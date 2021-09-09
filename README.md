@@ -3,11 +3,21 @@
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](#swift-package-manager)
 [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](#cocoapods)
 
+## Overview
+
+CrossDK is a solution belonging to Adikteev. The goal is to allow its users to cross-promote their application catalog through the `SKOverlay` class.
+
+### Requirements
+
+**iOS** version **>= 10.0**
+
+CrossDK is available with iOS 10 minimal target version but the `SKOverlay` is only available since iOS 14. CrossDK provides support in order to handle cases where the `SKOverlay` is not available (see [Overlay Delegate](#overlay-delegate))
+
 ## Installation
 
 ### Swift Package Manager
 
-_Note: Instructions below are for using **SPM** without the Xcode UI. It's easier to go to File > Swift Packages > Add Package Dependencies... and add CrossDK through there._
+_Note: Instructions below are for using **SPM** without the Xcode UI. It's easier to go to `File > Swift Packages > Add Package Dependencies...` and add CrossDK through there._
 
 To integrate using Apple's Swift Package Manager, without Xcode integration, add the following as a dependency to your `Package.swift`:
 
@@ -50,9 +60,6 @@ pod 'CrossDK', :git => 'git@github.com:Adikteev/CrossDK-release.git'
 
 Then run `pod install`.
 
-In any file you'd like to use CrossDK in, don't forget to
-import the framework with `import CrossDK`.
-
 ### Manually
 
 - Open up Terminal, `cd` into your top-level project directory, and run the following command *if* your project is not initialized as a git repository:
@@ -71,4 +78,59 @@ $ git submodule add https://github.com/Adikteev/CrossDK-release.git
 
 - And that's it!
 
-> XCode will automatically add `CrossDK.xcframework` to your `Link Binary With Libraries` Build Phase.
+> XCode will automatically add `CrossDK.xcframework` to your Link Binary With Libraries Build Phase.
+
+## Usage
+
+In any file you'd like to use CrossDK in, don't forget to import the framework with `import CrossDK`.
+
+### Configuration
+
+[to be continued]
+
+### Overlay Usage
+
+All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. A `dismiss` function is available as well if you want to programmatically dismiss a previously displayed overlay.
+
+```swift
+import CrossDK
+
+final class SomeViewController: UIViewController {
+    private let crossDKOverlay = CrossDKOverlay()
+    
+    private func displayOverlay() {
+        guard let window = view.window else { return }
+
+        crossDKOverlay.display(window: window, position: .bottom)
+    }
+}
+```
+
+### Overlay Delegate
+
+Additionally, a delegate is available if you want to monitor what is happening with the `CrossDKOverlay`. 
+
+Since `SKOverlay` is only available with iOS 14 or higher, you might want, for example to do something else if the overlay display is unavailable.
+
+```swift
+import CrossDK
+
+final class SomeViewController: UIViewController {
+    private let crossDKOverlay = CrossDKOverlay()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        crossDKOverlay.delegate = self
+    }
+}
+
+extension SomeViewController: CrossDKOverlayDelegate {
+    [...]
+    
+    func overlayUnavaible(error: CrossDKOverlay.OverlayError) {
+        if error == .unsupportedOSVersion {
+            // Do something for old iOS versions.
+        }
+    }
+}
+```
