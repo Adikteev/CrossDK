@@ -110,7 +110,7 @@ final class SomeViewController: UIViewController {
 
 Additionally, a delegate is available if you want to monitor what is happening with the `CrossDKOverlay`. 
 
-Since `SKOverlay` is only available with iOS 14 or higher, you might want, for example to do something else if the overlay display is unavailable.
+Since `SKOverlay` is only available with iOS 14 or higher, you might want, for example, to do something else if the overlay display is unavailable.
 
 ```swift
 import CrossDK
