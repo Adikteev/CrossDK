@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		fm7maZAs2db37loAtQKED6S80W0=
+		c085MZE+7lO/suXkWXZkWw06BeM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -15,91 +15,91 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1rqfE0bYuXTWdedN3f8eRemKd7cuo4NnwgFycPybHuM=
+			ez2ux/kehcTAPoEvSy3f4ru0fl8H4Cvjf2CRPVeGbVA=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mArlypuKH8olpkN3POehuXzI72W0c22aTSu8LKH840Y=
+			zpjj+YbXu0denY6/SxNDRJN3Jge2T+3fjrntyjV3fr0=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JFPqkYCWbG0kbCYztujME3cqizhuUQzKbBOKIOKZWqE=
+			thGTRNYfOZnhqH9Z1ECFEtWka+Zhr2LX/bwXWOne2NY=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X2Pd+xnahRvueMb2znoj7sHs7UKfHn7mis7XynwNNqk=
+			Ru+pRmUrGBlFYwg4ipPJAncZlKG2WL+JhBa9nqVjQrY=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mArlypuKH8olpkN3POehuXzI72W0c22aTSu8LKH840Y=
+			zpjj+YbXu0denY6/SxNDRJN3Jge2T+3fjrntyjV3fr0=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JFPqkYCWbG0kbCYztujME3cqizhuUQzKbBOKIOKZWqE=
+			thGTRNYfOZnhqH9Z1ECFEtWka+Zhr2LX/bwXWOne2NY=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X2Pd+xnahRvueMb2znoj7sHs7UKfHn7mis7XynwNNqk=
+			Ru+pRmUrGBlFYwg4ipPJAncZlKG2WL+JhBa9nqVjQrY=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zXK905BkL0PpfUTOcFUesYrMHOKwY7pMpe7bCivu4ds=
+			1Wmj/H2NZu+3NzB5IDDzm3JVZaqNc3vrsKEibGRsxBs=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uc+JVKVKDNj+/C5+EhIx/t5bSs0HNN33RVnYyckwnZw=
+			iwb3yYV4dY9HdERh2cL0BTX1FhG4Zl8RPMzYBOddpLY=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mcb8GxdbPLWG3W85dRWmwT51XdlN9MeMSc68hXamRmA=
+			4A+zS5/6b0TFCMOh8vrA7+VMRSTWVX/AePRPLOqeJ04=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zXK905BkL0PpfUTOcFUesYrMHOKwY7pMpe7bCivu4ds=
+			1Wmj/H2NZu+3NzB5IDDzm3JVZaqNc3vrsKEibGRsxBs=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uc+JVKVKDNj+/C5+EhIx/t5bSs0HNN33RVnYyckwnZw=
+			iwb3yYV4dY9HdERh2cL0BTX1FhG4Zl8RPMzYBOddpLY=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mcb8GxdbPLWG3W85dRWmwT51XdlN9MeMSc68hXamRmA=
+			4A+zS5/6b0TFCMOh8vrA7+VMRSTWVX/AePRPLOqeJ04=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -113,7 +113,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XaZu7PsK/2yDaro0LX+LPxGjsovzFN6OFYobnew2HpY=
+			36X/GgJeErUQLt8wrxqVQaJZEPMQyfk1ck+pH7fDdzc=
 			</data>
 		</dict>
 	</dict>

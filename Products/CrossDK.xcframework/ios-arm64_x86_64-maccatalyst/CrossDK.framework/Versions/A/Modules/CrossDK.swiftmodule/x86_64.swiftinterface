@@ -1,27 +1,46 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
-// swift-module-flags: -target x86_64-apple-ios14.5-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CrossDK
+// swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CrossDK
 import Foundation
 import StoreKit
 import Swift
-public protocol CrossDKDelegate {
+public protocol CrossDKOverlayDelegate : AnyObject {
   func storeOverlayWillStartPresentation()
   func storeOverlayDidFinishPresentation()
   func storeOverlayWillStartDismissal()
   func storeOverlayDidFinishDismissal()
   func storeOverlayDidFailToLoad(error: Swift.Error)
-  func didFailToLoad()
+  func overlayUnavaible(error: CrossDK.CrossDKOverlay.OverlayError)
 }
-@objc @_inheritsConvenienceInitializers public class CrossDK : ObjectiveC.NSObject {
-  public func dismissOverlay(scene: Any)
-  public func displayOverlayForUIKit(scene: Any, position: Any)
+@objc @_inheritsConvenienceInitializers public class CrossDKOverlay : ObjectiveC.NSObject {
+  weak public var delegate: CrossDK.CrossDKOverlayDelegate?
+  public enum Position {
+    case bottom
+    case bottomRaised
+    public static func == (a: CrossDK.CrossDKOverlay.Position, b: CrossDK.CrossDKOverlay.Position) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum OverlayError : Swift.Error {
+    case unsupportedOSVersion
+    case unavailableRecommendation
+    public static func == (a: CrossDK.CrossDKOverlay.OverlayError, b: CrossDK.CrossDKOverlay.OverlayError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public func dismiss(window: UIKit.UIWindow)
+  public func display(window: UIKit.UIWindow, position: CrossDK.CrossDKOverlay.Position)
   @available(iOS 14.0, *)
-  public func displayOverlayForSwiftUI(position: StoreKit.SKOverlay.Position) -> StoreKit.SKOverlay.AppConfiguration
+  public func getConfiguration(position: CrossDK.CrossDKOverlay.Position) -> StoreKit.SKOverlay.AppConfiguration
   @objc override dynamic public init()
   @objc deinit
 }
 @available(iOS 14.0, *)
-extension CrossDK : StoreKit.SKOverlayDelegate {
+extension CrossDKOverlay : StoreKit.SKOverlayDelegate {
   @objc dynamic public func storeOverlayWillStartPresentation(_ overlay: StoreKit.SKOverlay, transitionContext: StoreKit.SKOverlay.TransitionContext)
   @objc dynamic public func storeOverlayDidFinishPresentation(_ overlay: StoreKit.SKOverlay, transitionContext: StoreKit.SKOverlay.TransitionContext)
   @objc dynamic public func storeOverlayWillStartDismissal(_ overlay: StoreKit.SKOverlay, transitionContext: StoreKit.SKOverlay.TransitionContext)
@@ -30,3 +49,7 @@ extension CrossDK : StoreKit.SKOverlayDelegate {
 }
 public enum Environment {
 }
+extension CrossDK.CrossDKOverlay.Position : Swift.Equatable {}
+extension CrossDK.CrossDKOverlay.Position : Swift.Hashable {}
+extension CrossDK.CrossDKOverlay.OverlayError : Swift.Equatable {}
+extension CrossDK.CrossDKOverlay.OverlayError : Swift.Hashable {}
