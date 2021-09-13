@@ -4,6 +4,7 @@
 import Foundation
 import StoreKit
 import Swift
+import UIKit
 public protocol CrossDKOverlayDelegate : AnyObject {
   func storeOverlayWillStartPresentation()
   func storeOverlayDidFinishPresentation()
@@ -25,7 +26,9 @@ public protocol CrossDKOverlayDelegate : AnyObject {
   }
   public enum OverlayError : Swift.Error {
     case unsupportedOSVersion
+    case unavailableWindowScene
     case unavailableRecommendation
+    case noConfiguration
     public static func == (a: CrossDK.CrossDKOverlay.OverlayError, b: CrossDK.CrossDKOverlay.OverlayError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -47,7 +50,13 @@ extension CrossDKOverlay : StoreKit.SKOverlayDelegate {
   @objc dynamic public func storeOverlayDidFinishDismissal(_ overlay: StoreKit.SKOverlay, transitionContext: StoreKit.SKOverlay.TransitionContext)
   @objc dynamic public func storeOverlayDidFailToLoad(_ overlay: StoreKit.SKOverlay, error: Swift.Error)
 }
-public enum Environment {
+@_hasMissingDesignatedInitializers public class CrossDKConfig {
+  public static let shared: CrossDK.CrossDKConfig
+  public var isConfigured: Swift.Bool {
+    get
+  }
+  public func setup(appId: Swift.String, apiKey: Swift.String, userId: Swift.String? = nil)
+  @objc deinit
 }
 extension CrossDK.CrossDKOverlay.Position : Swift.Equatable {}
 extension CrossDK.CrossDKOverlay.Position : Swift.Hashable {}
