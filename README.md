@@ -1,4 +1,4 @@
-# CrossDK 0.0.2
+# CrossDK 0.1.1
 
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](#swift-package-manager)
 [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](#cocoapods)
@@ -22,7 +22,7 @@ _Note: Instructions below are for using **SPM** without the Xcode UI. It's easie
 To integrate using Apple's Swift Package Manager, without Xcode integration, add the following as a dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/Adikteev/CrossDK-release.git", .upToNextMajor(from: "0.0.2"))
+.package(url: "https://github.com/Adikteev/CrossDK-release.git", .upToNextMajor(from: "0.1.1"))
 ```
 
 and then specify `"CrossDK"` as a dependency of the Target in which you wish to use CrossDK.
@@ -40,7 +40,7 @@ let package = Package(
             targets: ["MyPackage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Adikteev/CrossDK-release.git", .upToNextMajor(from: "0.0.2"))
+        .package(url: "https://github.com/Adikteev/CrossDK-release.git", .upToNextMajor(from: "0.1.1"))
     ],
     targets: [
         .target(
@@ -62,16 +62,15 @@ Then run `pod install`.
 
 ### Manually
 
-- Open up Terminal, `cd` into your top-level project directory, and run the following command *if* your project is not initialized as a git repository:
+- Clone CrossDK's repository wherever you like in your project. For this example we will clone it in a `CrossDK-release` directory
 
 ```bash
-$ git init
+$ git clone https://github.com/Adikteev/CrossDK-release.git CrossDK-release
 ```
-
-- Add CrossDK as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following commands:
+OR
 
 ```bash
-$ git submodule add https://github.com/Adikteev/CrossDK-release.git
+$ git clone ssh://git@github.com:Adikteev/CrossDK-release.git CrossDK-release
 ```
 
 - Open the new `CrossDK-release/Products` folder, and drag the `CrossDK.xcframework` into the Project Navigator of your application's Xcode project. You can put it anywhere inside your project, just make sure you select any target that needs to use CrossDK.
@@ -86,7 +85,28 @@ In any file you'd like to use CrossDK in, don't forget to import the framework w
 
 ### Configuration
 
-[to be continued]
+In order to display overlays properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s application launch but it's up to you to set it up wherever you like.
+
+```swift
+import CrossDK
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    [...]
+
+    func application(_ application: UIApplication, 
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+                     
+        CrossDKConfig.shared.setup(appId: <YOUR APP ID>,
+                                   apiKey: <YOUR API KEY>,
+                                   userId: <USER'S IDFA (optional)>)
+
+        return true
+    }
+    
+    [...]
+}
+```
 
 ### Overlay Usage
 
