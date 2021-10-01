@@ -210,7 +210,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-/// A class dedicated to the CrossDK XCFramework.
+/// Handles CrossDK’s overlays display.
 SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 @interface CrossDKOverlay : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -451,7 +451,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-/// A class dedicated to the CrossDK XCFramework.
+/// Handles CrossDK’s overlays display.
 SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 @interface CrossDKOverlay : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -692,7 +692,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-/// A class dedicated to the CrossDK XCFramework.
+/// Handles CrossDK’s overlays display.
 SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 @interface CrossDKOverlay : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

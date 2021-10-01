@@ -37,8 +37,6 @@ public protocol CrossDKOverlayDelegate : AnyObject {
   }
   public func dismiss(window: UIKit.UIWindow)
   public func display(window: UIKit.UIWindow, position: CrossDK.CrossDKOverlay.Position)
-  @available(iOS 14.0, *)
-  public func getConfiguration(position: CrossDK.CrossDKOverlay.Position) -> StoreKit.SKOverlay.AppConfiguration
   @objc override dynamic public init()
   @objc deinit
 }

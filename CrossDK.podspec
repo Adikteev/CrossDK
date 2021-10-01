@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "CrossDK"
-  spec.version      = "0.1.4"
+  spec.version      = "1.0.0"
   spec.summary      = "Cross-promote an application catalog"
 
   spec.description  = <<-DESC
@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
   spec.author       = "Adikteev"
 
-  spec.source       = { :git => "https://github.com/Adikteev/CrossDK-release.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/Adikteev/CrossDK.git", :tag => "#{spec.version}" }
   spec.vendored_frameworks = "Products/CrossDK.xcframework"
 
 end
