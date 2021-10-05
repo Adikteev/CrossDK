@@ -22,7 +22,7 @@ _Note: Instructions below are for using **SPM** without the Xcode UI. It's easie
 To integrate using Apple's Swift Package Manager, without Xcode integration, add the following as a dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/Adikteev/CrossDK-release.git", .upToNextMajor(from: "1.0.0"))
+.package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "1.0.0"))
 ```
 
 and then specify `"CrossDK"` as a dependency of the Target in which you wish to use CrossDK.
@@ -40,7 +40,7 @@ let package = Package(
             targets: ["MyPackage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Adikteev/CrossDK-release.git", .upToNextMajor(from: "1.0.0"))
+        .package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "1.0.0"))
     ],
     targets: [
         .target(
@@ -55,7 +55,7 @@ let package = Package(
 Add the following entry to your Podfile for CrossDK:
 
 ```rb
-pod 'CrossDK', :git => 'git@github.com:Adikteev/CrossDK-release.git'
+pod 'CrossDK', :git => 'git@github.com:Adikteev/crossdk-ios.git'
 ```
 
 Then run `pod install`.
@@ -65,12 +65,12 @@ Then run `pod install`.
 - Clone CrossDK's repository wherever you like in your project. For this example we will clone it in a `CrossDK-release` directory
 
 ```bash
-$ git clone https://github.com/Adikteev/CrossDK-release.git CrossDK-release
+$ git clone https://github.com/Adikteev/crossdk-ios.git CrossDK-release
 ```
 OR
 
 ```bash
-$ git clone ssh://git@github.com:Adikteev/CrossDK-release.git CrossDK-release
+$ git clone ssh://git@github.com:Adikteev/crossdk-ios.git CrossDK-release
 ```
 
 - Open the new `CrossDK-release/Products` folder, and drag the `CrossDK.xcframework` into the Project Navigator of your application's Xcode project. You can put it anywhere inside your project, just make sure you select any target that needs to use CrossDK.
@@ -99,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      
         CrossDKConfig.shared.setup(appId: <YOUR APP ID>,
                                    apiKey: <YOUR API KEY>,
-                                   userId: <USER'S IDFA (optional)>)
+                                   userId: <USER'S ID (optional)>)
 
         return true
     }

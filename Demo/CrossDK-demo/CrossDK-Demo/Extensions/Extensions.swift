@@ -2,13 +2,14 @@
 //  Extensions.swift
 //  CrossDK demo
 //
-//  Created by Steven VAILLE on 30/08/2021.
+//  Created by Adikteev on 30/08/2021.
 //
 
 import Foundation
 import UIKit
 
 // MARK: - UIView extention
+
 extension UIView {
     /// Drops a shadow to a view.
     func dropShadow() {

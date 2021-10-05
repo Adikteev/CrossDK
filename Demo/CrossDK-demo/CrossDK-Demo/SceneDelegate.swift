@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  CrossDK-demo
 //
-//  Created by Arnaud RINGENBACH on 14/09/2021.
+//  Created by Adikteev on 14/09/2021.
 //
 
 import UIKit

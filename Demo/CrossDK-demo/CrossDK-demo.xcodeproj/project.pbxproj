@@ -7,24 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13AEFD2A270C568F000729ED /* CrossDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AEFD28270C53EE000729ED /* CrossDK.xcframework */; };
+		13AEFD2B270C568F000729ED /* CrossDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13AEFD28270C53EE000729ED /* CrossDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBE7C5C126F0E61400E4564E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5C026F0E61400E4564E /* AppDelegate.swift */; };
 		FBE7C5C326F0E61400E4564E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5C226F0E61400E4564E /* SceneDelegate.swift */; };
 		FBE7C5CA26F0E61600E4564E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE7C5C926F0E61600E4564E /* Assets.xcassets */; };
 		FBE7C5CD26F0E61600E4564E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE7C5CB26F0E61600E4564E /* LaunchScreen.storyboard */; };
-		FBE7C5D526F0E79B00E4564E /* CrossDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE7C5D426F0E79B00E4564E /* CrossDK.xcframework */; };
 		FBE7C5D726F0E7EF00E4564E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE7C5D626F0E7EF00E4564E /* Main.storyboard */; };
 		FBE7C5D926F0E7FB00E4564E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5D826F0E7FB00E4564E /* MainViewController.swift */; };
 		FBE7C5DB26F0E86F00E4564E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5DA26F0E86F00E4564E /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		13AEFD2C270C568F000729ED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				13AEFD2B270C568F000729ED /* CrossDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		13AEFD28270C53EE000729ED /* CrossDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CrossDK.xcframework; path = ../../../Products/CrossDK.xcframework; sourceTree = "<group>"; };
 		FBE7C5BD26F0E61400E4564E /* CrossDK-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossDK-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE7C5C026F0E61400E4564E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBE7C5C226F0E61400E4564E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FBE7C5C926F0E61600E4564E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBE7C5CC26F0E61600E4564E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBE7C5CE26F0E61600E4564E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FBE7C5D426F0E79B00E4564E /* CrossDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CrossDK.xcframework; path = ../../../Products/CrossDK.xcframework; sourceTree = "<group>"; };
 		FBE7C5D626F0E7EF00E4564E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FBE7C5D826F0E7FB00E4564E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FBE7C5DA26F0E86F00E4564E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -35,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBE7C5D526F0E79B00E4564E /* CrossDK.xcframework in Frameworks */,
+				13AEFD2A270C568F000729ED /* CrossDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,12 +76,15 @@
 		FBE7C5BF26F0E61400E4564E /* CrossDK-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				FBE7C5DD26F0E87E00E4564E /* UIKit */,
+				FBE7C5C026F0E61400E4564E /* AppDelegate.swift */,
+				FBE7C5C226F0E61400E4564E /* SceneDelegate.swift */,
+				FBE7C5D826F0E7FB00E4564E /* MainViewController.swift */,
+				FBE7C5D626F0E7EF00E4564E /* Main.storyboard */,
 				FBE7C5DC26F0E87600E4564E /* Extensions */,
 				FBE7C5C926F0E61600E4564E /* Assets.xcassets */,
 				FBE7C5CB26F0E61600E4564E /* LaunchScreen.storyboard */,
 				FBE7C5CE26F0E61600E4564E /* Info.plist */,
-				FBE7C5D426F0E79B00E4564E /* CrossDK.xcframework */,
+				13AEFD28270C53EE000729ED /* CrossDK.xcframework */,
 			);
 			path = "CrossDK-Demo";
 			sourceTree = "<group>";
@@ -79,17 +97,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		FBE7C5DD26F0E87E00E4564E /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				FBE7C5C026F0E61400E4564E /* AppDelegate.swift */,
-				FBE7C5C226F0E61400E4564E /* SceneDelegate.swift */,
-				FBE7C5D626F0E7EF00E4564E /* Main.storyboard */,
-				FBE7C5D826F0E7FB00E4564E /* MainViewController.swift */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,6 +107,7 @@
 				FBE7C5B926F0E61400E4564E /* Sources */,
 				FBE7C5BA26F0E61400E4564E /* Frameworks */,
 				FBE7C5BB26F0E61400E4564E /* Resources */,
+				13AEFD2C270C568F000729ED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

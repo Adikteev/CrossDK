@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sCI-8D-WMZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sCI-8D-WMZ">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,29 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FQN-RR-xle">
-                                <rect key="frame" x="310" y="80" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="QrB-8u-dxA"/>
-                                    <constraint firstAttribute="height" constant="50" id="oMl-KE-DTI"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="SwiftUI">
-                                            <attributes>
-                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" metaFont="cellTitle"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="swiftUIButtonPressed:" destination="sCI-8D-WMZ" eventType="touchUpInside" id="5Bi-My-l5U"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CrossDK demo - UIKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmk-vz-9dZ">
                                 <rect key="frame" x="20" y="20" width="251" height="34"/>
                                 <constraints>
@@ -244,13 +221,11 @@
                             </constraint>
                             <constraint firstItem="8ka-kI-VTn" firstAttribute="bottom" secondItem="BM9-J7-FPp" secondAttribute="bottom" id="Xoc-7U-Gwy"/>
                             <constraint firstAttribute="trailing" secondItem="dgK-jk-bMd" secondAttribute="trailing" id="Zd8-Gp-h5K"/>
-                            <constraint firstItem="FQN-RR-xle" firstAttribute="top" secondItem="BM9-J7-FPp" secondAttribute="top" constant="80" id="eYl-xh-nhB"/>
                             <constraint firstItem="hAp-Wd-c7l" firstAttribute="centerY" secondItem="ya3-gE-SA0" secondAttribute="centerY" id="gSl-3I-Pwt"/>
                             <constraint firstItem="BM9-J7-FPp" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qmk-vz-9dZ" secondAttribute="trailing" symbolic="YES" id="gha-bY-mxj"/>
                             <constraint firstItem="8ka-kI-VTn" firstAttribute="leading" secondItem="ya3-gE-SA0" secondAttribute="leading" id="lWC-qh-e2J"/>
                             <constraint firstItem="dgK-jk-bMd" firstAttribute="leading" secondItem="ya3-gE-SA0" secondAttribute="leading" id="roZ-kb-xLm"/>
                             <constraint firstItem="hAp-Wd-c7l" firstAttribute="centerX" secondItem="ya3-gE-SA0" secondAttribute="centerX" id="tPJ-U8-uic"/>
-                            <constraint firstItem="BM9-J7-FPp" firstAttribute="trailing" secondItem="FQN-RR-xle" secondAttribute="trailing" constant="15" id="w1d-VC-xmB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -258,7 +233,6 @@
                         <outlet property="bottomRaisedOverlayButton" destination="Igt-4q-TKx" id="3fH-My-3m3"/>
                         <outlet property="childTapBarView" destination="dgK-jk-bMd" id="bbG-Kp-jHE"/>
                         <outlet property="closeOverlayButton" destination="x21-Dm-WZg" id="EHf-Ly-SyJ"/>
-                        <outlet property="swiftUIButton" destination="FQN-RR-xle" id="8o3-2M-0rR"/>
                         <outlet property="tapBarView" destination="8ka-kI-VTn" id="1Iw-Zt-f4r"/>
                     </connections>
                 </viewController>
