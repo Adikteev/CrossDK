@@ -13,9 +13,9 @@
 		FBE7C5C326F0E61400E4564E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5C226F0E61400E4564E /* SceneDelegate.swift */; };
 		FBE7C5CA26F0E61600E4564E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE7C5C926F0E61600E4564E /* Assets.xcassets */; };
 		FBE7C5CD26F0E61600E4564E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE7C5CB26F0E61600E4564E /* LaunchScreen.storyboard */; };
-		FBE7C5D726F0E7EF00E4564E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE7C5D626F0E7EF00E4564E /* Main.storyboard */; };
-		FBE7C5D926F0E7FB00E4564E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5D826F0E7FB00E4564E /* MainViewController.swift */; };
-		FBE7C5DB26F0E86F00E4564E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5DA26F0E86F00E4564E /* Extensions.swift */; };
+		FBE7C5D726F0E7EF00E4564E /* CrossDKViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE7C5D626F0E7EF00E4564E /* CrossDKViewController.storyboard */; };
+		FBE7C5D926F0E7FB00E4564E /* CrossDKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5D826F0E7FB00E4564E /* CrossDKViewController.swift */; };
+		FBE7C5DB26F0E86F00E4564E /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5DA26F0E86F00E4564E /* UIView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,16 +33,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		13AEFD28270C53EE000729ED /* CrossDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CrossDK.xcframework; path = ../../../Products/CrossDK.xcframework; sourceTree = "<group>"; };
-		FBE7C5BD26F0E61400E4564E /* CrossDK-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossDK-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13AEFD28270C53EE000729ED /* CrossDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CrossDK.xcframework; sourceTree = "<group>"; };
+		FBE7C5BD26F0E61400E4564E /* CrossDK-demo UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossDK-demo UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE7C5C026F0E61400E4564E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBE7C5C226F0E61400E4564E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FBE7C5C926F0E61600E4564E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBE7C5CC26F0E61600E4564E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBE7C5CE26F0E61600E4564E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FBE7C5D626F0E7EF00E4564E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		FBE7C5D826F0E7FB00E4564E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		FBE7C5DA26F0E86F00E4564E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FBE7C5D626F0E7EF00E4564E /* CrossDKViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CrossDKViewController.storyboard; sourceTree = "<group>"; };
+		FBE7C5D826F0E7FB00E4564E /* CrossDKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDKViewController.swift; sourceTree = "<group>"; };
+		FBE7C5DA26F0E86F00E4564E /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +57,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13C7FDCA273526C70022EA52 /* CrossDKViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FBE7C5D826F0E7FB00E4564E /* CrossDKViewController.swift */,
+				FBE7C5D626F0E7EF00E4564E /* CrossDKViewController.storyboard */,
+			);
+			path = CrossDKViewController;
+			sourceTree = "<group>";
+		};
+		13C7FDCB273526FB0022EA52 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBE7C5CB26F0E61600E4564E /* LaunchScreen.storyboard */,
+				13AEFD28270C53EE000729ED /* CrossDK.xcframework */,
+				FBE7C5C926F0E61600E4564E /* Assets.xcassets */,
+				FBE7C5CE26F0E61600E4564E /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FBE7C5B426F0E61400E4564E = {
 			isa = PBXGroup;
 			children = (
-				FBE7C5BF26F0E61400E4564E /* CrossDK-Demo */,
+				FBE7C5BF26F0E61400E4564E /* CrossDK-demo UIKit */,
 				FBE7C5BE26F0E61400E4564E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,31 +88,27 @@
 		FBE7C5BE26F0E61400E4564E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FBE7C5BD26F0E61400E4564E /* CrossDK-demo.app */,
+				FBE7C5BD26F0E61400E4564E /* CrossDK-demo UIKit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FBE7C5BF26F0E61400E4564E /* CrossDK-Demo */ = {
+		FBE7C5BF26F0E61400E4564E /* CrossDK-demo UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				FBE7C5C026F0E61400E4564E /* AppDelegate.swift */,
 				FBE7C5C226F0E61400E4564E /* SceneDelegate.swift */,
-				FBE7C5D826F0E7FB00E4564E /* MainViewController.swift */,
-				FBE7C5D626F0E7EF00E4564E /* Main.storyboard */,
+				13C7FDCA273526C70022EA52 /* CrossDKViewController */,
 				FBE7C5DC26F0E87600E4564E /* Extensions */,
-				FBE7C5C926F0E61600E4564E /* Assets.xcassets */,
-				FBE7C5CB26F0E61600E4564E /* LaunchScreen.storyboard */,
-				FBE7C5CE26F0E61600E4564E /* Info.plist */,
-				13AEFD28270C53EE000729ED /* CrossDK.xcframework */,
+				13C7FDCB273526FB0022EA52 /* Resources */,
 			);
-			path = "CrossDK-Demo";
+			path = "CrossDK-demo UIKit";
 			sourceTree = "<group>";
 		};
 		FBE7C5DC26F0E87600E4564E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FBE7C5DA26F0E86F00E4564E /* Extensions.swift */,
+				FBE7C5DA26F0E86F00E4564E /* UIView+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -100,9 +116,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FBE7C5BC26F0E61400E4564E /* CrossDK-demo */ = {
+		FBE7C5BC26F0E61400E4564E /* CrossDK-demo UIKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FBE7C5D126F0E61600E4564E /* Build configuration list for PBXNativeTarget "CrossDK-demo" */;
+			buildConfigurationList = FBE7C5D126F0E61600E4564E /* Build configuration list for PBXNativeTarget "CrossDK-demo UIKit" */;
 			buildPhases = (
 				FBE7C5B926F0E61400E4564E /* Sources */,
 				FBE7C5BA26F0E61400E4564E /* Frameworks */,
@@ -113,9 +129,9 @@
 			);
 			dependencies = (
 			);
-			name = "CrossDK-demo";
+			name = "CrossDK-demo UIKit";
 			productName = "CrossDK-demo";
-			productReference = FBE7C5BD26F0E61400E4564E /* CrossDK-demo.app */;
+			productReference = FBE7C5BD26F0E61400E4564E /* CrossDK-demo UIKit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,7 +149,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FBE7C5B826F0E61400E4564E /* Build configuration list for PBXProject "CrossDK-demo" */;
+			buildConfigurationList = FBE7C5B826F0E61400E4564E /* Build configuration list for PBXProject "CrossDK-demo UIKit" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,7 +162,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FBE7C5BC26F0E61400E4564E /* CrossDK-demo */,
+				FBE7C5BC26F0E61400E4564E /* CrossDK-demo UIKit */,
 			);
 		};
 /* End PBXProject section */
@@ -158,7 +174,7 @@
 			files = (
 				FBE7C5CD26F0E61600E4564E /* LaunchScreen.storyboard in Resources */,
 				FBE7C5CA26F0E61600E4564E /* Assets.xcassets in Resources */,
-				FBE7C5D726F0E7EF00E4564E /* Main.storyboard in Resources */,
+				FBE7C5D726F0E7EF00E4564E /* CrossDKViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,9 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBE7C5C126F0E61400E4564E /* AppDelegate.swift in Sources */,
-				FBE7C5D926F0E7FB00E4564E /* MainViewController.swift in Sources */,
+				FBE7C5D926F0E7FB00E4564E /* CrossDKViewController.swift in Sources */,
 				FBE7C5C326F0E61400E4564E /* SceneDelegate.swift in Sources */,
-				FBE7C5DB26F0E86F00E4564E /* Extensions.swift in Sources */,
+				FBE7C5DB26F0E86F00E4564E /* UIView+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,12 +329,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YDX93A7ASS;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CrossDK-demo/Info.plist";
+				INFOPLIST_FILE = "CrossDK-demo UIKit/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CrossDK-demo UIKit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = CrossDKViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -342,12 +359,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YDX93A7ASS;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CrossDK-demo/Info.plist";
+				INFOPLIST_FILE = "CrossDK-demo UIKit/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CrossDK-demo UIKit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = CrossDKViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -367,7 +385,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FBE7C5B826F0E61400E4564E /* Build configuration list for PBXProject "CrossDK-demo" */ = {
+		FBE7C5B826F0E61400E4564E /* Build configuration list for PBXProject "CrossDK-demo UIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FBE7C5CF26F0E61600E4564E /* Debug */,
@@ -376,7 +394,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FBE7C5D126F0E61600E4564E /* Build configuration list for PBXNativeTarget "CrossDK-demo" */ = {
+		FBE7C5D126F0E61600E4564E /* Build configuration list for PBXNativeTarget "CrossDK-demo UIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FBE7C5D226F0E61600E4564E /* Debug */,

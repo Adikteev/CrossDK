@@ -1,15 +1,15 @@
 //
-//  MainViewController.swift
-//  CrossDK demo
+//  CrossDKViewController.swift
+//  CrossDK-demo UIKit
 //
 //  Created by Adikteev on 19/07/2021.
 //
 
 import UIKit
-import StoreKit
 import CrossDK
 
-class MainViewController: UIViewController {
+class CrossDKViewController: UIViewController {
+
     // MARK: - Outlets
 
     @IBOutlet private var bottomOverlayButton: UIButton!
@@ -26,7 +26,6 @@ class MainViewController: UIViewController {
     // MARK: - Private Enums
 
     private enum Constants {
-        static let cornerSwiftUIButton: CGFloat = 25.0
         static let cornerRadiusButton: CGFloat = 18.0
     }
 
@@ -34,13 +33,14 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
     }
 }
 
 // MARK: - Private Actions
 
-private extension MainViewController {
+private extension CrossDKViewController {
     /// Bottom overlay button clicked.
     @IBAction func bottomOverlayButtonPressed(_ sender: Any) {
         guard let window = view.window else { return }
@@ -71,9 +71,10 @@ private extension MainViewController {
 
 // MARK: - Private Funcs
 
-private extension MainViewController {
+private extension CrossDKViewController {
     /// Setups the UI.
     func setupUI() {
+        crossDKOverlay.delegate = self
         bottomOverlayButton.layer.cornerRadius = Constants.cornerRadiusButton
         bottomRaisedOverlayButton.layer.cornerRadius = Constants.cornerRadiusButton
         bottomOverlayButton.dropShadow()
@@ -84,7 +85,7 @@ private extension MainViewController {
     }
 }
 
-extension MainViewController: CrossDKOverlayDelegate {
+extension CrossDKViewController: CrossDKOverlayDelegate {
     func storeOverlayWillStartPresentation() {
         NSLog("Overlay will start presentation")
     }
@@ -99,6 +100,7 @@ extension MainViewController: CrossDKOverlayDelegate {
 
     func storeOverlayDidFinishDismissal() {
         NSLog("Overlay did finish dismissal")
+        closeOverlayButton.isHidden = true
     }
 
     func storeOverlayDidFailToLoad(error: Error) {

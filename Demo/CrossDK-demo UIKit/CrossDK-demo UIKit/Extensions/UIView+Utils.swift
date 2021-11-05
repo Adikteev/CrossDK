@@ -1,6 +1,6 @@
 //
-//  Extensions.swift
-//  CrossDK demo
+//  UIView+Utils.swift
+//  CrossDK-demo UIKit
 //
 //  Created by Adikteev on 30/08/2021.
 //

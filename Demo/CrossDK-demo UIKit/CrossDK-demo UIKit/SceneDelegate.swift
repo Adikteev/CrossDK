@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  CrossDK-demo
+//  CrossDK-demo UIKit
 //
 //  Created by Adikteev on 14/09/2021.
 //
