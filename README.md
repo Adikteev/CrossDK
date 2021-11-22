@@ -4,6 +4,11 @@
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](#swift-package-manager)
 [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](#cocoapods)
 
+##Table of contents :
+  * [UIKit](#uikit)
+  * [SwiftUI](#swiftui-support)
+  * [Objective-C](#objective-c-support)
+
 ## Overview
 
 CrossDK is a solution belonging to Adikteev. The goal is to allow its users to cross-promote their application catalog through the `CrossDKOverlay` class.
@@ -366,7 +371,7 @@ In order to display overlays properly, CrossDK requires a few informations. Sinc
 
 ```swift
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [CrossDKConfig.shared setupWithAppId:<#(NSString * _Nonnull)#> apiKey:<#(NSString * _Nonnull)#> userId:<#(NSString * _Nullable)#>];
+	[CrossDKConfig.shared setupWithAppId:<#(NSString * _Nonnull)#> apiKey:<#(NSString * _Nonnull)#> userId:<#(NSString * _Nullable)#>];
     return YES;
 }
 
