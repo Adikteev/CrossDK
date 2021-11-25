@@ -1,0 +1,101 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CrossDK
+import AVKit
+import Foundation
+import StoreKit
+import Swift
+import UIKit
+import _Concurrency
+@objc public protocol CrossDKOverlayDelegate {
+  @objc func overlayWillStartPresentation()
+  @objc func overlayDidFinishPresentation()
+  @objc func overlayWillStartDismissal()
+  @objc func overlayDidFinishDismissal()
+  @objc func overlayShowsRecommendedAppInAppStore()
+  @objc func overlayStartsPlayingVideo()
+  @objc func overlayPlayedHalfVideo()
+  @objc func overlayDidFinishPlayingVideo()
+  @objc func overlayDidFailToLoad(error: Swift.Error)
+  @objc func overlayUnavailable(error: CrossDK.CrossDKOverlay.OverlayError)
+}
+@objc @_inheritsConvenienceInitializers public class CrossDKOverlay : ObjectiveC.NSObject {
+  @objc weak public var delegate: CrossDK.CrossDKOverlayDelegate?
+  @objc public enum OverlayPosition : Swift.Int {
+    case bottom
+    case bottomRaised
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum OverlayError : Swift.Int {
+    case unsupportedOSVersion
+    case unavailableWindowScene
+    case unavailableRecommendation
+    case noConfiguration
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc override dynamic public init()
+  @objc public func display(window: UIKit.UIWindow, position: CrossDK.CrossDKOverlay.OverlayPosition)
+  @objc public func dismiss()
+  @objc public func closeButton(isHidden: Swift.Bool)
+  @objc deinit
+}
+@available(iOS 14.0, *)
+extension CrossDK.CrossDKOverlay : StoreKit.SKOverlayDelegate {
+  @objc dynamic public func storeOverlayWillStartPresentation(_: StoreKit.SKOverlay, transitionContext _: StoreKit.SKOverlay.TransitionContext)
+  @objc dynamic public func storeOverlayDidFinishPresentation(_: StoreKit.SKOverlay, transitionContext _: StoreKit.SKOverlay.TransitionContext)
+  @objc dynamic public func storeOverlayWillStartDismissal(_: StoreKit.SKOverlay, transitionContext _: StoreKit.SKOverlay.TransitionContext)
+  @objc dynamic public func storeOverlayDidFinishDismissal(_: StoreKit.SKOverlay, transitionContext _: StoreKit.SKOverlay.TransitionContext)
+  @objc dynamic public func storeOverlayDidFailToLoad(_: StoreKit.SKOverlay, error: Swift.Error)
+}
+extension CrossDK.CrossDKOverlay : CrossDK.CrossDKOverlayDelegate {
+  @objc dynamic public func overlayWillStartPresentation()
+  @objc dynamic public func overlayWillStartDismissal()
+  @objc dynamic public func overlayDidFinishPresentation()
+  @objc dynamic public func overlayDidFinishDismissal()
+  @objc dynamic public func overlayShowsRecommendedAppInAppStore()
+  @objc dynamic public func overlayStartsPlayingVideo()
+  @objc dynamic public func overlayPlayedHalfVideo()
+  @objc dynamic public func overlayDidFinishPlayingVideo()
+  @objc dynamic public func overlayDidFailToLoad(error: Swift.Error)
+  @objc dynamic public func overlayUnavailable(error: CrossDK.CrossDKOverlay.OverlayError)
+}
+public struct CrossDKRecommendationFilter {
+  public init(churnedRankRange: Swift.ClosedRange<Swift.Float>? = nil, reopenRankRange: Swift.ClosedRange<Swift.Float>? = nil, installConversionProbaMin: Swift.Float? = nil, appIdDenylist: [Swift.String]? = nil, appIdAllowlist: [Swift.String]? = nil)
+}
+public enum Style {
+}
+public enum StarRounding : Swift.Int {
+  case roundToHalfStar
+  case roundToStar
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CrossDKConfig : ObjectiveC.NSObject {
+  @objc public static let shared: CrossDK.CrossDKConfig
+  @objc public var isConfigured: Swift.Bool {
+    @objc get
+  }
+  @objc public func setup(appId: Swift.String, apiKey: Swift.String, userId: Swift.String? = nil)
+  public func set(recommendationFilter: CrossDK.CrossDKRecommendationFilter)
+  @objc deinit
+}
+extension CrossDK.CrossDKOverlay.OverlayPosition : Swift.Equatable {}
+extension CrossDK.CrossDKOverlay.OverlayPosition : Swift.Hashable {}
+extension CrossDK.CrossDKOverlay.OverlayPosition : Swift.RawRepresentable {}
+extension CrossDK.CrossDKOverlay.OverlayError : Swift.Equatable {}
+extension CrossDK.CrossDKOverlay.OverlayError : Swift.Hashable {}
+extension CrossDK.CrossDKOverlay.OverlayError : Swift.RawRepresentable {}
+extension CrossDK.StarRounding : Swift.Equatable {}
+extension CrossDK.StarRounding : Swift.Hashable {}
+extension CrossDK.StarRounding : Swift.RawRepresentable {}

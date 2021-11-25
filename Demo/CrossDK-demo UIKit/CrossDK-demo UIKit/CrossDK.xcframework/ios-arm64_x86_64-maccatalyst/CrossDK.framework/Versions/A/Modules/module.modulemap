@@ -1,0 +1,4 @@
+framework module CrossDK {
+  header "CrossDK-Swift.h"
+  requires objc
+}

@@ -16,7 +16,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>CrossDKViewController</string>
+					<string>CrossDKView</string>
 				</dict>
 			</array>
 		</dict>

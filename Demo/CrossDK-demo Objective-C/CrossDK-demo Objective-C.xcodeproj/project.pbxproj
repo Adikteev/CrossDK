@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13EC34C7273A754D00B711A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC34C6273A754D00B711A5 /* AppDelegate.m */; };
+		13EC34CA273A754D00B711A5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC34C9273A754D00B711A5 /* SceneDelegate.m */; };
+		13EC34CD273A754D00B711A5 /* CrossDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC34CC273A754D00B711A5 /* CrossDKViewController.m */; };
+		13EC34D0273A754D00B711A5 /* CrossDKView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EC34CE273A754D00B711A5 /* CrossDKView.storyboard */; };
+		13EC34D2273A754F00B711A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13EC34D1273A754F00B711A5 /* Assets.xcassets */; };
+		13EC34D5273A754F00B711A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EC34D3273A754F00B711A5 /* LaunchScreen.storyboard */; };
+		13EC34D8273A754F00B711A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC34D7273A754F00B711A5 /* main.m */; };
+		ABFEB4D38CCD57233F8F5F3F /* Pods_CrossDK_demo_Objective_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DFB8F49F37B0D8C7427FAC /* Pods_CrossDK_demo_Objective_C.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		13138DF7273ADD7C0074DB67 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		13EC34C2273A754D00B711A5 /* CrossDK-demo Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossDK-demo Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13EC34C5273A754D00B711A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		13EC34C6273A754D00B711A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		13EC34C8273A754D00B711A5 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		13EC34C9273A754D00B711A5 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		13EC34CB273A754D00B711A5 /* CrossDKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrossDKViewController.h; sourceTree = "<group>"; };
+		13EC34CC273A754D00B711A5 /* CrossDKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrossDKViewController.m; sourceTree = "<group>"; };
+		13EC34CF273A754D00B711A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CrossDKView.storyboard; sourceTree = "<group>"; };
+		13EC34D1273A754F00B711A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13EC34D4273A754F00B711A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		13EC34D6273A754F00B711A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13EC34D7273A754F00B711A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15DFB8F49F37B0D8C7427FAC /* Pods_CrossDK_demo_Objective_C.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrossDK_demo_Objective_C.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A2607FF47A692BA96A85D81 /* Pods-CrossDK-demo Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossDK-demo Objective-C.debug.xcconfig"; path = "Target Support Files/Pods-CrossDK-demo Objective-C/Pods-CrossDK-demo Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
+		A22A2B7DB5E6BE26A0EC54F4 /* Pods-CrossDK-demo Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossDK-demo Objective-C.release.xcconfig"; path = "Target Support Files/Pods-CrossDK-demo Objective-C/Pods-CrossDK-demo Objective-C.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13EC34BF273A754D00B711A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABFEB4D38CCD57233F8F5F3F /* Pods_CrossDK_demo_Objective_C.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1370D8842745536F007B8667 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13EC34D1273A754F00B711A5 /* Assets.xcassets */,
+				13EC34D3273A754F00B711A5 /* LaunchScreen.storyboard */,
+				13EC34D6273A754F00B711A5 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1370D88527455469007B8667 /* CrossDKViewController */ = {
+			isa = PBXGroup;
+			children = (
+				13EC34CE273A754D00B711A5 /* CrossDKView.storyboard */,
+				13EC34CB273A754D00B711A5 /* CrossDKViewController.h */,
+				13EC34CC273A754D00B711A5 /* CrossDKViewController.m */,
+			);
+			path = CrossDKViewController;
+			sourceTree = "<group>";
+		};
+		13EC34B9273A754D00B711A5 = {
+			isa = PBXGroup;
+			children = (
+				13EC34C4273A754D00B711A5 /* CrossDK-demo Objective-C */,
+				13EC34C3273A754D00B711A5 /* Products */,
+				86E7612A32D168666DE8E641 /* Pods */,
+				8A6170292E4DA71C0A145CC9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		13EC34C3273A754D00B711A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13EC34C2273A754D00B711A5 /* CrossDK-demo Objective-C.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13EC34C4273A754D00B711A5 /* CrossDK-demo Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				13EC34C5273A754D00B711A5 /* AppDelegate.h */,
+				13EC34C6273A754D00B711A5 /* AppDelegate.m */,
+				13EC34C8273A754D00B711A5 /* SceneDelegate.h */,
+				13EC34C9273A754D00B711A5 /* SceneDelegate.m */,
+				13EC34D7273A754F00B711A5 /* main.m */,
+				1370D88527455469007B8667 /* CrossDKViewController */,
+				1370D8842745536F007B8667 /* Resources */,
+			);
+			path = "CrossDK-demo Objective-C";
+			sourceTree = "<group>";
+		};
+		86E7612A32D168666DE8E641 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A2607FF47A692BA96A85D81 /* Pods-CrossDK-demo Objective-C.debug.xcconfig */,
+				A22A2B7DB5E6BE26A0EC54F4 /* Pods-CrossDK-demo Objective-C.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8A6170292E4DA71C0A145CC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15DFB8F49F37B0D8C7427FAC /* Pods_CrossDK_demo_Objective_C.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13EC34C1273A754D00B711A5 /* CrossDK-demo Objective-C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13EC34DB273A754F00B711A5 /* Build configuration list for PBXNativeTarget "CrossDK-demo Objective-C" */;
+			buildPhases = (
+				DD5EED9AE9D6C45AACD300B6 /* [CP] Check Pods Manifest.lock */,
+				13EC34BE273A754D00B711A5 /* Sources */,
+				13EC34BF273A754D00B711A5 /* Frameworks */,
+				13EC34C0273A754D00B711A5 /* Resources */,
+				13138DF7273ADD7C0074DB67 /* Embed Frameworks */,
+				B138EC09595BA30C8693C28E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CrossDK-demo Objective-C";
+			productName = "CrossDK-demo Objective-C";
+			productReference = 13EC34C2273A754D00B711A5 /* CrossDK-demo Objective-C.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13EC34BA273A754D00B711A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					13EC34C1273A754D00B711A5 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 13EC34BD273A754D00B711A5 /* Build configuration list for PBXProject "CrossDK-demo Objective-C" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 13EC34B9273A754D00B711A5;
+			productRefGroup = 13EC34C3273A754D00B711A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13EC34C1273A754D00B711A5 /* CrossDK-demo Objective-C */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13EC34C0273A754D00B711A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EC34D5273A754F00B711A5 /* LaunchScreen.storyboard in Resources */,
+				13EC34D2273A754F00B711A5 /* Assets.xcassets in Resources */,
+				13EC34D0273A754D00B711A5 /* CrossDKView.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B138EC09595BA30C8693C28E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrossDK-demo Objective-C/Pods-CrossDK-demo Objective-C-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrossDK-demo Objective-C/Pods-CrossDK-demo Objective-C-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CrossDK-demo Objective-C/Pods-CrossDK-demo Objective-C-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD5EED9AE9D6C45AACD300B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrossDK-demo Objective-C-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13EC34BE273A754D00B711A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EC34CD273A754D00B711A5 /* CrossDKViewController.m in Sources */,
+				13EC34C7273A754D00B711A5 /* AppDelegate.m in Sources */,
+				13EC34D8273A754F00B711A5 /* main.m in Sources */,
+				13EC34CA273A754D00B711A5 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		13EC34CE273A754D00B711A5 /* CrossDKView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13EC34CF273A754D00B711A5 /* Base */,
+			);
+			name = CrossDKView.storyboard;
+			sourceTree = "<group>";
+		};
+		13EC34D3273A754F00B711A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13EC34D4273A754F00B711A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13EC34D9273A754F00B711A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		13EC34DA273A754F00B711A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13EC34DC273A754F00B711A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A2607FF47A692BA96A85D81 /* Pods-CrossDK-demo Objective-C.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CrossDK-demo Objective-C/Resources/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = CrossDKView;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adikteev.crossdk.CrossDK-demo-Objective-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13EC34DD273A754F00B711A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A22A2B7DB5E6BE26A0EC54F4 /* Pods-CrossDK-demo Objective-C.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CrossDK-demo Objective-C/Resources/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = CrossDKView;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adikteev.crossdk.CrossDK-demo-Objective-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13EC34BD273A754D00B711A5 /* Build configuration list for PBXProject "CrossDK-demo Objective-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13EC34D9273A754F00B711A5 /* Debug */,
+				13EC34DA273A754F00B711A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13EC34DB273A754F00B711A5 /* Build configuration list for PBXNativeTarget "CrossDK-demo Objective-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13EC34DC273A754F00B711A5 /* Debug */,
+				13EC34DD273A754F00B711A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13EC34BA273A754D00B711A5 /* Project object */;
+}

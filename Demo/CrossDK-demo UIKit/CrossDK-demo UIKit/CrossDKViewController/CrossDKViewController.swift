@@ -13,28 +13,19 @@ class CrossDKViewController: UIViewController {
     // MARK: - Outlets
 
     @IBOutlet private var bottomOverlayButton: UIButton!
-    @IBOutlet private var bottomRaisedOverlayButton: UIButton!
-    @IBOutlet private var closeOverlayButton: UIButton!
-    @IBOutlet private var tapBarView: UIVisualEffectView!
-    @IBOutlet private var childTapBarView: UIVisualEffectView!
 
     // MARK: - Private properties
 
     private let crossDKOverlay = CrossDKOverlay()
     private let systemVersion = UIDevice.current.systemVersion
 
-    // MARK: - Private Enums
-
-    private enum Constants {
-        static let cornerRadiusButton: CGFloat = 18.0
-    }
-
     // MARK: - Override Funcs
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+        crossDKOverlay.delegate = self
+        bottomOverlayButton.layer.cornerRadius = 18.0
     }
 }
 
@@ -45,71 +36,59 @@ private extension CrossDKViewController {
     @IBAction func bottomOverlayButtonPressed(_ sender: Any) {
         guard let window = view.window else { return }
 
-        crossDKOverlay.display(window: window, position: .bottom)
-        tapBarView.isHidden = true
-        childTapBarView.isHidden = true
-        closeOverlayButton.isHidden = false
-    }
-
-    /// Bottom raised overlay button clicked.
-    @IBAction func bottomRaisedOverlayButtonPressed(_ sender: Any) {
-        guard let window = view.window else { return }
-
-        crossDKOverlay.display(window: window, position: .bottomRaised)
-        tapBarView.isHidden = false
-        childTapBarView.isHidden = false
-        closeOverlayButton.isHidden = false
-    }
-
-    /// Close overlay button clicked.
-    @IBAction func closeOverlayButtonPressed(_ sender: Any) {
-        guard let window = view.window else { return }
-
-        crossDKOverlay.dismiss(window: window)
-    }
-}
-
-// MARK: - Private Funcs
-
-private extension CrossDKViewController {
-    /// Setups the UI.
-    func setupUI() {
-        crossDKOverlay.delegate = self
-        bottomOverlayButton.layer.cornerRadius = Constants.cornerRadiusButton
-        bottomRaisedOverlayButton.layer.cornerRadius = Constants.cornerRadiusButton
-        bottomOverlayButton.dropShadow()
-        bottomRaisedOverlayButton.dropShadow()
-        closeOverlayButton.isHidden = true
-        tapBarView.isHidden = true
-        childTapBarView.isHidden = true
+        crossDKOverlay.display(window: window, position: .bottom, withCloseButton: true)
     }
 }
 
 extension CrossDKViewController: CrossDKOverlayDelegate {
-    func storeOverlayWillStartPresentation() {
+    func overlayWillStartPresentation() {
         NSLog("Overlay will start presentation")
     }
 
-    func storeOverlayDidFinishPresentation() {
+    func overlayDidFinishPresentation() {
         NSLog("Overlay did finish presentation")
     }
 
-    func storeOverlayWillStartDismissal() {
+    func overlayWillStartDismissal() {
         NSLog("Overlay will start dismissal")
     }
 
-    func storeOverlayDidFinishDismissal() {
+    func overlayDidFinishDismissal() {
         NSLog("Overlay did finish dismissal")
-        closeOverlayButton.isHidden = true
     }
 
-    func storeOverlayDidFailToLoad(error: Error) {
-        NSLog("Overlay did fail to load")
+    func overlayStartsPlayingVideo() {
+        NSLog("Overlay starts playing video")
+    }
+
+    func overlayPlayedHalfVideo() {
+        NSLog("Overlay played half video")
+    }
+
+    func overlayDidFinishPlayingVideo() {
+        NSLog("Overlay did finish playing video")
+    }
+
+    func overlayShowsRecommendedAppInAppStore() {
+        NSLog("Overlay shows recommended app in App Store")
+    }
+
+    func overlayDidFailToLoad(error: Error) {
+        NSLog("Overlay did fail to load with error: \(error)")
     }
 
     func overlayUnavailable(error: CrossDKOverlay.OverlayError) {
-        if error == .unsupportedOSVersion {
-            NSLog("iOS 14 is required to run CrossDK. Current iOS version is : \(systemVersion)")
+        switch error {
+        case .unsupportedOSVersion:
+            NSLog("iOS 14 is required to run CrossDK. Current iOS version is: \(systemVersion)")
+        case .unavailableWindowScene:
+            NSLog("Unavailable WindowScene")
+        case .unavailableRecommendation:
+            NSLog("Unavailable Recommendation")
+        case .noConfiguration:
+            NSLog("No configuration WindowScene")
+        @unknown default:
+            NSLog("Overlay unavailable")
         }
     }
 }

@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13AEFD2A270C568F000729ED /* CrossDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AEFD28270C53EE000729ED /* CrossDK.xcframework */; };
-		13AEFD2B270C568F000729ED /* CrossDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13AEFD28270C53EE000729ED /* CrossDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D2A9D19F1641A375B6ACBDB /* Pods_CrossDK_demo_UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2931655EA9AD55D9351321EE /* Pods_CrossDK_demo_UIKit.framework */; };
 		FBE7C5C126F0E61400E4564E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5C026F0E61400E4564E /* AppDelegate.swift */; };
 		FBE7C5C326F0E61400E4564E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5C226F0E61400E4564E /* SceneDelegate.swift */; };
 		FBE7C5CA26F0E61600E4564E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE7C5C926F0E61600E4564E /* Assets.xcassets */; };
 		FBE7C5CD26F0E61600E4564E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE7C5CB26F0E61600E4564E /* LaunchScreen.storyboard */; };
-		FBE7C5D726F0E7EF00E4564E /* CrossDKViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE7C5D626F0E7EF00E4564E /* CrossDKViewController.storyboard */; };
+		FBE7C5D726F0E7EF00E4564E /* CrossDKView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE7C5D626F0E7EF00E4564E /* CrossDKView.storyboard */; };
 		FBE7C5D926F0E7FB00E4564E /* CrossDKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5D826F0E7FB00E4564E /* CrossDKViewController.swift */; };
-		FBE7C5DB26F0E86F00E4564E /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5DA26F0E86F00E4564E /* UIView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				13AEFD2B270C568F000729ED /* CrossDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,16 +30,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		13AEFD28270C53EE000729ED /* CrossDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CrossDK.xcframework; sourceTree = "<group>"; };
+		2931655EA9AD55D9351321EE /* Pods_CrossDK_demo_UIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrossDK_demo_UIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5620CFCB92DE74797440D46A /* Pods-CrossDK-demo UIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossDK-demo UIKit.debug.xcconfig"; path = "Target Support Files/Pods-CrossDK-demo UIKit/Pods-CrossDK-demo UIKit.debug.xcconfig"; sourceTree = "<group>"; };
+		7C0B35B52C905A3296D5A78F /* Pods-CrossDK-demo UIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossDK-demo UIKit.release.xcconfig"; path = "Target Support Files/Pods-CrossDK-demo UIKit/Pods-CrossDK-demo UIKit.release.xcconfig"; sourceTree = "<group>"; };
 		FBE7C5BD26F0E61400E4564E /* CrossDK-demo UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossDK-demo UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE7C5C026F0E61400E4564E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBE7C5C226F0E61400E4564E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FBE7C5C926F0E61600E4564E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBE7C5CC26F0E61600E4564E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBE7C5CE26F0E61600E4564E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FBE7C5D626F0E7EF00E4564E /* CrossDKViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CrossDKViewController.storyboard; sourceTree = "<group>"; };
+		FBE7C5D626F0E7EF00E4564E /* CrossDKView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CrossDKView.storyboard; sourceTree = "<group>"; };
 		FBE7C5D826F0E7FB00E4564E /* CrossDKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDKViewController.swift; sourceTree = "<group>"; };
-		FBE7C5DA26F0E86F00E4564E /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13AEFD2A270C568F000729ED /* CrossDK.xcframework in Frameworks */,
+				8D2A9D19F1641A375B6ACBDB /* Pods_CrossDK_demo_UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +58,8 @@
 		13C7FDCA273526C70022EA52 /* CrossDKViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FBE7C5D626F0E7EF00E4564E /* CrossDKView.storyboard */,
 				FBE7C5D826F0E7FB00E4564E /* CrossDKViewController.swift */,
-				FBE7C5D626F0E7EF00E4564E /* CrossDKViewController.storyboard */,
 			);
 			path = CrossDKViewController;
 			sourceTree = "<group>";
@@ -70,11 +68,27 @@
 			isa = PBXGroup;
 			children = (
 				FBE7C5CB26F0E61600E4564E /* LaunchScreen.storyboard */,
-				13AEFD28270C53EE000729ED /* CrossDK.xcframework */,
 				FBE7C5C926F0E61600E4564E /* Assets.xcassets */,
 				FBE7C5CE26F0E61600E4564E /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C5DBA95ED08C18C23680B94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2931655EA9AD55D9351321EE /* Pods_CrossDK_demo_UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		934708A22A35E87E87E313E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5620CFCB92DE74797440D46A /* Pods-CrossDK-demo UIKit.debug.xcconfig */,
+				7C0B35B52C905A3296D5A78F /* Pods-CrossDK-demo UIKit.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		FBE7C5B426F0E61400E4564E = {
@@ -82,6 +96,8 @@
 			children = (
 				FBE7C5BF26F0E61400E4564E /* CrossDK-demo UIKit */,
 				FBE7C5BE26F0E61400E4564E /* Products */,
+				934708A22A35E87E87E313E8 /* Pods */,
+				4C5DBA95ED08C18C23680B94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,18 +115,9 @@
 				FBE7C5C026F0E61400E4564E /* AppDelegate.swift */,
 				FBE7C5C226F0E61400E4564E /* SceneDelegate.swift */,
 				13C7FDCA273526C70022EA52 /* CrossDKViewController */,
-				FBE7C5DC26F0E87600E4564E /* Extensions */,
 				13C7FDCB273526FB0022EA52 /* Resources */,
 			);
 			path = "CrossDK-demo UIKit";
-			sourceTree = "<group>";
-		};
-		FBE7C5DC26F0E87600E4564E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				FBE7C5DA26F0E86F00E4564E /* UIView+Utils.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,10 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBE7C5D126F0E61600E4564E /* Build configuration list for PBXNativeTarget "CrossDK-demo UIKit" */;
 			buildPhases = (
+				89F6C443D6179D5A03D6110D /* [CP] Check Pods Manifest.lock */,
 				FBE7C5B926F0E61400E4564E /* Sources */,
 				FBE7C5BA26F0E61400E4564E /* Frameworks */,
 				FBE7C5BB26F0E61400E4564E /* Resources */,
 				13AEFD2C270C568F000729ED /* Embed Frameworks */,
+				E13F4F196D0E48A7CED18725 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,11 +183,53 @@
 			files = (
 				FBE7C5CD26F0E61600E4564E /* LaunchScreen.storyboard in Resources */,
 				FBE7C5CA26F0E61600E4564E /* Assets.xcassets in Resources */,
-				FBE7C5D726F0E7EF00E4564E /* CrossDKViewController.storyboard in Resources */,
+				FBE7C5D726F0E7EF00E4564E /* CrossDKView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89F6C443D6179D5A03D6110D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrossDK-demo UIKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E13F4F196D0E48A7CED18725 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrossDK-demo UIKit/Pods-CrossDK-demo UIKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrossDK-demo UIKit/Pods-CrossDK-demo UIKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CrossDK-demo UIKit/Pods-CrossDK-demo UIKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FBE7C5B926F0E61400E4564E /* Sources */ = {
@@ -188,7 +239,6 @@
 				FBE7C5C126F0E61400E4564E /* AppDelegate.swift in Sources */,
 				FBE7C5D926F0E7FB00E4564E /* CrossDKViewController.swift in Sources */,
 				FBE7C5C326F0E61400E4564E /* SceneDelegate.swift in Sources */,
-				FBE7C5DB26F0E86F00E4564E /* UIView+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +374,7 @@
 		};
 		FBE7C5D226F0E61600E4564E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5620CFCB92DE74797440D46A /* Pods-CrossDK-demo UIKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -354,6 +405,7 @@
 		};
 		FBE7C5D326F0E61600E4564E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C0B35B52C905A3296D5A78F /* Pods-CrossDK-demo UIKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

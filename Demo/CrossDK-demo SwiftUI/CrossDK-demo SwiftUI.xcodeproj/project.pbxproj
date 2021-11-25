@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		131FA7CA273412630048B9EF /* CrossDKOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FA7C9273412630048B9EF /* CrossDKOverlayViewController.swift */; };
+		13774A092732E862009243CC /* SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13774A082732E862009243CC /* SwiftUIApp.swift */; };
+		13774A0B2732E862009243CC /* SKOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13774A0A2732E862009243CC /* SKOverlayView.swift */; };
+		13774A0D2732E865009243CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13774A0C2732E865009243CC /* Assets.xcassets */; };
+		13774A102732E865009243CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13774A0F2732E865009243CC /* Preview Assets.xcassets */; };
+		13A7F2A127351FCD00451626 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A7F2A027351FCD00451626 /* AppDelegate.swift */; };
+		5A3FEDF8429730602416960C /* Pods_CrossDK_demo_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DE94883DA5A240A5E0C8C3 /* Pods_CrossDK_demo_SwiftUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		135D3EE727469EC300DB0B43 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		131FA7C9273412630048B9EF /* CrossDKOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossDKOverlayViewController.swift; sourceTree = "<group>"; };
+		13774A052732E862009243CC /* CrossDK-demo SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossDK-demo SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13774A082732E862009243CC /* SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIApp.swift; sourceTree = "<group>"; };
+		13774A0A2732E862009243CC /* SKOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKOverlayView.swift; sourceTree = "<group>"; };
+		13774A0C2732E865009243CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13774A0F2732E865009243CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		13A7F2A027351FCD00451626 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		68475AC2F5C800850E8D9829 /* Pods-CrossDK-demo SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossDK-demo SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-CrossDK-demo SwiftUI/Pods-CrossDK-demo SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		73DE94883DA5A240A5E0C8C3 /* Pods_CrossDK_demo_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrossDK_demo_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83653274A750336CDC5E3782 /* Pods-CrossDK-demo SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossDK-demo SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-CrossDK-demo SwiftUI/Pods-CrossDK-demo SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13774A022732E862009243CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3FEDF8429730602416960C /* Pods_CrossDK_demo_SwiftUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		137749FC2732E862009243CC = {
+			isa = PBXGroup;
+			children = (
+				13774A072732E862009243CC /* CrossDK-demo SwiftUI */,
+				13774A062732E862009243CC /* Products */,
+				3A3B0417CCFC93A60D7CBFB0 /* Pods */,
+				7C0178B9CD7B83D08D08213F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		13774A062732E862009243CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13774A052732E862009243CC /* CrossDK-demo SwiftUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13774A072732E862009243CC /* CrossDK-demo SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				13C7FDD227352D1D0022EA52 /* SwiftUI */,
+				13C7FDD127352D160022EA52 /* UIKit */,
+				13C7FDCE27352C490022EA52 /* Resources */,
+			);
+			path = "CrossDK-demo SwiftUI";
+			sourceTree = "<group>";
+		};
+		13774A0E2732E865009243CC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				13774A0F2732E865009243CC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		13C7FDCE27352C490022EA52 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13774A0C2732E865009243CC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		13C7FDD127352D160022EA52 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				13A7F2A027351FCD00451626 /* AppDelegate.swift */,
+				131FA7C9273412630048B9EF /* CrossDKOverlayViewController.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		13C7FDD227352D1D0022EA52 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				13774A082732E862009243CC /* SwiftUIApp.swift */,
+				13774A0A2732E862009243CC /* SKOverlayView.swift */,
+				13774A0E2732E865009243CC /* Preview Content */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		3A3B0417CCFC93A60D7CBFB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83653274A750336CDC5E3782 /* Pods-CrossDK-demo SwiftUI.debug.xcconfig */,
+				68475AC2F5C800850E8D9829 /* Pods-CrossDK-demo SwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7C0178B9CD7B83D08D08213F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73DE94883DA5A240A5E0C8C3 /* Pods_CrossDK_demo_SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13774A042732E862009243CC /* CrossDK-demo SwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13774A132732E865009243CC /* Build configuration list for PBXNativeTarget "CrossDK-demo SwiftUI" */;
+			buildPhases = (
+				8AA101C20E2E724EDE75086C /* [CP] Check Pods Manifest.lock */,
+				13774A012732E862009243CC /* Sources */,
+				13774A022732E862009243CC /* Frameworks */,
+				13774A032732E862009243CC /* Resources */,
+				135D3EE727469EC300DB0B43 /* Embed Frameworks */,
+				7892F073214B03A2524ACE0C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CrossDK-demo SwiftUI";
+			productName = "CrossDK Demo SwiftUI";
+			productReference = 13774A052732E862009243CC /* CrossDK-demo SwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		137749FD2732E862009243CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					13774A042732E862009243CC = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 13774A002732E862009243CC /* Build configuration list for PBXProject "CrossDK-demo SwiftUI" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 137749FC2732E862009243CC;
+			productRefGroup = 13774A062732E862009243CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13774A042732E862009243CC /* CrossDK-demo SwiftUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13774A032732E862009243CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13774A102732E865009243CC /* Preview Assets.xcassets in Resources */,
+				13774A0D2732E865009243CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7892F073214B03A2524ACE0C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrossDK-demo SwiftUI/Pods-CrossDK-demo SwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrossDK-demo SwiftUI/Pods-CrossDK-demo SwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CrossDK-demo SwiftUI/Pods-CrossDK-demo SwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AA101C20E2E724EDE75086C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrossDK-demo SwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13774A012732E862009243CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13774A0B2732E862009243CC /* SKOverlayView.swift in Sources */,
+				131FA7CA273412630048B9EF /* CrossDKOverlayViewController.swift in Sources */,
+				13A7F2A127351FCD00451626 /* AppDelegate.swift in Sources */,
+				13774A092732E862009243CC /* SwiftUIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		13774A112732E865009243CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13774A122732E865009243CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13774A142732E865009243CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83653274A750336CDC5E3782 /* Pods-CrossDK-demo SwiftUI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CrossDK-demo SwiftUI/SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adikteev.crossdk.CrossDK-Demo-SwiftUI";
+				PRODUCT_NAME = "CrossDK-demo SwiftUI";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13774A152732E865009243CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68475AC2F5C800850E8D9829 /* Pods-CrossDK-demo SwiftUI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CrossDK-demo SwiftUI/SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adikteev.crossdk.CrossDK-Demo-SwiftUI";
+				PRODUCT_NAME = "CrossDK-demo SwiftUI";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13774A002732E862009243CC /* Build configuration list for PBXProject "CrossDK-demo SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13774A112732E865009243CC /* Debug */,
+				13774A122732E865009243CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13774A132732E865009243CC /* Build configuration list for PBXNativeTarget "CrossDK-demo SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13774A142732E865009243CC /* Debug */,
+				13774A152732E865009243CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 137749FD2732E862009243CC /* Project object */;
+}
