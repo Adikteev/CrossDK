@@ -126,7 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ### Overlay Usage
 
-All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`. You can choose the overlay type between `.banner` or `.mid_size`, its position between `.bottom` or `.bottomRaised` and decide to display it with or without a close button.
+All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`. You can choose the overlay format between `.banner` or `.mid_size`, its position between `.bottom` or `.bottomRaised` and decide to display it with or without a close button.
 
 ```swift
 import CrossDK
@@ -137,7 +137,7 @@ final class SomeViewController: UIViewController {
     private func displayOverlay() {
         guard let window = view.window else { return }
 
-        crossDKOverlay.display(window: window, type: .mid_size, position: .bottom, withCloseButton: true)
+        crossDKOverlay.display(window: window, format: .mid_size, position: .bottom, withCloseButton: true)
     }
 }
 ```
@@ -230,7 +230,7 @@ struct SwiftUIApp: App {
 
 ### Overlay Usage
 
-All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`. You can choose the overlay type between `.banner` or `.mid_size`, its position between `.bottom` or `.bottomRaised` and decide to display it with or without a close button.
+All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`. You can choose the overlay format between `.banner` or `.mid_size`, its position between `.bottom` or `.bottomRaised` and decide to display it with or without a close button.
 
 Let’s create a `UIViewController` subclass named SomeViewController and add some methods to :  
 - display an Overlay (to call in the `viewDidAppear`)  
@@ -245,7 +245,7 @@ final class SomeViewController: UIViewController {
     private func displayOverlay() {
         guard let window = view.window else { return }
 
-        crossDKOverlay.display(window: window, type: .mid_size, position: .bottom, withCloseButton: true)
+        crossDKOverlay.display(window: window, format: .mid_size, position: .bottom, withCloseButton: true)
     }
     
     private func dismissCrossDKViewController() {
@@ -384,7 +384,7 @@ You should `#import "CrossDK/CrossDK-Swift.h"` to use CrossDK.
 
 #### ViewController.m :
 
-All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`. You can choose the overlay type between `.banner` or `.mid_size`, its position between `.bottom` or `.bottomRaised` and decide to display it with or without a close button.
+All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`. You can choose the overlay format between `.banner` or `.mid_size`, its position between `.bottom` or `.bottomRaised` and decide to display it with or without a close button.
 
 ```swift
 @interface CrossDKViewController ()
@@ -394,7 +394,7 @@ All you need to do in order to display an overlay is to retrieve your `UIWindow`
 - (void)displayOverlay {
     UIWindow* window = self.view.window;
     if (window != nil) {
-        [_crossDKOverlay displayWithWindow:window type:OverlayTypeMid_size position:OverlayPositionBottom withCloseButton:true];
+        [_crossDKOverlay displayWithWindow:window format:OverlayFormatMid_size position:OverlayPositionBottom withCloseButton:true];
     }
 }
 
