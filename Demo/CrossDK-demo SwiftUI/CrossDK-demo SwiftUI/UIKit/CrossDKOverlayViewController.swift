@@ -34,7 +34,7 @@ extension CrossDKOverlayViewController {
     private func displayOverlay() {
         guard let window = view.window else { return }
 
-        crossDKOverlay.display(window: window, position: .bottom, withCloseButton: true)
+        crossDKOverlay.display(window: window, format: .mid_size, position: .bottom, withCloseButton: true)
     }
 
     /// Dismisses the CrossDKViewController.

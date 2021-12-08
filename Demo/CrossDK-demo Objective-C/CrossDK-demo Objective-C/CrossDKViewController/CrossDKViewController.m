@@ -40,7 +40,7 @@
 - (void)displayOverlay {
     UIWindow* window = self.view.window;
     if (window != nil) {
-        [_crossDKOverlay displayWithWindow:window position:OverlayPositionBottom withCloseButton:true];
+        [_crossDKOverlay displayWithWindow:window format:OverlayFormatMid_size position:OverlayPositionBottom withCloseButton:true];
     }
 }
 
