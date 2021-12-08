@@ -3,6 +3,12 @@
 
 # Q421
 
+## Sprint 5
+
+### Features
+
+* ARP-2510 : Add an ad type parameter in the SDK integration
+
 
 ## Sprint 4
 

@@ -235,6 +235,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 
 @protocol CrossDKOverlayDelegate;
 @class UIWindow;
+enum OverlayFormat : NSInteger;
 enum OverlayPosition : NSInteger;
 
 /// Handles CrossDK’s overlays display.
@@ -245,11 +246,13 @@ SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 /// Displays an Overlay view.
 /// \param window current window
 ///
+/// \param format overlay format
+///
 /// \param position overlay position
 ///
 /// \param withCloseButton show / hide a close overlay button
 ///
-- (void)displayWithWindow:(UIWindow * _Nonnull)window position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton;
+- (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton;
 /// Dismisses an Overlay view.
 /// \param window current window
 ///
@@ -262,6 +265,13 @@ typedef SWIFT_ENUM(NSInteger, OverlayPosition, open) {
   OverlayPositionBottom = 0,
 /// Specifies that the overlay is at a raised position at the bottom of the screen.
   OverlayPositionBottomRaised = 1,
+};
+
+/// Identifies the format of an overlay on the screen.
+typedef SWIFT_ENUM(NSInteger, OverlayFormat, open) {
+/// Prensents the overlay in small format size.
+  OverlayFormatBanner = 0,
+  OverlayFormatMid_size = 1,
 };
 
 /// Describes a specific error from <code>CrossDKOverlay</code>.
@@ -590,6 +600,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 
 @protocol CrossDKOverlayDelegate;
 @class UIWindow;
+enum OverlayFormat : NSInteger;
 enum OverlayPosition : NSInteger;
 
 /// Handles CrossDK’s overlays display.
@@ -600,11 +611,13 @@ SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 /// Displays an Overlay view.
 /// \param window current window
 ///
+/// \param format overlay format
+///
 /// \param position overlay position
 ///
 /// \param withCloseButton show / hide a close overlay button
 ///
-- (void)displayWithWindow:(UIWindow * _Nonnull)window position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton;
+- (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton;
 /// Dismisses an Overlay view.
 /// \param window current window
 ///
@@ -617,6 +630,13 @@ typedef SWIFT_ENUM(NSInteger, OverlayPosition, open) {
   OverlayPositionBottom = 0,
 /// Specifies that the overlay is at a raised position at the bottom of the screen.
   OverlayPositionBottomRaised = 1,
+};
+
+/// Identifies the format of an overlay on the screen.
+typedef SWIFT_ENUM(NSInteger, OverlayFormat, open) {
+/// Prensents the overlay in small format size.
+  OverlayFormatBanner = 0,
+  OverlayFormatMid_size = 1,
 };
 
 /// Describes a specific error from <code>CrossDKOverlay</code>.
