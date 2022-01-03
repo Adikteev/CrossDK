@@ -243,20 +243,11 @@ SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 @interface CrossDKOverlay : NSObject
 @property (nonatomic, weak) id <CrossDKOverlayDelegate> _Nullable delegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// Displays an Overlay view.
-/// \param window current window
-///
-/// \param format overlay format
-///
-/// \param position overlay position
-///
-/// \param withCloseButton show / hide a close overlay button
-///
 - (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton;
 /// Dismisses an Overlay view.
 /// \param window current window
 ///
-- (void)dismiss;
+- (void)dismissWithWindow:(UIWindow * _Nonnull)window;
 @end
 
 /// Identifies the position of an overlay on the screen.
@@ -608,20 +599,11 @@ SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 @interface CrossDKOverlay : NSObject
 @property (nonatomic, weak) id <CrossDKOverlayDelegate> _Nullable delegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// Displays an Overlay view.
-/// \param window current window
-///
-/// \param format overlay format
-///
-/// \param position overlay position
-///
-/// \param withCloseButton show / hide a close overlay button
-///
 - (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton;
 /// Dismisses an Overlay view.
 /// \param window current window
 ///
-- (void)dismiss;
+- (void)dismissWithWindow:(UIWindow * _Nonnull)window;
 @end
 
 /// Identifies the position of an overlay on the screen.
@@ -973,20 +955,11 @@ SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 @interface CrossDKOverlay : NSObject
 @property (nonatomic, weak) id <CrossDKOverlayDelegate> _Nullable delegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// Displays an Overlay view.
-/// \param window current window
-///
-/// \param format overlay format
-///
-/// \param position overlay position
-///
-/// \param withCloseButton show / hide a close overlay button
-///
 - (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton;
 /// Dismisses an Overlay view.
 /// \param window current window
 ///
-- (void)dismiss;
+- (void)dismissWithWindow:(UIWindow * _Nonnull)window;
 @end
 
 /// Identifies the position of an overlay on the screen.

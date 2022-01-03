@@ -52,7 +52,7 @@ import _Concurrency
   }
   @objc override dynamic public init()
   @objc public func display(window: UIKit.UIWindow, format: CrossDK.CrossDKOverlay.OverlayFormat, position: CrossDK.CrossDKOverlay.OverlayPosition, withCloseButton: Swift.Bool)
-  @objc public func dismiss()
+  @objc public func dismiss(window: UIKit.UIWindow)
   @objc deinit
 }
 @available(iOS 14.0, *)
