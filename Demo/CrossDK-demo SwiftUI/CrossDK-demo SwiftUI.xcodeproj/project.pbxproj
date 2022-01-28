@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		131FA7CA273412630048B9EF /* CrossDKOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FA7C9273412630048B9EF /* CrossDKOverlayViewController.swift */; };
+		13102B2D27A3FF1700C8C815 /* MidSizeOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13102B2C27A3FF1700C8C815 /* MidSizeOverlayViewController.swift */; };
+		13102B2F27A3FF8F00C8C815 /* InterstitialOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13102B2E27A3FF8F00C8C815 /* InterstitialOverlayViewController.swift */; };
+		131FA7CA273412630048B9EF /* BannerOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FA7C9273412630048B9EF /* BannerOverlayViewController.swift */; };
 		13774A092732E862009243CC /* SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13774A082732E862009243CC /* SwiftUIApp.swift */; };
 		13774A0B2732E862009243CC /* SKOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13774A0A2732E862009243CC /* SKOverlayView.swift */; };
 		13774A0D2732E865009243CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13774A0C2732E865009243CC /* Assets.xcassets */; };
@@ -30,7 +32,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		131FA7C9273412630048B9EF /* CrossDKOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossDKOverlayViewController.swift; sourceTree = "<group>"; };
+		13102B2C27A3FF1700C8C815 /* MidSizeOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidSizeOverlayViewController.swift; sourceTree = "<group>"; };
+		13102B2E27A3FF8F00C8C815 /* InterstitialOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialOverlayViewController.swift; sourceTree = "<group>"; };
+		131FA7C9273412630048B9EF /* BannerOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerOverlayViewController.swift; sourceTree = "<group>"; };
 		13774A052732E862009243CC /* CrossDK-demo SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossDK-demo SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13774A082732E862009243CC /* SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIApp.swift; sourceTree = "<group>"; };
 		13774A0A2732E862009243CC /* SKOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKOverlayView.swift; sourceTree = "<group>"; };
@@ -102,7 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				13A7F2A027351FCD00451626 /* AppDelegate.swift */,
-				131FA7C9273412630048B9EF /* CrossDKOverlayViewController.swift */,
+				131FA7C9273412630048B9EF /* BannerOverlayViewController.swift */,
+				13102B2C27A3FF1700C8C815 /* MidSizeOverlayViewController.swift */,
+				13102B2E27A3FF8F00C8C815 /* InterstitialOverlayViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -250,9 +256,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13774A0B2732E862009243CC /* SKOverlayView.swift in Sources */,
-				131FA7CA273412630048B9EF /* CrossDKOverlayViewController.swift in Sources */,
+				131FA7CA273412630048B9EF /* BannerOverlayViewController.swift in Sources */,
 				13A7F2A127351FCD00451626 /* AppDelegate.swift in Sources */,
 				13774A092732E862009243CC /* SwiftUIApp.swift in Sources */,
+				13102B2D27A3FF1700C8C815 /* MidSizeOverlayViewController.swift in Sources */,
+				13102B2F27A3FF8F00C8C815 /* InterstitialOverlayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CrossDK-demo SwiftUI/SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YDX93A7ASS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -416,7 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CrossDK-demo SwiftUI/SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YDX93A7ASS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

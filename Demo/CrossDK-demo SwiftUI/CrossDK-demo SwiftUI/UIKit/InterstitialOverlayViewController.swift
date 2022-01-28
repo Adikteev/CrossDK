@@ -1,15 +1,14 @@
 //
-//  CrossDKOverlayViewController.swift
+//  InterstitialOverlayViewController.swift
 //  CrossDK-demo SwiftUI
 //
-//  Created by Adikteev on 03/11/2021.
+//  Created by Steven VAILLE on 28/01/2022.
 //
-//  NOTE : To use this app, configure the CrossDK in AppDelegate.swift and run it on a real device.
 
 import UIKit
 import CrossDK
 
-class CrossDKOverlayViewController: UIViewController {
+class InterstitialOverlayViewController: UIViewController {
 
     // MARK: - Private properties
 
@@ -20,7 +19,7 @@ class CrossDKOverlayViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         displayOverlay()
         crossDKOverlay.delegate = self
     }
@@ -28,17 +27,17 @@ class CrossDKOverlayViewController: UIViewController {
 
 // MARK: - Private Funcs
 
-extension CrossDKOverlayViewController {
+extension InterstitialOverlayViewController {
 
     /// Displays an Overlay.
     private func displayOverlay() {
         guard let window = view.window else { return }
 
-        crossDKOverlay.display(window: window, format: .mid_size, position: .bottom, withCloseButton: true)
+        crossDKOverlay.display(window: window, format: .interstitial, position: .bottom, withCloseButton: true)
     }
 
-    /// Dismisses the CrossDKViewController.
-    private func dismissCrossDKViewController() {
+    /// Dismisses the InterstitialOverlayViewController.
+    private func dismissInterstitialOverlayViewController() {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
@@ -46,7 +45,7 @@ extension CrossDKOverlayViewController {
 
 // MARK: - CrossDKOverlayDelegate
 
-extension CrossDKOverlayViewController: CrossDKOverlayDelegate {
+extension InterstitialOverlayViewController: CrossDKOverlayDelegate {
     func overlayWillStartPresentation() {
         NSLog("Overlay will start presentation")
     }
@@ -61,7 +60,7 @@ extension CrossDKOverlayViewController: CrossDKOverlayDelegate {
 
     func overlayDidFinishDismissal() {
         NSLog("Overlay did finish dismissal")
-        dismissCrossDKViewController()
+        dismissInterstitialOverlayViewController()
     }
 
     func overlayStartsPlayingVideo() {
@@ -99,3 +98,5 @@ extension CrossDKOverlayViewController: CrossDKOverlayDelegate {
         }
     }
 }
+
+
