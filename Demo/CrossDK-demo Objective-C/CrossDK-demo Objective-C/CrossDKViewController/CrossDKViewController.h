@@ -11,5 +11,5 @@
 
 @interface CrossDKViewController : UIViewController
 // MARK: - Outlets
-    @property (strong, nonatomic) IBOutlet UIButton *overlayButton;
+    @property (strong, nonatomic) IBOutletCollection (UIButton) NSArray *overlayButtons;
 @end
