@@ -16,19 +16,6 @@
 		FBE7C5D926F0E7FB00E4564E /* CrossDKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7C5D826F0E7FB00E4564E /* CrossDKViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		13AEFD2C270C568F000729ED /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		2931655EA9AD55D9351321EE /* Pods_CrossDK_demo_UIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrossDK_demo_UIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5620CFCB92DE74797440D46A /* Pods-CrossDK-demo UIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossDK-demo UIKit.debug.xcconfig"; path = "Target Support Files/Pods-CrossDK-demo UIKit/Pods-CrossDK-demo UIKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +118,6 @@
 				FBE7C5B926F0E61400E4564E /* Sources */,
 				FBE7C5BA26F0E61400E4564E /* Frameworks */,
 				FBE7C5BB26F0E61400E4564E /* Resources */,
-				13AEFD2C270C568F000729ED /* Embed Frameworks */,
 				8E04905F13B32C5E9F18C866 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -386,7 +372,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "CrossDK-demo UIKit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = CrossDKViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = CrossDKView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -417,7 +403,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "CrossDK-demo UIKit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = CrossDKViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = CrossDKView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
