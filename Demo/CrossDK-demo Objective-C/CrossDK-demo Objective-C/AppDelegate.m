@@ -14,7 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [CrossDKConfig.shared setupWithAppId:@"986110430" apiKey:@"1a8ea4c1b521ea099136507b55e6975c" userId:nil];
+    [CrossDKConfig.shared setupWithAppId:<#(NSString * _Nonnull)#> apiKey:<#(NSString * _Nonnull)#> userId:<#(NSString * _Nullable)#>];
     return YES;
 }
 

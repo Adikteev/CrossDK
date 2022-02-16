@@ -39,7 +39,6 @@ extension BannerOverlayViewController {
 
     /// Dismisses the BannerOverlayViewController.
     private func dismissBannerOverlayViewController() {
-        navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
 }

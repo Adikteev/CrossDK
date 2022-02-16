@@ -38,7 +38,6 @@ extension InterstitialOverlayViewController {
 
     /// Dismisses the InterstitialOverlayViewController.
     private func dismissInterstitialOverlayViewController() {
-        navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
 }

@@ -38,7 +38,6 @@ extension MidSizeOverlayViewController {
 
     /// Dismisses the MidSizeOverlayViewController.
     private func dismissMidSizeOverlayViewController() {
-        navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
 }
