@@ -13,9 +13,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        CrossDKConfig.shared.setup(appId: <#T##String#>,
-                                   apiKey: <#T##String#>,
-                                   userId: <#T##String?#>)
+        CrossDKConfig.shared.setup(appId: <#T##String#>, apiKey: <#T##String#>, userId: <#T##String?#>)
         return true
     }
 }

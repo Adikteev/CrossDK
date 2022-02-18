@@ -13,14 +13,6 @@
 
 @implementation CrossDKViewController
 
-// MARK: - viewWillAppear
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-
-    [self displayOverlay];
-}
-
 // MARK: - viewDidLoad
 
 - (void)viewDidLoad {
@@ -28,19 +20,32 @@
 
     _crossDKOverlay = [[CrossDKOverlay alloc] init];
     _crossDKOverlay.delegate = self;
-    _overlayButton.layer.cornerRadius = 18;
+    for (UIButton *overlayButton in self.overlayButtons) {
+        overlayButton.layer.cornerRadius = 18;
+    }
 }
 
-/// Overlay button clicked.
-- (IBAction)overlayButtonPressed:(UIButton *)sender {
-    [self displayOverlay];
+/// Banner overlay button clicked.
+- (IBAction)bannerOverlayButtonPressed:(UIButton *)sender {
+    UIWindow* window = self.view.window;
+    if (window != nil) {
+        [_crossDKOverlay displayWithWindow:window format:OverlayFormatBanner position:OverlayPositionBottom withCloseButton:true];
+    }
 }
 
-/// Displays an Overlay.
-- (void)displayOverlay {
+/// Mid size overlay button clicked.
+- (IBAction)midSizeOverlayButtonPressed:(UIButton *)sender {
     UIWindow* window = self.view.window;
     if (window != nil) {
         [_crossDKOverlay displayWithWindow:window format:OverlayFormatMid_size position:OverlayPositionBottom withCloseButton:true];
+    }
+}
+
+/// Interstitial overlay button clicked.
+- (IBAction)interstitialOverlayButtonPressed:(UIButton *)sender {
+    UIWindow* window = self.view.window;
+    if (window != nil) {
+        [_crossDKOverlay displayWithWindow:window format:OverlayFormatInterstitial position:OverlayPositionBottom withCloseButton:true];
     }
 }
 

@@ -1,21 +1,3 @@
-PODS:
-  - CrossDK (2.1.0)
-
-DEPENDENCIES:
-  - "CrossDK (from `git@github.com:Adikteev/crossdk-ios.git`)"
-
-EXTERNAL SOURCES:
-  CrossDK:
-    :git: "git@github.com:Adikteev/crossdk-ios.git"
-
-CHECKOUT OPTIONS:
-  CrossDK:
-    :commit: af7ab784472a9bd429bb72251df37194a6779b2f
-    :git: "git@github.com:Adikteev/crossdk-ios.git"
-
-SPEC CHECKSUMS:
-  CrossDK: 151d12b33f7b672d92cc146607b74b5291e7bbc2
-
-PODFILE CHECKSUM: 62ba9690b53274e0dfee0c501cf4b2723d76c8fd
+PODFILE CHECKSUM: ffcbdb95d89a1f47628b20fed0bca216255b8145
 
 COCOAPODS: 1.11.2

@@ -25,29 +25,78 @@ struct SKOverlayView: View {
         .padding(.top, 20)
         Spacer()
         ZStack {
-            OverlayButton()
+            BannerOverlayButton()
+            MidSizeOverlayButton()
+            InterstitialOverlayButton()
         }
         Spacer()
     }
 }
 
-// MARK: - OverlayButtonView
+// MARK: - BannerOverlayButton
 
-struct OverlayButton: View {
+struct BannerOverlayButton: View {
     /// Create a fullScreenCover and call the SwiftUICrossDKOverlayViewController and the ClearBackgroundView.
     /// To perform the overlay independently, please go to the bottom of this page or to the README file.
     @State private var isVCPresented = false
 
     internal var body: some View {
-        Button("Show UIKit Overlay") {
+        Button("Show banner overlay") {
             self.isVCPresented = true
+            print("banner")
+        }
+        .buttonStyle(ButtonShape())
+        .offset(x: 0, y: -66)
+        .fullScreenCover(isPresented: $isVCPresented) {
+            ZStack {
+                VStack {
+                    SwiftUIBannerOverlayViewController()
+                }
+            }
+            .background(ClearBackgroundView())
+        }
+    }
+}
+
+// MARK: - MidSizeOverlayButton
+
+struct MidSizeOverlayButton: View {
+    @State private var isVCPresented = false
+
+    internal var body: some View {
+        Button("Show mid size overlay") {
+            self.isVCPresented = true
+            print("mid size")
         }
         .buttonStyle(ButtonShape())
         .offset(x: 0, y: 0)
         .fullScreenCover(isPresented: $isVCPresented) {
             ZStack {
                 VStack {
-                    SwiftUICrossDKOverlayViewController()
+                    SwiftUIMidSizeOverlayViewController()
+                }
+            }
+            .background(ClearBackgroundView())
+        }
+    }
+}
+
+// MARK: - InterstitialOverlayButton
+
+struct InterstitialOverlayButton: View {
+    @State private var isVCPresented = false
+
+    internal var body: some View {
+        Button("Show interstitial overlay") {
+            self.isVCPresented = true
+            print("interstitial")
+        }
+        .buttonStyle(ButtonShape())
+        .offset(x: 0, y: +66)
+        .fullScreenCover(isPresented: $isVCPresented) {
+            ZStack {
+                VStack {
+                    SwiftUIInterstitialOverlayViewController()
                 }
             }
             .background(ClearBackgroundView())
@@ -83,15 +132,41 @@ struct ClearBackgroundView: UIViewRepresentable {
     func updateUIView(_ uiView: UIView, context: Context) {}
 }
 
-// MARK: - SwiftUICrossDKOverlayViewController
+// MARK: - SwiftUIBannerOverlayViewController
 
 /// Create a UIViewControllerRepresentable to call a UIViewController.
-struct SwiftUICrossDKOverlayViewController: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> CrossDKOverlayViewController {
-        return CrossDKOverlayViewController()
+struct SwiftUIBannerOverlayViewController: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> BannerOverlayViewController {
+        return BannerOverlayViewController()
     }
 
-    func updateUIViewController(_ uiViewController: CrossDKOverlayViewController, context: Context) {
+    func updateUIViewController(_ uiViewController: BannerOverlayViewController, context: Context) {
+
+    }
+}
+
+// MARK: - SwiftUIBannerOverlayViewController
+
+/// Create a UIViewControllerRepresentable to call a UIViewController.
+struct SwiftUIMidSizeOverlayViewController: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> MidSizeOverlayViewController {
+        return MidSizeOverlayViewController()
+    }
+
+    func updateUIViewController(_ uiViewController: MidSizeOverlayViewController, context: Context) {
+
+    }
+}
+
+// MARK: - SwiftUIInterstitialOverlayViewController
+
+/// Create a UIViewControllerRepresentable to call a UIViewController.
+struct SwiftUIInterstitialOverlayViewController: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> InterstitialOverlayViewController {
+        return InterstitialOverlayViewController()
+    }
+
+    func updateUIViewController(_ uiViewController: InterstitialOverlayViewController, context: Context) {
 
     }
 }
@@ -120,7 +195,7 @@ struct IndependantOverlayExample: View {
             .fullScreenCover(isPresented: $isVCPresented) {
                 ZStack {
                     VStack {
-                        SwiftUICrossDKOverlayViewController()
+                        SwiftUIBannerOverlayViewController()
                     }
                 }
                 .background(ClearBackgroundView())

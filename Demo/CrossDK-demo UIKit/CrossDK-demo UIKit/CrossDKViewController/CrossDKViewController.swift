@@ -12,7 +12,7 @@ class CrossDKViewController: UIViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet private var bottomOverlayButton: UIButton!
+    @IBOutlet private var overlayButtons: [UIButton]!
 
     // MARK: - Private properties
 
@@ -25,18 +25,27 @@ class CrossDKViewController: UIViewController {
         super.viewDidLoad()
         
         crossDKOverlay.delegate = self
-        bottomOverlayButton.layer.cornerRadius = 18.0
+        overlayButtons.forEach { $0.layer.cornerRadius = 18 }
     }
 }
 
 // MARK: - Private Actions
 
 private extension CrossDKViewController {
-    /// Bottom overlay button clicked.
-    @IBAction func bottomOverlayButtonPressed(_ sender: Any) {
+    /// Overlay button clicked.
+    @IBAction func overlayButtonPressed(_ sender: UIButton) {
         guard let window = view.window else { return }
 
-        crossDKOverlay.display(window: window, format: .mid_size, position: .bottom, withCloseButton: true)
+        switch sender {
+        case overlayButtons[0]:
+            crossDKOverlay.display(window: window, format: .banner, position: .bottom, withCloseButton: true)
+        case overlayButtons[1]:
+            crossDKOverlay.display(window: window, format: .mid_size, position: .bottom, withCloseButton: true)
+        case overlayButtons[2]:
+            crossDKOverlay.display(window: window, format: .interstitial, position: .bottom, withCloseButton: true)
+        default:
+            break
+        }
     }
 }
 

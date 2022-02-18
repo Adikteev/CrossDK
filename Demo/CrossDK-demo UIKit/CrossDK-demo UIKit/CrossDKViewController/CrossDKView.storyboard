@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sCI-8D-WMZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sCI-8D-WMZ">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--CrossDK View Controller-->
         <scene sceneID="yy2-jF-yuE">
             <objects>
-                <viewController storyboardIdentifier="CrossDKAPIAnswerViewController" id="sCI-8D-WMZ" customClass="CrossDKViewController" customModule="CrossDK_demo_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CrossDKViewController" id="sCI-8D-WMZ" customClass="CrossDKViewController" customModule="CrossDK_demo_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ya3-gE-SA0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,40 +25,73 @@
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVI-12-F8O">
-                                <rect key="frame" x="57.5" y="308.5" width="260" height="50"/>
-                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBb-S2-BKo">
+                                <rect key="frame" x="57.5" y="234.5" width="260" height="198"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVI-12-F8O">
+                                        <rect key="frame" x="0.0" y="8" width="260" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="Show banner overlay">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="overlayButtonPressed:" destination="sCI-8D-WMZ" eventType="touchUpInside" id="LaA-sF-SRe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I40-xU-CLN">
+                                        <rect key="frame" x="0.0" y="74" width="260" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="Show mid size overlay">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="overlayButtonPressed:" destination="sCI-8D-WMZ" eventType="touchUpInside" id="c93-aY-crB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tH-Ju-Mzs">
+                                        <rect key="frame" x="0.0" y="140" width="260" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="Show interstitial overlay">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="overlayButtonPressed:" destination="sCI-8D-WMZ" eventType="touchUpInside" id="spW-xm-fQ3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="bqG-fa-bLH"/>
-                                    <constraint firstAttribute="height" constant="50" id="qQz-HM-6Oz"/>
+                                    <constraint firstAttribute="height" constant="198" id="FE2-Un-E1o"/>
+                                    <constraint firstAttribute="width" constant="260" id="y98-Ne-n95"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <state key="normal" title="Show Overlay">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="bottomOverlayButtonPressed:" destination="sCI-8D-WMZ" eventType="touchUpInside" id="60F-Xq-G1k"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BM9-J7-FPp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TVI-12-F8O" firstAttribute="centerY" secondItem="ya3-gE-SA0" secondAttribute="centerY" id="RSB-4w-6m1"/>
+                            <constraint firstItem="NBb-S2-BKo" firstAttribute="centerX" secondItem="ya3-gE-SA0" secondAttribute="centerX" id="4ms-JO-NBT"/>
                             <constraint firstItem="Qmk-vz-9dZ" firstAttribute="top" secondItem="BM9-J7-FPp" secondAttribute="top" constant="20" id="Ut4-gS-MGK">
                                 <variation key="heightClass=compact-widthClass=compact" constant="10"/>
                             </constraint>
-                            <constraint firstItem="TVI-12-F8O" firstAttribute="centerX" secondItem="ya3-gE-SA0" secondAttribute="centerX" id="hHq-ag-uh7"/>
                             <constraint firstItem="Qmk-vz-9dZ" firstAttribute="centerX" secondItem="ya3-gE-SA0" secondAttribute="centerX" id="luz-ob-viu"/>
+                            <constraint firstItem="NBb-S2-BKo" firstAttribute="centerY" secondItem="ya3-gE-SA0" secondAttribute="centerY" id="nrf-jI-8QI"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bottomOverlayButton" destination="TVI-12-F8O" id="ZCP-59-BlO"/>
+                        <outletCollection property="overlayButtons" destination="TVI-12-F8O" collectionClass="NSMutableArray" id="qaD-hf-zRd"/>
+                        <outletCollection property="overlayButtons" destination="I40-xU-CLN" collectionClass="NSMutableArray" id="JTT-MA-92m"/>
+                        <outletCollection property="overlayButtons" destination="2tH-Ju-Mzs" collectionClass="NSMutableArray" id="qOs-Go-XMq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXE-Qr-GZf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="112"/>
+            <point key="canvasLocation" x="1860" y="111.99400299850076"/>
         </scene>
     </scenes>
     <resources>

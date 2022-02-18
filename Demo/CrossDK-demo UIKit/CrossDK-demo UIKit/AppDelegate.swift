@@ -12,9 +12,7 @@ import CrossDK
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        CrossDKConfig.shared.setup(appId: <#T##String#>,
-                                   apiKey: <#T##String#>,
-                                   userId: <#T##String?#>)
+        CrossDKConfig.shared.setup(appId: <#T##String#>, apiKey: <#T##String#>, userId: <#T##String?#>)
 
         return true
     }

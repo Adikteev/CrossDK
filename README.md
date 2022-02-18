@@ -1,4 +1,4 @@
-# CrossDK 2.1.0
+# CrossDK 3.0.0
 
 ![IOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](#swift-package-manager)
@@ -28,7 +28,7 @@ _Note: Instructions below are for using **SPM** without the Xcode UI. It's easie
 To integrate using Apple's Swift Package Manager, without Xcode integration, add the following as a dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "2.1.0"))
+.package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.0.0"))
 ```
 
 and then specify `"CrossDK"` as a dependency of the Target in which you wish to use CrossDK.
@@ -46,7 +46,7 @@ let package = Package(
             targets: ["MyPackage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "2.1.0"))
+        .package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.0.0"))
     ],
     targets: [
         .target(
@@ -101,7 +101,7 @@ In order to cover a majority of projects, the `CrossDKOverlay` class is develope
 
 ### Configuration
 
-In order to display overlays properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s application launch but it's up to you to set it up wherever you like.
+In order to display an overlay properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s application launch but it's up to you to set it up wherever you like.
 
 ```swift
 import CrossDK
@@ -126,7 +126,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ### Overlay Usage
 
-All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`. You can choose the overlay format between `.banner` or `.mid_size`, its position between `.bottom` or `.bottomRaised` and decide to display it with or without a close button.
+All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`.
+Here are the configurations for each overlay format :  
+- `.banner` : settle its position between `.bottom` or `.bottomRaised`  
+- `.mid_size` : settle its position between `.bottom` or `.bottomRaised`, with or without a close button  
+- `.interstitial` : settle it with or without a close button
 
 ```swift
 import CrossDK
@@ -188,7 +192,7 @@ In this section, we will see how to integrate it into a SwiftUI project.
 
 ### Configuration 
 
-In order to display overlays properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s (create the swift file in your SwiftUI project) application launch but it's up to you to set it up wherever you like.
+In order to display an overlay properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s (create the swift file in your SwiftUI project) application launch but it's up to you to set it up wherever you like.
 
 ```swift
 import CrossDK
@@ -230,7 +234,11 @@ struct SwiftUIApp: App {
 
 ### Overlay Usage
 
-All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`. You can choose the overlay format between `.banner` or `.mid_size`, its position between `.bottom` or `.bottomRaised` and decide to display it with or without a close button.
+All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`.
+Here are the configurations for each overlay format :  
+- `.banner` : settle its position between `.bottom` or `.bottomRaised`  
+- `.mid_size` : settle its position between `.bottom` or `.bottomRaised`, with or without a close button  
+- `.interstitial` : settle it with or without a close button
 
 Let’s create a `UIViewController` subclass named SomeViewController and add some methods to :  
 - display an Overlay (to call in the `viewDidAppear`)  
@@ -249,7 +257,6 @@ final class SomeViewController: UIViewController {
     }
     
     private func dismissCrossDKViewController() {
-        navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
 }
@@ -365,7 +372,7 @@ You should `#import "CrossDK/CrossDK-Swift.h"` to use CrossDK.
 
 #### AppDelegate.m :
 
-In order to display overlays properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s application launch but it's up to you to set it up wherever you like.
+In order to display an overlay properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s application launch but it's up to you to set it up wherever you like.
 
 ```swift
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -384,7 +391,11 @@ You should `#import "CrossDK/CrossDK-Swift.h"` to use CrossDK.
 
 #### ViewController.m :
 
-All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`. You can choose the overlay format between `.banner` or `.mid_size`, its position between `.bottom` or `.bottomRaised` and decide to display it with or without a close button.
+All you need to do in order to display an overlay is to retrieve your `UIWindow` object and call the `display` function. Then call it in the `viewDidAppear`.
+Here are the configurations for each overlay format :  
+- `.banner` : settle its position between `.bottom` or `.bottomRaised`  
+- `.mid_size` : settle its position between `.bottom` or `.bottomRaised`, with or without a close button  
+- `.interstitial` : settle it with or without a close button
 
 ```swift
 @interface CrossDKViewController ()

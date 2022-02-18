@@ -1,7 +1,62 @@
 # CrossDK - CHANGELOG
 
 
+# Q122
+
+
+## Sprint 3
+
+### Feature
+
+* ARP-2665 : Deploy V3.0 SDK containing interstitial overlay
+
+
+## Sprint 2
+
+### Feature
+
+* ARP-2621 : Creation of the interstitial format in UIKit in CrossDK project 
+
+
+## Sprint 1
+
+### Feature
+
+* ARP-2586 : Mock SDK interstitial format 
+
+
 # Q421
+
+
+## Sprint 6
+
+### Feature
+
+* ARP-2555 : Dismiss all overlay when a new one is called
+
+
+## Sprint 5
+
+### Feature
+
+* ARP-2510 : Add an ad type parameter in the SDK integration
+
+
+## Sprint 4
+
+### Features
+
+* ARP-2321 : Mock SDK video format
+* ARP-2440 : UIKit Overlay : Objective-C compatibility
+* ARP-2453 : Deploy V2.0 SDK containing video overlay
+
+
+## Sprint 3
+
+### Feature
+
+* ARP-2359 : UIKit Overlay : SwiftUI compatibility
+
 
 ## Sprint 2
 
@@ -15,12 +70,13 @@
 
 ## Sprint 1
 
-### Features
+### Feature
 
 * ARP-2323 : Creation of the custom overlay in UIKit
 
 
 # Q321
+
 
 ## Sprint 6
 
@@ -32,7 +88,7 @@
 
 ## Sprint 5
 
-### Features
+### Feature
 
 * Documentation for CrossSDK
 
@@ -49,7 +105,7 @@
 
 ### Features
 
-* API ARP-2130: Integration for SDK
+* API ARP-2130 : Integration for SDK
 * ARP-2162 : Technical integration of API for the SDK
 
 

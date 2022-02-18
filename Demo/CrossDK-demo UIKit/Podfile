@@ -6,6 +6,5 @@ target 'CrossDK-demo UIKit' do
   use_frameworks!
 
   # Pods for CrossDK-demo UIKit
-  pod 'CrossDK', :git => 'git@github.com:Adikteev/crossdk-ios.git'
 
 end
