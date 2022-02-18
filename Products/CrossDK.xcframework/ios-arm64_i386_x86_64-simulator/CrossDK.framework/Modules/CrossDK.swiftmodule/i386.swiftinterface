@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CrossDK
 import AVKit
 import Foundation
@@ -33,6 +33,7 @@ import _Concurrency
   @objc public enum OverlayFormat : Swift.Int {
     case banner
     case mid_size
+    case interstitial
     public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
@@ -91,6 +92,7 @@ public enum StarRounding : Swift.Int {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CrossDKConfig : ObjectiveC.NSObject {
   @objc public static let shared: CrossDK.CrossDKConfig
+  @objc public var apiStatus: Swift.String?
   @objc public var isConfigured: Swift.Bool {
     @objc get
   }

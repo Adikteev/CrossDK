@@ -1,6 +1,30 @@
 # CrossDK - CHANGELOG
 
 
+# Q122
+
+
+## Sprint 3
+
+### Feature
+
+* ARP-2665 : Deploy V3.0 SDK containing interstitial overlay
+
+
+## Sprint 2
+
+### Feature
+
+* ARP-2621 : Creation of the interstitial format in UIKit in CrossDK project 
+
+
+## Sprint 1
+
+### Feature
+
+* ARP-2586 : Mock SDK interstitial format 
+
+
 # Q421
 
 
