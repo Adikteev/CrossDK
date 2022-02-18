@@ -101,7 +101,7 @@ In order to cover a majority of projects, the `CrossDKOverlay` class is develope
 
 ### Configuration
 
-In order to display overlay properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s application launch but it's up to you to set it up wherever you like.
+In order to display an overlay properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s application launch but it's up to you to set it up wherever you like.
 
 ```swift
 import CrossDK
@@ -192,7 +192,7 @@ In this section, we will see how to integrate it into a SwiftUI project.
 
 ### Configuration 
 
-In order to display overlay properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s (create the swift file in your SwiftUI project) application launch but it's up to you to set it up wherever you like.
+In order to display an overlay properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s (create the swift file in your SwiftUI project) application launch but it's up to you to set it up wherever you like.
 
 ```swift
 import CrossDK
@@ -372,7 +372,7 @@ You should `#import "CrossDK/CrossDK-Swift.h"` to use CrossDK.
 
 #### AppDelegate.m :
 
-In order to display overlay properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s application launch but it's up to you to set it up wherever you like.
+In order to display an overlay properly, CrossDK requires a few informations. Since CrossDK won't work without these, you should set them up as soon as possible. In the following example, we use the setup function inside `AppDelegate`'s application launch but it's up to you to set it up wherever you like.
 
 ```swift
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
