@@ -4,6 +4,20 @@
 # Q122
 
 
+## Sprint 6 & 7
+
+### Feature
+
+* ARP-2757 : One click install for mid size format
+
+
+## Sprint 5
+
+### Feature
+
+* ARP-2750 : Update of CrossDK with Rewarded ads
+
+
 ## Sprint 3
 
 ### Feature

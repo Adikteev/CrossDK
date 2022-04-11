@@ -218,7 +218,7 @@ SWIFT_CLASS("_TtC7CrossDK13CrossDKConfig")
 /// Shared instance.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfig * _Nonnull shared;)
 + (CrossDKConfig * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-/// Current api status.
+/// Current status state of the api.
 @property (nonatomic, copy) NSString * _Nullable apiStatus;
 /// Returns whether <code>CrossDK</code> is properly configured.
 @property (nonatomic, readonly) BOOL isConfigured;
@@ -229,13 +229,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 ///
 /// \param apiKey authorization API key
 ///
-/// \param userId user’s ID
+/// \param idfv current mobiles’ ID
 ///
-- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nullable)userId;
+- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey idfv:(NSString * _Nullable)idfv;
 @end
 
 
 @protocol CrossDKOverlayDelegate;
+@protocol InterstitialAdDelegate;
+@protocol RewardedAdDelegate;
 @class UIWindow;
 enum OverlayFormat : NSInteger;
 enum OverlayPosition : NSInteger;
@@ -243,18 +245,31 @@ enum OverlayPosition : NSInteger;
 /// Handles CrossDK’s overlays display.
 SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 @interface CrossDKOverlay : NSObject
+/// Delegate that gets notified on overlay state changes.
 @property (nonatomic, weak) id <CrossDKOverlayDelegate> _Nullable delegate;
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay state changes.
+@property (nonatomic, weak) id <InterstitialAdDelegate> _Nullable interstitialAdDelegate;
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay with rewarded state changes.
+@property (nonatomic, weak) id <RewardedAdDelegate> _Nullable rewardedAdDelegate;
+/// Returns the <code>CrossDK</code> version.
+@property (nonatomic, copy) NSString * _Nullable sdkVersion;
+/// Current status state of the api.
+@property (nonatomic, copy) NSString * _Nullable apiStatus;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// For ALAdikteevMediationAdapter : Loads an Overlay view.
+- (void)load;
 /// Displays an Overlay view.
 /// \param window current window
 ///
-/// \param format overlay format
+/// \param format banner, mid_size, interstitial overlay
 ///
-/// \param position overlay position
+/// \param position banner and mid_size overlay position
 ///
-/// \param withCloseButton show / hide a close overlay button
+/// \param withCloseButton mid_size and interstitial overlay close button
 ///
-- (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton;
+/// \param isRewarded provides some kind of value for the user (interstitial format only)
+///
+- (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton isRewarded:(BOOL)isRewarded;
 /// Dismisses an Overlay view.
 /// \param window current window
 ///
@@ -273,6 +288,7 @@ typedef SWIFT_ENUM(NSInteger, OverlayPosition, open) {
 typedef SWIFT_ENUM(NSInteger, OverlayFormat, open) {
 /// Presents the overlay in small format size.
   OverlayFormatBanner = 0,
+/// Presents the overlay in medium format size.
   OverlayFormatMid_size = 1,
 /// Presents the overlay in full format size.
   OverlayFormatInterstitial = 2,
@@ -305,6 +321,86 @@ SWIFT_AVAILABILITY(ios,introduced=14.0)
 - (void)storeOverlay:(SKOverlay * _Nonnull)_ didFinishDismissal:(SKOverlayTransitionContext * _Nonnull)_;
 /// Indicates that the platform failed to load an overlay.
 - (void)storeOverlay:(SKOverlay * _Nonnull)_ didFailToLoadWithError:(NSError * _Nonnull)error;
+@end
+
+
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay state changes.
+SWIFT_PROTOCOL("_TtP7CrossDK22InterstitialAdDelegate_")
+@protocol InterstitialAdDelegate
+/// Indicates that the platform did load an interstitial ad.
+- (void)didLoadInterstitialAd;
+/// Indicates that the platform did fail to load an interstitial ad.
+- (void)didFailToLoadInterstitialAd;
+/// Indicates that the platform did display an interstitial ad.
+- (void)didDisplayInterstitialAd;
+/// Indicates that the platform did fail to display an interstitial ad.
+- (void)didFailToDisplayInterstitialAd;
+/// Indicates that the platform did hide an interstitial ad.
+- (void)didHideInterstitialAd;
+/// Indicates that the user did click an interstitial ad.
+- (void)didClickInterstitialAd;
+@end
+
+
+@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <InterstitialAdDelegate>
+/// For ALAdikteevMediationAdapter : Indicates that the platform did load an interstitial ad.
+- (void)didLoadInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to load an interstitial ad.
+- (void)didFailToLoadInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did display an interstitial ad.
+- (void)didDisplayInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to display an interstitial ad.
+- (void)didFailToDisplayInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did hide an interstitial ad.
+- (void)didHideInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the user did click an interstitial ad.
+- (void)didClickInterstitialAd;
+@end
+
+
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay with rewarded state changes.
+SWIFT_PROTOCOL("_TtP7CrossDK18RewardedAdDelegate_")
+@protocol RewardedAdDelegate
+/// Indicates that the platform did load a rewarded ad.
+- (void)didLoadRewardedAd;
+/// Indicates that the platform did fail to load a rewarded ad.
+- (void)didFailToLoadRewardedAd;
+/// Indicates that the platform did display a rewarded ad.
+- (void)didDisplayRewardedAd;
+/// Indicates that the platform did fail to display a rewarded ad.
+- (void)didFailToDisplayRewardedAd;
+/// Indicates that the platform did hide a rewarded ad.
+- (void)didHideRewardedAd;
+/// Indicates that the user did click a rewarded ad.
+- (void)didClickRewardedAd;
+/// Indicates that the platform did start a reward ad video.
+- (void)didStartRewardedAdVideo;
+/// Indicates that the platform did complete a reward ad video.
+- (void)didCompleteRewardedAdVideo;
+/// Indicates that the platform did reward user with reward.
+- (void)didRewardUserWithReward;
+@end
+
+
+@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <RewardedAdDelegate>
+/// For ALAdikteevMediationAdapter : Indicates that the platform did load a rewarded ad.
+- (void)didLoadRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to load a rewarded ad.
+- (void)didFailToLoadRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did display a rewarded ad.
+- (void)didDisplayRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to display a rewarded ad.
+- (void)didFailToDisplayRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did hide a rewarded ad.
+- (void)didHideRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the user did click a rewarded ad.
+- (void)didClickRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did start a reward ad video.
+- (void)didStartRewardedAdVideo;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did complete a reward ad video.
+- (void)didCompleteRewardedAdVideo;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did reward user with reward.
+- (void)didRewardUserWithReward;
 @end
 
 
@@ -359,6 +455,8 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 /// Indicates that an overlay is unavailable.
 - (void)overlayUnavailableWithError:(enum OverlayError)error;
 @end
+
+
 
 
 
@@ -588,7 +686,7 @@ SWIFT_CLASS("_TtC7CrossDK13CrossDKConfig")
 /// Shared instance.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfig * _Nonnull shared;)
 + (CrossDKConfig * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-/// Current api status.
+/// Current status state of the api.
 @property (nonatomic, copy) NSString * _Nullable apiStatus;
 /// Returns whether <code>CrossDK</code> is properly configured.
 @property (nonatomic, readonly) BOOL isConfigured;
@@ -599,13 +697,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 ///
 /// \param apiKey authorization API key
 ///
-/// \param userId user’s ID
+/// \param idfv current mobiles’ ID
 ///
-- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nullable)userId;
+- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey idfv:(NSString * _Nullable)idfv;
 @end
 
 
 @protocol CrossDKOverlayDelegate;
+@protocol InterstitialAdDelegate;
+@protocol RewardedAdDelegate;
 @class UIWindow;
 enum OverlayFormat : NSInteger;
 enum OverlayPosition : NSInteger;
@@ -613,18 +713,31 @@ enum OverlayPosition : NSInteger;
 /// Handles CrossDK’s overlays display.
 SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 @interface CrossDKOverlay : NSObject
+/// Delegate that gets notified on overlay state changes.
 @property (nonatomic, weak) id <CrossDKOverlayDelegate> _Nullable delegate;
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay state changes.
+@property (nonatomic, weak) id <InterstitialAdDelegate> _Nullable interstitialAdDelegate;
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay with rewarded state changes.
+@property (nonatomic, weak) id <RewardedAdDelegate> _Nullable rewardedAdDelegate;
+/// Returns the <code>CrossDK</code> version.
+@property (nonatomic, copy) NSString * _Nullable sdkVersion;
+/// Current status state of the api.
+@property (nonatomic, copy) NSString * _Nullable apiStatus;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// For ALAdikteevMediationAdapter : Loads an Overlay view.
+- (void)load;
 /// Displays an Overlay view.
 /// \param window current window
 ///
-/// \param format overlay format
+/// \param format banner, mid_size, interstitial overlay
 ///
-/// \param position overlay position
+/// \param position banner and mid_size overlay position
 ///
-/// \param withCloseButton show / hide a close overlay button
+/// \param withCloseButton mid_size and interstitial overlay close button
 ///
-- (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton;
+/// \param isRewarded provides some kind of value for the user (interstitial format only)
+///
+- (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton isRewarded:(BOOL)isRewarded;
 /// Dismisses an Overlay view.
 /// \param window current window
 ///
@@ -643,6 +756,7 @@ typedef SWIFT_ENUM(NSInteger, OverlayPosition, open) {
 typedef SWIFT_ENUM(NSInteger, OverlayFormat, open) {
 /// Presents the overlay in small format size.
   OverlayFormatBanner = 0,
+/// Presents the overlay in medium format size.
   OverlayFormatMid_size = 1,
 /// Presents the overlay in full format size.
   OverlayFormatInterstitial = 2,
@@ -675,6 +789,86 @@ SWIFT_AVAILABILITY(ios,introduced=14.0)
 - (void)storeOverlay:(SKOverlay * _Nonnull)_ didFinishDismissal:(SKOverlayTransitionContext * _Nonnull)_;
 /// Indicates that the platform failed to load an overlay.
 - (void)storeOverlay:(SKOverlay * _Nonnull)_ didFailToLoadWithError:(NSError * _Nonnull)error;
+@end
+
+
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay state changes.
+SWIFT_PROTOCOL("_TtP7CrossDK22InterstitialAdDelegate_")
+@protocol InterstitialAdDelegate
+/// Indicates that the platform did load an interstitial ad.
+- (void)didLoadInterstitialAd;
+/// Indicates that the platform did fail to load an interstitial ad.
+- (void)didFailToLoadInterstitialAd;
+/// Indicates that the platform did display an interstitial ad.
+- (void)didDisplayInterstitialAd;
+/// Indicates that the platform did fail to display an interstitial ad.
+- (void)didFailToDisplayInterstitialAd;
+/// Indicates that the platform did hide an interstitial ad.
+- (void)didHideInterstitialAd;
+/// Indicates that the user did click an interstitial ad.
+- (void)didClickInterstitialAd;
+@end
+
+
+@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <InterstitialAdDelegate>
+/// For ALAdikteevMediationAdapter : Indicates that the platform did load an interstitial ad.
+- (void)didLoadInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to load an interstitial ad.
+- (void)didFailToLoadInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did display an interstitial ad.
+- (void)didDisplayInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to display an interstitial ad.
+- (void)didFailToDisplayInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did hide an interstitial ad.
+- (void)didHideInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the user did click an interstitial ad.
+- (void)didClickInterstitialAd;
+@end
+
+
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay with rewarded state changes.
+SWIFT_PROTOCOL("_TtP7CrossDK18RewardedAdDelegate_")
+@protocol RewardedAdDelegate
+/// Indicates that the platform did load a rewarded ad.
+- (void)didLoadRewardedAd;
+/// Indicates that the platform did fail to load a rewarded ad.
+- (void)didFailToLoadRewardedAd;
+/// Indicates that the platform did display a rewarded ad.
+- (void)didDisplayRewardedAd;
+/// Indicates that the platform did fail to display a rewarded ad.
+- (void)didFailToDisplayRewardedAd;
+/// Indicates that the platform did hide a rewarded ad.
+- (void)didHideRewardedAd;
+/// Indicates that the user did click a rewarded ad.
+- (void)didClickRewardedAd;
+/// Indicates that the platform did start a reward ad video.
+- (void)didStartRewardedAdVideo;
+/// Indicates that the platform did complete a reward ad video.
+- (void)didCompleteRewardedAdVideo;
+/// Indicates that the platform did reward user with reward.
+- (void)didRewardUserWithReward;
+@end
+
+
+@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <RewardedAdDelegate>
+/// For ALAdikteevMediationAdapter : Indicates that the platform did load a rewarded ad.
+- (void)didLoadRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to load a rewarded ad.
+- (void)didFailToLoadRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did display a rewarded ad.
+- (void)didDisplayRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to display a rewarded ad.
+- (void)didFailToDisplayRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did hide a rewarded ad.
+- (void)didHideRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the user did click a rewarded ad.
+- (void)didClickRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did start a reward ad video.
+- (void)didStartRewardedAdVideo;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did complete a reward ad video.
+- (void)didCompleteRewardedAdVideo;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did reward user with reward.
+- (void)didRewardUserWithReward;
 @end
 
 
@@ -729,6 +923,8 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 /// Indicates that an overlay is unavailable.
 - (void)overlayUnavailableWithError:(enum OverlayError)error;
 @end
+
+
 
 
 
@@ -958,7 +1154,7 @@ SWIFT_CLASS("_TtC7CrossDK13CrossDKConfig")
 /// Shared instance.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfig * _Nonnull shared;)
 + (CrossDKConfig * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-/// Current api status.
+/// Current status state of the api.
 @property (nonatomic, copy) NSString * _Nullable apiStatus;
 /// Returns whether <code>CrossDK</code> is properly configured.
 @property (nonatomic, readonly) BOOL isConfigured;
@@ -969,13 +1165,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 ///
 /// \param apiKey authorization API key
 ///
-/// \param userId user’s ID
+/// \param idfv current mobiles’ ID
 ///
-- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nullable)userId;
+- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey idfv:(NSString * _Nullable)idfv;
 @end
 
 
 @protocol CrossDKOverlayDelegate;
+@protocol InterstitialAdDelegate;
+@protocol RewardedAdDelegate;
 @class UIWindow;
 enum OverlayFormat : NSInteger;
 enum OverlayPosition : NSInteger;
@@ -983,18 +1181,31 @@ enum OverlayPosition : NSInteger;
 /// Handles CrossDK’s overlays display.
 SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 @interface CrossDKOverlay : NSObject
+/// Delegate that gets notified on overlay state changes.
 @property (nonatomic, weak) id <CrossDKOverlayDelegate> _Nullable delegate;
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay state changes.
+@property (nonatomic, weak) id <InterstitialAdDelegate> _Nullable interstitialAdDelegate;
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay with rewarded state changes.
+@property (nonatomic, weak) id <RewardedAdDelegate> _Nullable rewardedAdDelegate;
+/// Returns the <code>CrossDK</code> version.
+@property (nonatomic, copy) NSString * _Nullable sdkVersion;
+/// Current status state of the api.
+@property (nonatomic, copy) NSString * _Nullable apiStatus;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// For ALAdikteevMediationAdapter : Loads an Overlay view.
+- (void)load;
 /// Displays an Overlay view.
 /// \param window current window
 ///
-/// \param format overlay format
+/// \param format banner, mid_size, interstitial overlay
 ///
-/// \param position overlay position
+/// \param position banner and mid_size overlay position
 ///
-/// \param withCloseButton show / hide a close overlay button
+/// \param withCloseButton mid_size and interstitial overlay close button
 ///
-- (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton;
+/// \param isRewarded provides some kind of value for the user (interstitial format only)
+///
+- (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton isRewarded:(BOOL)isRewarded;
 /// Dismisses an Overlay view.
 /// \param window current window
 ///
@@ -1013,6 +1224,7 @@ typedef SWIFT_ENUM(NSInteger, OverlayPosition, open) {
 typedef SWIFT_ENUM(NSInteger, OverlayFormat, open) {
 /// Presents the overlay in small format size.
   OverlayFormatBanner = 0,
+/// Presents the overlay in medium format size.
   OverlayFormatMid_size = 1,
 /// Presents the overlay in full format size.
   OverlayFormatInterstitial = 2,
@@ -1045,6 +1257,86 @@ SWIFT_AVAILABILITY(ios,introduced=14.0)
 - (void)storeOverlay:(SKOverlay * _Nonnull)_ didFinishDismissal:(SKOverlayTransitionContext * _Nonnull)_;
 /// Indicates that the platform failed to load an overlay.
 - (void)storeOverlay:(SKOverlay * _Nonnull)_ didFailToLoadWithError:(NSError * _Nonnull)error;
+@end
+
+
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay state changes.
+SWIFT_PROTOCOL("_TtP7CrossDK22InterstitialAdDelegate_")
+@protocol InterstitialAdDelegate
+/// Indicates that the platform did load an interstitial ad.
+- (void)didLoadInterstitialAd;
+/// Indicates that the platform did fail to load an interstitial ad.
+- (void)didFailToLoadInterstitialAd;
+/// Indicates that the platform did display an interstitial ad.
+- (void)didDisplayInterstitialAd;
+/// Indicates that the platform did fail to display an interstitial ad.
+- (void)didFailToDisplayInterstitialAd;
+/// Indicates that the platform did hide an interstitial ad.
+- (void)didHideInterstitialAd;
+/// Indicates that the user did click an interstitial ad.
+- (void)didClickInterstitialAd;
+@end
+
+
+@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <InterstitialAdDelegate>
+/// For ALAdikteevMediationAdapter : Indicates that the platform did load an interstitial ad.
+- (void)didLoadInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to load an interstitial ad.
+- (void)didFailToLoadInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did display an interstitial ad.
+- (void)didDisplayInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to display an interstitial ad.
+- (void)didFailToDisplayInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did hide an interstitial ad.
+- (void)didHideInterstitialAd;
+/// For ALAdikteevMediationAdapter : Indicates that the user did click an interstitial ad.
+- (void)didClickInterstitialAd;
+@end
+
+
+/// For ALAdikteevMediationAdapter : Delegate that gets notified on interstitial overlay with rewarded state changes.
+SWIFT_PROTOCOL("_TtP7CrossDK18RewardedAdDelegate_")
+@protocol RewardedAdDelegate
+/// Indicates that the platform did load a rewarded ad.
+- (void)didLoadRewardedAd;
+/// Indicates that the platform did fail to load a rewarded ad.
+- (void)didFailToLoadRewardedAd;
+/// Indicates that the platform did display a rewarded ad.
+- (void)didDisplayRewardedAd;
+/// Indicates that the platform did fail to display a rewarded ad.
+- (void)didFailToDisplayRewardedAd;
+/// Indicates that the platform did hide a rewarded ad.
+- (void)didHideRewardedAd;
+/// Indicates that the user did click a rewarded ad.
+- (void)didClickRewardedAd;
+/// Indicates that the platform did start a reward ad video.
+- (void)didStartRewardedAdVideo;
+/// Indicates that the platform did complete a reward ad video.
+- (void)didCompleteRewardedAdVideo;
+/// Indicates that the platform did reward user with reward.
+- (void)didRewardUserWithReward;
+@end
+
+
+@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <RewardedAdDelegate>
+/// For ALAdikteevMediationAdapter : Indicates that the platform did load a rewarded ad.
+- (void)didLoadRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to load a rewarded ad.
+- (void)didFailToLoadRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did display a rewarded ad.
+- (void)didDisplayRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did fail to display a rewarded ad.
+- (void)didFailToDisplayRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did hide a rewarded ad.
+- (void)didHideRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the user did click a rewarded ad.
+- (void)didClickRewardedAd;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did start a reward ad video.
+- (void)didStartRewardedAdVideo;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did complete a reward ad video.
+- (void)didCompleteRewardedAdVideo;
+/// For ALAdikteevMediationAdapter : Indicates that the platform did reward user with reward.
+- (void)didRewardUserWithReward;
 @end
 
 
@@ -1099,6 +1391,8 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 /// Indicates that an overlay is unavailable.
 - (void)overlayUnavailableWithError:(enum OverlayError)error;
 @end
+
+
 
 
 

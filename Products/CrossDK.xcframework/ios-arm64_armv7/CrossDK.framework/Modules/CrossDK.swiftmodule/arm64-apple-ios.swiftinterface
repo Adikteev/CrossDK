@@ -7,6 +7,8 @@ import StoreKit
 import Swift
 import UIKit
 import _Concurrency
+public enum Colors {
+}
 @objc public protocol CrossDKOverlayDelegate {
   @objc func overlayWillStartPresentation()
   @objc func overlayDidFinishPresentation()
@@ -19,8 +21,31 @@ import _Concurrency
   @objc func overlayDidFailToLoad(error: Swift.Error)
   @objc func overlayUnavailable(error: CrossDK.CrossDKOverlay.OverlayError)
 }
+@objc public protocol InterstitialAdDelegate {
+  @objc func didLoadInterstitialAd()
+  @objc func didFailToLoadInterstitialAd()
+  @objc func didDisplayInterstitialAd()
+  @objc func didFailToDisplayInterstitialAd()
+  @objc func didHideInterstitialAd()
+  @objc func didClickInterstitialAd()
+}
+@objc public protocol RewardedAdDelegate {
+  @objc func didLoadRewardedAd()
+  @objc func didFailToLoadRewardedAd()
+  @objc func didDisplayRewardedAd()
+  @objc func didFailToDisplayRewardedAd()
+  @objc func didHideRewardedAd()
+  @objc func didClickRewardedAd()
+  @objc func didStartRewardedAdVideo()
+  @objc func didCompleteRewardedAdVideo()
+  @objc func didRewardUserWithReward()
+}
 @objc @_inheritsConvenienceInitializers public class CrossDKOverlay : ObjectiveC.NSObject {
   @objc weak public var delegate: CrossDK.CrossDKOverlayDelegate?
+  @objc weak public var interstitialAdDelegate: CrossDK.InterstitialAdDelegate?
+  @objc weak public var rewardedAdDelegate: CrossDK.RewardedAdDelegate?
+  @objc public var sdkVersion: Swift.String?
+  @objc public var apiStatus: Swift.String?
   @objc public enum OverlayPosition : Swift.Int {
     case bottom
     case bottomRaised
@@ -52,7 +77,8 @@ import _Concurrency
     }
   }
   @objc override dynamic public init()
-  @objc public func display(window: UIKit.UIWindow, format: CrossDK.CrossDKOverlay.OverlayFormat, position: CrossDK.CrossDKOverlay.OverlayPosition, withCloseButton: Swift.Bool)
+  @objc public func load()
+  @objc public func display(window: UIKit.UIWindow, format: CrossDK.CrossDKOverlay.OverlayFormat, position: CrossDK.CrossDKOverlay.OverlayPosition, withCloseButton: Swift.Bool, isRewarded: Swift.Bool)
   @objc public func dismiss(window: UIKit.UIWindow)
   @objc deinit
 }
@@ -76,6 +102,25 @@ extension CrossDK.CrossDKOverlay : CrossDK.CrossDKOverlayDelegate {
   @objc dynamic public func overlayDidFailToLoad(error: Swift.Error)
   @objc dynamic public func overlayUnavailable(error: CrossDK.CrossDKOverlay.OverlayError)
 }
+extension CrossDK.CrossDKOverlay : CrossDK.InterstitialAdDelegate {
+  @objc dynamic public func didLoadInterstitialAd()
+  @objc dynamic public func didFailToLoadInterstitialAd()
+  @objc dynamic public func didDisplayInterstitialAd()
+  @objc dynamic public func didFailToDisplayInterstitialAd()
+  @objc dynamic public func didHideInterstitialAd()
+  @objc dynamic public func didClickInterstitialAd()
+}
+extension CrossDK.CrossDKOverlay : CrossDK.RewardedAdDelegate {
+  @objc dynamic public func didLoadRewardedAd()
+  @objc dynamic public func didFailToLoadRewardedAd()
+  @objc dynamic public func didDisplayRewardedAd()
+  @objc dynamic public func didFailToDisplayRewardedAd()
+  @objc dynamic public func didHideRewardedAd()
+  @objc dynamic public func didClickRewardedAd()
+  @objc dynamic public func didStartRewardedAdVideo()
+  @objc dynamic public func didCompleteRewardedAdVideo()
+  @objc dynamic public func didRewardUserWithReward()
+}
 public struct CrossDKRecommendationFilter {
   public init(churnedRankRange: Swift.ClosedRange<Swift.Float>? = nil, reopenRankRange: Swift.ClosedRange<Swift.Float>? = nil, installConversionProbaMin: Swift.Float? = nil, appIdDenylist: [Swift.String]? = nil, appIdAllowlist: [Swift.String]? = nil)
 }
@@ -96,7 +141,7 @@ public enum StarRounding : Swift.Int {
   @objc public var isConfigured: Swift.Bool {
     @objc get
   }
-  @objc public func setup(appId: Swift.String, apiKey: Swift.String, userId: Swift.String? = nil)
+  @objc public func setup(appId: Swift.String, apiKey: Swift.String, idfv: Swift.String? = nil)
   public func set(recommendationFilter: CrossDK.CrossDKRecommendationFilter)
   @objc deinit
 }
