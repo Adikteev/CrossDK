@@ -1,4 +1,4 @@
-# CrossDK 3.0.0
+# CrossDK 3.1.0
 
 ![IOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](#swift-package-manager)
@@ -28,7 +28,7 @@ _Note: Instructions below are for using **SPM** without the Xcode UI. It's easie
 To integrate using Apple's Swift Package Manager, without Xcode integration, add the following as a dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.0.0"))
+.package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.1.0"))
 ```
 
 and then specify `"CrossDK"` as a dependency of the Target in which you wish to use CrossDK.
@@ -46,7 +46,7 @@ let package = Package(
             targets: ["MyPackage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.0.0"))
+        .package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.1.0"))
     ],
     targets: [
         .target(
@@ -130,7 +130,7 @@ All you need to do in order to display an overlay is to retrieve your `UIWindow`
 Here are the configurations for each overlay format :  
 - `.banner` : settle its position between `.bottom` or `.bottomRaised`  
 - `.mid_size` : settle its position between `.bottom` or `.bottomRaised`, with or without a close button  
-- `.interstitial` : settle it with or without a close button
+- `.interstitial` : settle it with or without a close button, with or without a rewarded
 
 ```swift
 import CrossDK
@@ -141,7 +141,7 @@ final class SomeViewController: UIViewController {
     private func displayOverlay() {
         guard let window = view.window else { return }
 
-        crossDKOverlay.display(window: window, format: .mid_size, position: .bottom, withCloseButton: true)
+        crossDKOverlay.display(window: window, format: .mid_size, position: .bottom, withCloseButton: true, isRewarded: false)
     }
 }
 ```
@@ -238,7 +238,7 @@ All you need to do in order to display an overlay is to retrieve your `UIWindow`
 Here are the configurations for each overlay format :  
 - `.banner` : settle its position between `.bottom` or `.bottomRaised`  
 - `.mid_size` : settle its position between `.bottom` or `.bottomRaised`, with or without a close button  
-- `.interstitial` : settle it with or without a close button
+- `.interstitial` : settle it with or without a close button, with or without a reward
 
 Let’s create a `UIViewController` subclass named SomeViewController and add some methods to :  
 - display an Overlay (to call in the `viewDidAppear`)  
@@ -253,7 +253,7 @@ final class SomeViewController: UIViewController {
     private func displayOverlay() {
         guard let window = view.window else { return }
 
-        crossDKOverlay.display(window: window, format: .mid_size, position: .bottom, withCloseButton: true)
+        crossDKOverlay.display(window: window, format: .mid_size, position: .bottom, withCloseButton: true, isRewarded: false)
     }
     
     private func dismissCrossDKViewController() {
@@ -395,7 +395,7 @@ All you need to do in order to display an overlay is to retrieve your `UIWindow`
 Here are the configurations for each overlay format :  
 - `.banner` : settle its position between `.bottom` or `.bottomRaised`  
 - `.mid_size` : settle its position between `.bottom` or `.bottomRaised`, with or without a close button  
-- `.interstitial` : settle it with or without a close button
+- `.interstitial` : settle it with or without a close button, with or without a reward
 
 ```swift
 @interface CrossDKViewController ()
@@ -405,7 +405,7 @@ Here are the configurations for each overlay format :
 - (void)displayOverlay {
     UIWindow* window = self.view.window;
     if (window != nil) {
-        [_crossDKOverlay displayWithWindow:window format:OverlayFormatMid_size position:OverlayPositionBottom withCloseButton:true];
+        [_crossDKOverlay displayWithWindow:window format:OverlayFormatMid_size position:OverlayPositionBottom withCloseButton:true isRewarded:false];
     }
 }
 
