@@ -61,7 +61,7 @@ let package = Package(
 Add the following entry to your Podfile for CrossDK:
 
 ```rb
-pod 'CrossDK', :git => 'git@github.com:Adikteev/crossdk-ios.git'
+pod 'CrossDK'
 ```
 
 Then run `pod install`.
