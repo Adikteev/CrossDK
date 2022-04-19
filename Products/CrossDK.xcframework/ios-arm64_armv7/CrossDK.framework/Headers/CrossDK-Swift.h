@@ -424,6 +424,8 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 - (void)overlayPlayedHalfVideo;
 /// Indicates that the platform has finished playing the video.
 - (void)overlayDidFinishPlayingVideo;
+/// Indicates that the platform did reward user with reward.
+- (void)overlayDidRewardUserWithReward;
 /// Indicates that the platform failed to load an overlay.
 - (void)overlayDidFailToLoadWithError:(NSError * _Nonnull)error;
 /// Indicates that the overlay is not available.
@@ -450,6 +452,8 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 - (void)overlayPlayedHalfVideo;
 /// Indicates that the platform has finished playing the video.
 - (void)overlayDidFinishPlayingVideo;
+/// Indicates that the platform did reward user with reward.
+- (void)overlayDidRewardUserWithReward;
 /// Indicates that the platform failed to load an overlay.
 - (void)overlayDidFailToLoadWithError:(NSError * _Nonnull)error;
 /// Indicates that an overlay is unavailable.
@@ -892,6 +896,8 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 - (void)overlayPlayedHalfVideo;
 /// Indicates that the platform has finished playing the video.
 - (void)overlayDidFinishPlayingVideo;
+/// Indicates that the platform did reward user with reward.
+- (void)overlayDidRewardUserWithReward;
 /// Indicates that the platform failed to load an overlay.
 - (void)overlayDidFailToLoadWithError:(NSError * _Nonnull)error;
 /// Indicates that the overlay is not available.
@@ -918,6 +924,8 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 - (void)overlayPlayedHalfVideo;
 /// Indicates that the platform has finished playing the video.
 - (void)overlayDidFinishPlayingVideo;
+/// Indicates that the platform did reward user with reward.
+- (void)overlayDidRewardUserWithReward;
 /// Indicates that the platform failed to load an overlay.
 - (void)overlayDidFailToLoadWithError:(NSError * _Nonnull)error;
 /// Indicates that an overlay is unavailable.

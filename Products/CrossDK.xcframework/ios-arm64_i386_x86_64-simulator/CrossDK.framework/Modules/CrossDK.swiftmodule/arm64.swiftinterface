@@ -18,6 +18,7 @@ public enum Colors {
   @objc func overlayStartsPlayingVideo()
   @objc func overlayPlayedHalfVideo()
   @objc func overlayDidFinishPlayingVideo()
+  @objc func overlayDidRewardUserWithReward()
   @objc func overlayDidFailToLoad(error: Swift.Error)
   @objc func overlayUnavailable(error: CrossDK.CrossDKOverlay.OverlayError)
 }
@@ -99,6 +100,7 @@ extension CrossDK.CrossDKOverlay : CrossDK.CrossDKOverlayDelegate {
   @objc dynamic public func overlayStartsPlayingVideo()
   @objc dynamic public func overlayPlayedHalfVideo()
   @objc dynamic public func overlayDidFinishPlayingVideo()
+  @objc dynamic public func overlayDidRewardUserWithReward()
   @objc dynamic public func overlayDidFailToLoad(error: Swift.Error)
   @objc dynamic public func overlayUnavailable(error: CrossDK.CrossDKOverlay.OverlayError)
 }
