@@ -229,9 +229,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 ///
 /// \param apiKey authorization API key
 ///
-/// \param idfv current mobiles’ ID
+/// \param userId user’s ID
 ///
-- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey idfv:(NSString * _Nullable)idfv;
+- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nullable)userId;
 @end
 
 
@@ -701,9 +701,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 ///
 /// \param apiKey authorization API key
 ///
-/// \param idfv current mobiles’ ID
+/// \param userId user’s ID
 ///
-- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey idfv:(NSString * _Nullable)idfv;
+- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nullable)userId;
 @end
 
 
@@ -1173,9 +1173,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 ///
 /// \param apiKey authorization API key
 ///
-/// \param idfv current mobiles’ ID
+/// \param userId user’s ID
 ///
-- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey idfv:(NSString * _Nullable)idfv;
+- (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nullable)userId;
 @end
 
 
