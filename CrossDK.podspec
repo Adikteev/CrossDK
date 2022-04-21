@@ -1,13 +1,13 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "CrossDK"
-  spec.platform     = :ios, '10.0'
+  spec.platform     = ":ios, '10.0'"
   spec.version      = "3.2.0"
   spec.summary      = "Cross-promote an application catalog"
 
   spec.description  = <<-DESC
   CrossDK is a solution belonging to Adikteev. The goal is to allow its users to cross-promote their application catalog through the SKOverlay class.
-  DESC
+                   DESC
 
   spec.homepage     = "https://github.com/CocoaPods/Specs/search?o=desc&q=CrossDK&s=indexed"
 
