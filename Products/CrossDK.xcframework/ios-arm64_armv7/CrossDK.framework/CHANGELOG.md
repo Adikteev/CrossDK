@@ -1,14 +1,18 @@
 # CrossDK - CHANGELOG
 
 
-# Q122
+# Q3
 
-
-## Sprint 6 & 7
+## Sprint 1
 
 ### Feature
 
+* ARP-3076 : Device id can be edited in SDK
+* ARP-3075 : Add error notification when no recommendation can be displayed in SDK
 * ARP-2757 : One click install for mid size format
+
+
+# Q122
 
 
 ## Sprint 5
