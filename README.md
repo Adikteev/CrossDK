@@ -146,12 +146,12 @@ final class SomeViewController: UIViewController {
 }
 ```
 
-A public variable is available in CrossDKConfig : deviceId, to use custom device to try your recommendations using another device id than yours.
-Set it before crossDKOverlay.display
+A public variable is available in `CrossDKConfig` : `deviceId`, to use custom device to try your recommendations using another device id than yours.
+Set it before crossDKOverlay.display function call.
 
 ```
-        CrossDKConfig.shared.deviceId = "My custom device ID"
-        crossDKOverlay.display(window: window, format: .banner, position: .bottom, withCloseButton: false, isRewarded: false)
+    CrossDKConfig.shared.deviceId = "My custom device ID"
+    crossDKOverlay.display(window: window, format: .banner, position: .bottom, withCloseButton: false, isRewarded: false)
 ```
 
 
