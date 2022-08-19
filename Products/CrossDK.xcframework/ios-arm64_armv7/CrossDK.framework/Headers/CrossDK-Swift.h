@@ -222,6 +222,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 @property (nonatomic, copy) NSString * _Nullable apiStatus;
 /// Returns whether <code>CrossDK</code> is properly configured.
 @property (nonatomic, readonly) BOOL isConfigured;
+/// Current device ID.
+@property (nonatomic, copy) NSString * _Nullable deviceId;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// Sets up configuration for <code>CrossDK</code>.
@@ -694,6 +696,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 @property (nonatomic, copy) NSString * _Nullable apiStatus;
 /// Returns whether <code>CrossDK</code> is properly configured.
 @property (nonatomic, readonly) BOOL isConfigured;
+/// Current device ID.
+@property (nonatomic, copy) NSString * _Nullable deviceId;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// Sets up configuration for <code>CrossDK</code>.
