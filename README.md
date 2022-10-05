@@ -1,4 +1,4 @@
-# CrossDK 3.2.1
+# CrossDK 3.2.2
 
 ![IOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](#swift-package-manager)
@@ -469,3 +469,16 @@ And now, you can access to the `CrossDKOverlayDelegate`.
 ```
 
 That’s all you need to know !
+
+
+### Info
+
+We are currently working on a bug fix that causes the app to freeze after dismiss a midsize recommendation.
+In the meantime if you encounter this problem, you can call the dismiss in the overlayDidFinishDismissal function:
+
+```swift
+func overlayDidFinishDismissal() {
+    guard let window = view. window else { return }
+    crossDKOverlay.dismiss(window:window)
+}
+```
