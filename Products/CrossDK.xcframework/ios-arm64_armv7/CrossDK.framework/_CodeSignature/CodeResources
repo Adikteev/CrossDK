@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		6nuviyEfnFTo8VbKQOaoUA2KLgc=
+		1x+Nlh2Qnv5i4GB+LN7jvSeYj88=
 		</data>
 		<key>CHANGELOG.md</key>
 		<data>
-		I22mGWTA9dbO7sMu1VfpwSltefM=
+		CVVVPpvc6ZjqU/KUOhOteXZiDhk=
 		</data>
 		<key>Headers/CrossDK-Swift.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ktiFpPBzhDt1SL0fRPzhO5zjf3A=
+		KPEhBNxMpEVxbDsOOWbGYVaWHvU=
 		</data>
 		<key>InterstitialOverlayViewController.storyboardc/BZo-a2-3aS-view-s0d-Y5-PD6.nib</key>
 		<data>
-		LXUg4DWx1C698dxaW75srzFpoFc=
+		3SM8lmmq++eG53wmC0y2aag8xuo=
 		</data>
 		<key>InterstitialOverlayViewController.storyboardc/Info.plist</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>MidSizeOverlayViewController.storyboardc/jn2-VF-tgt-view-hS4-YQ-8yz.nib/objects-11.0+.nib</key>
 		<data>
-		CorCL60lohRXPbqJ/s5NjxfER3M=
+		5VCnM6KBCzePSRk6+No67OnBwMU=
 		</data>
 		<key>MidSizeOverlayViewController.storyboardc/jn2-VF-tgt-view-hS4-YQ-8yz.nib/runtime.nib</key>
 		<data>
-		BdRG5Hxl8cN/WfkG47dND+uz0O4=
+		7jWODKClkvnkNMFW5oXhcR00pe4=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		9aLsisUSmTx4Wm1jvaOn0cd7o3Q=
+		ca2id2vuftrdlnS3c9U2i2h6eEA=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		L79LVwnKapn7nvWziYFAfBJe99w=
+		3QlABA/Im3k9yaBWp2F4s4jdZGI=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		L79LVwnKapn7nvWziYFAfBJe99w=
+		3QlABA/Im3k9yaBWp2F4s4jdZGI=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		9aLsisUSmTx4Wm1jvaOn0cd7o3Q=
+		ca2id2vuftrdlnS3c9U2i2h6eEA=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		9aLsisUSmTx4Wm1jvaOn0cd7o3Q=
+		ca2id2vuftrdlnS3c9U2i2h6eEA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -221,22 +221,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6nuviyEfnFTo8VbKQOaoUA2KLgc=
+			1x+Nlh2Qnv5i4GB+LN7jvSeYj88=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bqo6350KT5xW+YLIbZQ/1cJxrK+FIMMMfjmAntPD8po=
+			lpB27mzDQcBP+2MUryL6msjTwro9SJbXwuglSB8nWEk=
 			</data>
 		</dict>
 		<key>CHANGELOG.md</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I22mGWTA9dbO7sMu1VfpwSltefM=
+			CVVVPpvc6ZjqU/KUOhOteXZiDhk=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZtG/sSrui/qij43vIDnY+ZUOME2jFzmb3+cgNA0jTZA=
+			sj2Bad/9Qpjiwzv9Q0yrwNUpI6kPWUK92T1OZbVJQ5Y=
 			</data>
 		</dict>
 		<key>Headers/CrossDK-Swift.h</key>
@@ -254,11 +254,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LXUg4DWx1C698dxaW75srzFpoFc=
+			3SM8lmmq++eG53wmC0y2aag8xuo=
 			</data>
 			<key>hash2</key>
 			<data>
-			O399EUy+N+K3OdjwOL+3tu8FAgL0pf57aTtRZRQ6iP8=
+			MIKetK+3l3T+sL8+9oZ4iC3hLeBDv2fWZjWtYJne9nA=
 			</data>
 		</dict>
 		<key>InterstitialOverlayViewController.storyboardc/Info.plist</key>
@@ -320,22 +320,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CorCL60lohRXPbqJ/s5NjxfER3M=
+			5VCnM6KBCzePSRk6+No67OnBwMU=
 			</data>
 			<key>hash2</key>
 			<data>
-			s1xm3+w0RSB87jYtWK6z++yBVQXlAq2ItwiLD1dsjL8=
+			ET0EfxCfOpdSJB6+00gINjbQeFDo9el87qqi6aSzLpA=
 			</data>
 		</dict>
 		<key>MidSizeOverlayViewController.storyboardc/jn2-VF-tgt-view-hS4-YQ-8yz.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BdRG5Hxl8cN/WfkG47dND+uz0O4=
+			7jWODKClkvnkNMFW5oXhcR00pe4=
 			</data>
 			<key>hash2</key>
 			<data>
-			uGXn0p4tEtDj2JssOdwAO3+8k9rHHAmbCgMujCA6q1s=
+			cZYfukWbdAka/nAacbTJhUV9pwQvd1iuplWBxO5O6p8=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm.swiftdoc</key>
@@ -364,11 +364,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9aLsisUSmTx4Wm1jvaOn0cd7o3Q=
+			ca2id2vuftrdlnS3c9U2i2h6eEA=
 			</data>
 			<key>hash2</key>
 			<data>
-			IyVfb6sPj0pNn9lsUsuvAjfV/zrctZtQeZS/LXehHwM=
+			jXVkRzwEu/Y6eIriRw02a+OvawF44Jb5Zd/WFQvZrpE=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -397,11 +397,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L79LVwnKapn7nvWziYFAfBJe99w=
+			3QlABA/Im3k9yaBWp2F4s4jdZGI=
 			</data>
 			<key>hash2</key>
 			<data>
-			IJAOLTWveiXiNhLA2viAnhpu48cXc9ZOXtZVBNRiMJ8=
+			be4c5h/rq9+bpqjBDnh6aSrA4L3xI7zMKIXmq/DsVKM=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftdoc</key>
@@ -430,11 +430,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L79LVwnKapn7nvWziYFAfBJe99w=
+			3QlABA/Im3k9yaBWp2F4s4jdZGI=
 			</data>
 			<key>hash2</key>
 			<data>
-			IJAOLTWveiXiNhLA2viAnhpu48cXc9ZOXtZVBNRiMJ8=
+			be4c5h/rq9+bpqjBDnh6aSrA4L3xI7zMKIXmq/DsVKM=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -463,11 +463,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9aLsisUSmTx4Wm1jvaOn0cd7o3Q=
+			ca2id2vuftrdlnS3c9U2i2h6eEA=
 			</data>
 			<key>hash2</key>
 			<data>
-			IyVfb6sPj0pNn9lsUsuvAjfV/zrctZtQeZS/LXehHwM=
+			jXVkRzwEu/Y6eIriRw02a+OvawF44Jb5Zd/WFQvZrpE=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/armv7.swiftdoc</key>
@@ -496,11 +496,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9aLsisUSmTx4Wm1jvaOn0cd7o3Q=
+			ca2id2vuftrdlnS3c9U2i2h6eEA=
 			</data>
 			<key>hash2</key>
 			<data>
-			IyVfb6sPj0pNn9lsUsuvAjfV/zrctZtQeZS/LXehHwM=
+			jXVkRzwEu/Y6eIriRw02a+OvawF44Jb5Zd/WFQvZrpE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

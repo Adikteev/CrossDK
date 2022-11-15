@@ -1,5 +1,14 @@
 # CrossDK - CHANGELOG
 
+# Q4
+
+* ARP-3404 : Ad events are not well monitored on cross promotion stream
+* ARP-3433 : All ad requests contain mid size as a creative format
+* ARP-3405 : SDK version dimension contains app test version
+* ARP-3371 : The video content is not aligned with the slot (mid size)
+* ARP-3375 : Fix freeze bug on dismiss ad for midsize in SDK
+* ARP-3415 : Client cannot dismiss an ad (close button)
+* ARP-3200 : Manage orientation for video
 
 # Q3
 
@@ -7,6 +16,7 @@
 
 ### Feature
 
+* ARP-3124 : API changes to implement in SDK
 * ARP-3076 : Device id can be edited in SDK
 * ARP-3075 : Add error notification when no recommendation can be displayed in SDK
 * ARP-2757 : One click install for mid size format
@@ -100,6 +110,7 @@
 
 ### Features
 
+* ARP-3105 : Build SDK app IOS with staging url
 * ARP-2272 : Test SDK in the test app
 * ARP-2278 : Add recommendation filter customization
 
