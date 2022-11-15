@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		aJ3qydltNVQIeKLt0XUEN6UNBCg=
+		ieQy3DFK7DxJ+tgSJ5pkunO0R28=
 		</data>
 		<key>Resources/CHANGELOG.md</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/BZo-a2-3aS-view-s0d-Y5-PD6.nib</key>
 		<data>
-		AUNFRPWxD3HxgpUzGqoCRKDPeI8=
+		6LCewiHt4Rh+NwLUIWe6qILCP5k=
 		</data>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/Info.plist</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/InterstitialOverlayViewController.nib</key>
 		<data>
-		hvXNZgIUnMtj3/HSloF25EwJKyA=
+		+XqyIkoenGKRDhl3f7oLQUsotCs=
 		</data>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/Info.plist</key>
 		<data>
@@ -34,19 +34,19 @@
 		</data>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/MidSizeOverlay.nib</key>
 		<data>
-		AlnMYmRnUIJXQTAWaFG7zvmP2HI=
+		m4IcnkKwkebT8DGnjq61isqKHAU=
 		</data>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/jn2-VF-tgt-view-hS4-YQ-8yz.nib</key>
 		<data>
-		DH6HA3vClHgD9bKYnTtq4kKUrN0=
+		9IKiZhXNav3K5zCtFJyiPIZ3MiU=
 		</data>
 		<key>Resources/RatingStackView.nib/objects-14.0+.nib</key>
 		<data>
-		JjkLerUv/DZU6yo+wFteZRa8MiI=
+		ah80vWXKK5imnlUbt6a0BxBM8Go=
 		</data>
 		<key>Resources/RatingStackView.nib/runtime.nib</key>
 		<data>
-		41wFM6Gbo2rwX2ed3HpbpguMGTY=
+		S83rKXI9rePzbHAnmi0d/G3DNwk=
 		</data>
 		<key>Resources/de.lproj/Localizable.strings</key>
 		<dict>
@@ -243,7 +243,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z+Y/ZV+90aBYYPqobK8h5CE8vPpIuzXuzVyVV8gjOs8=
+			SbtsqrJihncTZDJYESgQrP8+BMqMWtd8x6FofEAUWGs=
 			</data>
 		</dict>
 		<key>Resources/CHANGELOG.md</key>
@@ -264,7 +264,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3yj9q5g51DtfWPGAZjxlTGUt43PyMOkrVbBfazGRfLA=
+			Mp7MvDwlp0Ctzmd2BJatqT9tKsC7Bxsp05kCcTsvVYA=
 			</data>
 		</dict>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/Info.plist</key>
@@ -278,7 +278,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pJfTB9DM0OHEzzMiiIwkeAFYn4eRQXueVPTTaU/PSt8=
+			1r1VV8bPVibXW56Y2lA62Y4wPt+O6+nX5PaQjIgO1AI=
 			</data>
 		</dict>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/Info.plist</key>
@@ -292,28 +292,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			u0A8lHn6bA7muchBtH4+hq4EXzrRD5JFTFHNlFWhA8c=
+			DqLEWN9W3wqRpHhi0jYt7DHGZoOYgxZvPFqyNbLzsbA=
 			</data>
 		</dict>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/jn2-VF-tgt-view-hS4-YQ-8yz.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			06aeaLW6BuglWO/2iMfwy3su96ORu3ED3MmQK0QU4Pw=
+			Y+GmSvYEhA5ouKo1h/xw2mBfTScvCP7Sp3gJsSGJw64=
 			</data>
 		</dict>
 		<key>Resources/RatingStackView.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jOAc4DBH4cTyqmn6XHZGm2XLj6Q+zdcdGNHO8ndHWrA=
+			kkq0e4uaPLLC/L1lwdNMJBD/0IMs5+0Q/TD8DezAzno=
 			</data>
 		</dict>
 		<key>Resources/RatingStackView.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VMfqqadQ9xSxYkemIgjnxYfrMeo0xhs3JvtiW/r9rUE=
+			47XXzr7GHHgSYZPaBTMdhVtfpq684bNLDRpS8z3sV38=
 			</data>
 		</dict>
 		<key>Resources/de.lproj/Localizable.strings</key>
