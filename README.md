@@ -1,4 +1,4 @@
-# CrossDK 3.2.2
+# CrossDK 3.3
 
 ![IOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](#swift-package-manager)
@@ -28,7 +28,7 @@ _Note: Instructions below are for using **SPM** without the Xcode UI. It's easie
 To integrate using Apple's Swift Package Manager, without Xcode integration, add the following as a dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.2.0"))
+.package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.3.O"))
 ```
 
 and then specify `"CrossDK"` as a dependency of the Target in which you wish to use CrossDK.
@@ -46,7 +46,7 @@ let package = Package(
             targets: ["MyPackage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.2.0"))
+        .package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.3.0"))
     ],
     targets: [
         .target(
@@ -470,15 +470,3 @@ And now, you can access to the `CrossDKOverlayDelegate`.
 
 That’s all you need to know !
 
-
-### Info
-
-We are currently working on a bug fix that causes the app to freeze after dismiss a midsize recommendation.
-In the meantime if you encounter this problem, you can call the dismiss in the overlayDidFinishDismissal function:
-
-```swift
-func overlayDidFinishDismissal() {
-    guard let window = view. window else { return }
-    crossDKOverlay.dismiss(window:window)
-}
-```
