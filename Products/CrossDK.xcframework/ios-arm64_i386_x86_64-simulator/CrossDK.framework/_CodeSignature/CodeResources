@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		N74fDq9vPY/uZqk9bMeoODh9d1s=
+		1x+Nlh2Qnv5i4GB+LN7jvSeYj88=
 		</data>
 		<key>CHANGELOG.md</key>
 		<data>
@@ -14,11 +14,11 @@
 		</data>
 		<key>Headers/CrossDK-Swift.h</key>
 		<data>
-		uFKRCgz+Lrybg1lKvkHApDwFEOM=
+		yE3Z5pWDwWLIO+jAD2q0OTwHEXw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xkzQ6P4RWwkXpiiRC5ADAPofeLo=
+		23RDbokk9c2OILc+kVNuvCx76TE=
 		</data>
 		<key>InterstitialOverlayViewController.storyboardc/BZo-a2-3aS-view-s0d-Y5-PD6.nib</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rOEUzSNZiTPuXeLROHiGMajWzlY=
+		SPYX9WsnEOT1TJzEp/OW6gzyQXU=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		rOEUzSNZiTPuXeLROHiGMajWzlY=
+		SPYX9WsnEOT1TJzEp/OW6gzyQXU=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		cTXU5As++nywK8wrYp3+gryg8E4=
+		v+NoFgfXvf9khwnDsci+Xjtsjmo=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386.swiftmodule</key>
 		<data>
-		cTXU5As++nywK8wrYp3+gryg8E4=
+		v+NoFgfXvf9khwnDsci+Xjtsjmo=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZHvZbhvKjKhPQBBf1wK5sjObRak=
+		SLK4qruyCk8LTdEWg7nELehNggA=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		ZHvZbhvKjKhPQBBf1wK5sjObRak=
+		SLK4qruyCk8LTdEWg7nELehNggA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -233,11 +233,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			N74fDq9vPY/uZqk9bMeoODh9d1s=
+			1x+Nlh2Qnv5i4GB+LN7jvSeYj88=
 			</data>
 			<key>hash2</key>
 			<data>
-			b4KPFXgW2RcL9s0ZFmZQAUpCpEXp33rf+GQmfaadijA=
+			lpB27mzDQcBP+2MUryL6msjTwro9SJbXwuglSB8nWEk=
 			</data>
 		</dict>
 		<key>CHANGELOG.md</key>
@@ -255,11 +255,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uFKRCgz+Lrybg1lKvkHApDwFEOM=
+			yE3Z5pWDwWLIO+jAD2q0OTwHEXw=
 			</data>
 			<key>hash2</key>
 			<data>
-			XQewCc0aVnIlIV/6iCiZ02AmGSI5BGNV7GycPCyZpI0=
+			p35QNml5REkOF75I/92zXYoPm0F1YgWQdZ/R4HdF3OA=
 			</data>
 		</dict>
 		<key>InterstitialOverlayViewController.storyboardc/BZo-a2-3aS-view-s0d-Y5-PD6.nib</key>
@@ -376,11 +376,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rOEUzSNZiTPuXeLROHiGMajWzlY=
+			SPYX9WsnEOT1TJzEp/OW6gzyQXU=
 			</data>
 			<key>hash2</key>
 			<data>
-			cm3UCTRrU2RXeyJGwtTJ3Iv9wb+/rJrYHiTHDjBtq1I=
+			zw9fos6HiqNqfEyk0yJygJWENKEpIxnzfnOjRL5+vFE=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftdoc</key>
@@ -409,11 +409,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rOEUzSNZiTPuXeLROHiGMajWzlY=
+			SPYX9WsnEOT1TJzEp/OW6gzyQXU=
 			</data>
 			<key>hash2</key>
 			<data>
-			cm3UCTRrU2RXeyJGwtTJ3Iv9wb+/rJrYHiTHDjBtq1I=
+			zw9fos6HiqNqfEyk0yJygJWENKEpIxnzfnOjRL5+vFE=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -442,11 +442,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cTXU5As++nywK8wrYp3+gryg8E4=
+			v+NoFgfXvf9khwnDsci+Xjtsjmo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZquInlsc/IHKJsYu7a/X1Ph/NPXeiPiMNSfWOkTcFPM=
+			kUobvmaxiCK/d0nLFV0e01coC/1jgK5GURIXpLglHEI=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/i386.swiftdoc</key>
@@ -475,11 +475,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cTXU5As++nywK8wrYp3+gryg8E4=
+			v+NoFgfXvf9khwnDsci+Xjtsjmo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZquInlsc/IHKJsYu7a/X1Ph/NPXeiPiMNSfWOkTcFPM=
+			kUobvmaxiCK/d0nLFV0e01coC/1jgK5GURIXpLglHEI=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -508,11 +508,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZHvZbhvKjKhPQBBf1wK5sjObRak=
+			SLK4qruyCk8LTdEWg7nELehNggA=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZJQjFxxIx7f/8vWOdZcel7eASi1dD43MC5cpO5u+h2c=
+			D+IoJfCEyNjtpIB7DllLXTQK52ezR3qwCUVpLNkeUD0=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftdoc</key>
@@ -541,11 +541,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZHvZbhvKjKhPQBBf1wK5sjObRak=
+			SLK4qruyCk8LTdEWg7nELehNggA=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZJQjFxxIx7f/8vWOdZcel7eASi1dD43MC5cpO5u+h2c=
+			D+IoJfCEyNjtpIB7DllLXTQK52ezR3qwCUVpLNkeUD0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
