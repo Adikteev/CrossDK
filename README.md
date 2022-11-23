@@ -1,4 +1,4 @@
-# CrossDK 3.3
+# CrossDK 3.3.1
 
 ![IOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](#swift-package-manager)
@@ -46,7 +46,7 @@ let package = Package(
             targets: ["MyPackage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.3.0"))
+        .package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.3.1"))
     ],
     targets: [
         .target(
