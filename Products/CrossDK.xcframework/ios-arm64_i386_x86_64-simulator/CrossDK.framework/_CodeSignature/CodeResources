@@ -6,19 +6,19 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		1x+Nlh2Qnv5i4GB+LN7jvSeYj88=
+		6nuviyEfnFTo8VbKQOaoUA2KLgc=
 		</data>
 		<key>CHANGELOG.md</key>
 		<data>
-		CVVVPpvc6ZjqU/KUOhOteXZiDhk=
+		EkeN/VFL1HfCf8etWyY5BD+4TgQ=
 		</data>
 		<key>Headers/CrossDK-Swift.h</key>
 		<data>
-		yE3Z5pWDwWLIO+jAD2q0OTwHEXw=
+		N1PEr63olvC7oEgZfpV5xOfJ8vU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		23RDbokk9c2OILc+kVNuvCx76TE=
+		BAwBCeginPY/kbF+T0fBW7QZL7c=
 		</data>
 		<key>InterstitialOverlayViewController.storyboardc/BZo-a2-3aS-view-s0d-Y5-PD6.nib</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		1AtvcHuG9HU9olBqOyPrH63RMhI=
+		HE6JhKDq0ZcEw3Dzu69/oS/uJRw=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		SPYX9WsnEOT1TJzEp/OW6gzyQXU=
+		IRyUQe+hIKJx7fKpPCuEUbGnDtY=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -70,11 +70,11 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		1AtvcHuG9HU9olBqOyPrH63RMhI=
+		HE6JhKDq0ZcEw3Dzu69/oS/uJRw=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		SPYX9WsnEOT1TJzEp/OW6gzyQXU=
+		IRyUQe+hIKJx7fKpPCuEUbGnDtY=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -82,11 +82,11 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
-		liZBq+t7B3TmDClHm2O9sTHzlQY=
+		Et7+URoH3aJ8p7xQan7R3klFpew=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		v+NoFgfXvf9khwnDsci+Xjtsjmo=
+		b3xSghmc+kTzSIreqWkmnBE2Ks8=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -94,11 +94,11 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386.swiftinterface</key>
 		<data>
-		liZBq+t7B3TmDClHm2O9sTHzlQY=
+		Et7+URoH3aJ8p7xQan7R3klFpew=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386.swiftmodule</key>
 		<data>
-		v+NoFgfXvf9khwnDsci+Xjtsjmo=
+		b3xSghmc+kTzSIreqWkmnBE2Ks8=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -106,11 +106,11 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		2B7l94fIDxxfjoalprWMfyl/6sU=
+		W1z+fN9nR5SsCBhHULKxwYYG4y8=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		SLK4qruyCk8LTdEWg7nELehNggA=
+		C5lJ6eC01N3eI/7m19syMeRYSWg=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -118,11 +118,11 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		2B7l94fIDxxfjoalprWMfyl/6sU=
+		W1z+fN9nR5SsCBhHULKxwYYG4y8=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		SLK4qruyCk8LTdEWg7nELehNggA=
+		C5lJ6eC01N3eI/7m19syMeRYSWg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -233,33 +233,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1x+Nlh2Qnv5i4GB+LN7jvSeYj88=
+			6nuviyEfnFTo8VbKQOaoUA2KLgc=
 			</data>
 			<key>hash2</key>
 			<data>
-			lpB27mzDQcBP+2MUryL6msjTwro9SJbXwuglSB8nWEk=
+			Bqo6350KT5xW+YLIbZQ/1cJxrK+FIMMMfjmAntPD8po=
 			</data>
 		</dict>
 		<key>CHANGELOG.md</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CVVVPpvc6ZjqU/KUOhOteXZiDhk=
+			EkeN/VFL1HfCf8etWyY5BD+4TgQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			sj2Bad/9Qpjiwzv9Q0yrwNUpI6kPWUK92T1OZbVJQ5Y=
+			VBa8xqtgzQwF8cS3WC7xsQX/tI1/9H8QL1tQr5xOuwQ=
 			</data>
 		</dict>
 		<key>Headers/CrossDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yE3Z5pWDwWLIO+jAD2q0OTwHEXw=
+			N1PEr63olvC7oEgZfpV5xOfJ8vU=
 			</data>
 			<key>hash2</key>
 			<data>
-			p35QNml5REkOF75I/92zXYoPm0F1YgWQdZ/R4HdF3OA=
+			wzmwD3K+DaTj7LPAB5Te/Qd+4y764CQOjYm4qo+lX98=
 			</data>
 		</dict>
 		<key>InterstitialOverlayViewController.storyboardc/BZo-a2-3aS-view-s0d-Y5-PD6.nib</key>
@@ -365,22 +365,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1AtvcHuG9HU9olBqOyPrH63RMhI=
+			HE6JhKDq0ZcEw3Dzu69/oS/uJRw=
 			</data>
 			<key>hash2</key>
 			<data>
-			EsYV1d0o/x181Ts9VnQ3QfJUnNYgsqJhYHyaXegdqNc=
+			87DqhhigfJm5gHmPVdF2PUJ6K1K7U7LzF98+54Hxbpg=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SPYX9WsnEOT1TJzEp/OW6gzyQXU=
+			IRyUQe+hIKJx7fKpPCuEUbGnDtY=
 			</data>
 			<key>hash2</key>
 			<data>
-			zw9fos6HiqNqfEyk0yJygJWENKEpIxnzfnOjRL5+vFE=
+			ihGSq+hi9gQqva/ghant/ZhrQKqv3z21bag0VXb+MX0=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftdoc</key>
@@ -398,22 +398,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1AtvcHuG9HU9olBqOyPrH63RMhI=
+			HE6JhKDq0ZcEw3Dzu69/oS/uJRw=
 			</data>
 			<key>hash2</key>
 			<data>
-			EsYV1d0o/x181Ts9VnQ3QfJUnNYgsqJhYHyaXegdqNc=
+			87DqhhigfJm5gHmPVdF2PUJ6K1K7U7LzF98+54Hxbpg=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SPYX9WsnEOT1TJzEp/OW6gzyQXU=
+			IRyUQe+hIKJx7fKpPCuEUbGnDtY=
 			</data>
 			<key>hash2</key>
 			<data>
-			zw9fos6HiqNqfEyk0yJygJWENKEpIxnzfnOjRL5+vFE=
+			ihGSq+hi9gQqva/ghant/ZhrQKqv3z21bag0VXb+MX0=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -431,22 +431,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			liZBq+t7B3TmDClHm2O9sTHzlQY=
+			Et7+URoH3aJ8p7xQan7R3klFpew=
 			</data>
 			<key>hash2</key>
 			<data>
-			LCNfTodIoUtD2Qe4aXYLjRQetDESjfqTdJOxDK7D4PA=
+			u1i6L+wXugKdn+gQ2A0hvhxxqeiHt4Fntj5VDQfl0K8=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			v+NoFgfXvf9khwnDsci+Xjtsjmo=
+			b3xSghmc+kTzSIreqWkmnBE2Ks8=
 			</data>
 			<key>hash2</key>
 			<data>
-			kUobvmaxiCK/d0nLFV0e01coC/1jgK5GURIXpLglHEI=
+			UBC4lsRZADGUQoVeq4sHGs5k9ff8LwMSANEFiQfnXAc=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/i386.swiftdoc</key>
@@ -464,22 +464,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			liZBq+t7B3TmDClHm2O9sTHzlQY=
+			Et7+URoH3aJ8p7xQan7R3klFpew=
 			</data>
 			<key>hash2</key>
 			<data>
-			LCNfTodIoUtD2Qe4aXYLjRQetDESjfqTdJOxDK7D4PA=
+			u1i6L+wXugKdn+gQ2A0hvhxxqeiHt4Fntj5VDQfl0K8=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			v+NoFgfXvf9khwnDsci+Xjtsjmo=
+			b3xSghmc+kTzSIreqWkmnBE2Ks8=
 			</data>
 			<key>hash2</key>
 			<data>
-			kUobvmaxiCK/d0nLFV0e01coC/1jgK5GURIXpLglHEI=
+			UBC4lsRZADGUQoVeq4sHGs5k9ff8LwMSANEFiQfnXAc=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -497,22 +497,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2B7l94fIDxxfjoalprWMfyl/6sU=
+			W1z+fN9nR5SsCBhHULKxwYYG4y8=
 			</data>
 			<key>hash2</key>
 			<data>
-			oMvx9FjvRziOU6+UGpNDC9qc/Tb65ZWioiItFcZq5Ls=
+			aMiIv/K9wEBedTCOR+rd3v0lsDze+6orbNfwvlkCiBs=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SLK4qruyCk8LTdEWg7nELehNggA=
+			C5lJ6eC01N3eI/7m19syMeRYSWg=
 			</data>
 			<key>hash2</key>
 			<data>
-			D+IoJfCEyNjtpIB7DllLXTQK52ezR3qwCUVpLNkeUD0=
+			ujs40zXAukT81kCQBrRwp/T+NX2hmwU93hvV9if/Z1w=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftdoc</key>
@@ -530,22 +530,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2B7l94fIDxxfjoalprWMfyl/6sU=
+			W1z+fN9nR5SsCBhHULKxwYYG4y8=
 			</data>
 			<key>hash2</key>
 			<data>
-			oMvx9FjvRziOU6+UGpNDC9qc/Tb65ZWioiItFcZq5Ls=
+			aMiIv/K9wEBedTCOR+rd3v0lsDze+6orbNfwvlkCiBs=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SLK4qruyCk8LTdEWg7nELehNggA=
+			C5lJ6eC01N3eI/7m19syMeRYSWg=
 			</data>
 			<key>hash2</key>
 			<data>
-			D+IoJfCEyNjtpIB7DllLXTQK52ezR3qwCUVpLNkeUD0=
+			ujs40zXAukT81kCQBrRwp/T+NX2hmwU93hvV9if/Z1w=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

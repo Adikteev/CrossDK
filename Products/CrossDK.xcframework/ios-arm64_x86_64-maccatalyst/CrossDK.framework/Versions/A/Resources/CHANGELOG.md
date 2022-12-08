@@ -2,6 +2,9 @@
 
 # Q4
 
+* ARP-3535 : Freeze of the app when click and reclick before the end of the display
+* ARP-3534 : Reduce memory leak causing the freeze of the app for interstitial and banner formats
+* ARP-3522 : Memory leak causing the freeze of the app for mid size format
 * ARP-3404 : Ad events are not well monitored on cross promotion stream
 * ARP-3433 : All ad requests contain mid size as a creative format
 * ARP-3405 : SDK version dimension contains app test version

@@ -123,6 +123,9 @@ extension CrossDK.CrossDKOverlay : CrossDK.RewardedAdDelegate {
   @objc dynamic public func didCompleteRewardedAdVideo()
   @objc dynamic public func didRewardUserWithReward()
 }
+extension CrossDK.CrossDKOverlay : UIKit.UIViewControllerTransitioningDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func animationController(forDismissed dismissed: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+}
 public struct CrossDKRecommendationFilter {
   public init(churnedRankRange: Swift.ClosedRange<Swift.Float>? = nil, reopenRankRange: Swift.ClosedRange<Swift.Float>? = nil, installConversionProbaMin: Swift.Float? = nil, appIdDenylist: [Swift.String]? = nil, appIdAllowlist: [Swift.String]? = nil)
 }

@@ -192,6 +192,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import ObjectiveC;
 @import StoreKit;
+@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -308,6 +309,14 @@ typedef SWIFT_ENUM(NSInteger, OverlayError, open) {
 /// Indicates that <code>CrossDK</code> is not properly configured.
   OverlayErrorNoConfiguration = 3,
 };
+
+@class UIViewController;
+@protocol UIViewControllerAnimatedTransitioning;
+
+@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <UIViewControllerTransitioningDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+@end
+
 
 @class SKOverlay;
 @class SKOverlayTransitionContext;
@@ -667,6 +676,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import ObjectiveC;
 @import StoreKit;
+@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -783,6 +793,14 @@ typedef SWIFT_ENUM(NSInteger, OverlayError, open) {
 /// Indicates that <code>CrossDK</code> is not properly configured.
   OverlayErrorNoConfiguration = 3,
 };
+
+@class UIViewController;
+@protocol UIViewControllerAnimatedTransitioning;
+
+@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <UIViewControllerTransitioningDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+@end
+
 
 @class SKOverlay;
 @class SKOverlayTransitionContext;
