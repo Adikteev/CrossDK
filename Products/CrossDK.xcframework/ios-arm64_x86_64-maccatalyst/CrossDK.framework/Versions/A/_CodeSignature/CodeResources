@@ -6,19 +6,19 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		yrznge9zb9ZHo2sQCBMP6SQY4Ys=
+		ieQy3DFK7DxJ+tgSJ5pkunO0R28=
 		</data>
 		<key>Resources/CHANGELOG.md</key>
 		<data>
-		EkeN/VFL1HfCf8etWyY5BD+4TgQ=
+		c3+Oi4jSg7ZgUNnOcIT7BUzYNqU=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		wCbCHRzM8dYShP7Ky7nd5Ngc3pE=
+		GX4M5ax1aoulC4sAQNYrFuSrefM=
 		</data>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/BZo-a2-3aS-view-s0d-Y5-PD6.nib</key>
 		<data>
-		KsIv7CigCLFE3LXAkDnWvFZKzjc=
+		6aOL8XzuLSxbDa/4WPRlGxt/RRI=
 		</data>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/Info.plist</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/InterstitialOverlayViewController.nib</key>
 		<data>
-		7rcm+e5y1bylPUe+qSUMVYFq5U8=
+		gWGXPEggm8PmzhjpkYMLWZwthXM=
 		</data>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/Info.plist</key>
 		<data>
@@ -34,19 +34,11 @@
 		</data>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/MidSizeOverlay.nib</key>
 		<data>
-		zslIIxt5Cr9ZJuapp1oGHcIIaeU=
+		57SO67sVm2V+ZBbSm7dEz/UU55A=
 		</data>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/jn2-VF-tgt-view-hS4-YQ-8yz.nib</key>
 		<data>
-		PC5UcKfQD8+0451dS4epZgaB33M=
-		</data>
-		<key>Resources/RatingStackView.nib/objects-14.0+.nib</key>
-		<data>
-		utgK+NpXV4xQK4HYeEQPW7C8s9c=
-		</data>
-		<key>Resources/RatingStackView.nib/runtime.nib</key>
-		<data>
-		XR7mwhVfjfV6R3T+WIL0eVQgEAA=
+		3q5LUXvHEaPHC9gQyHcgWaHKrKY=
 		</data>
 		<key>Resources/de.lproj/Localizable.strings</key>
 		<dict>
@@ -145,91 +137,91 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bQe1jej9QhPerw+mVtgV6kO713mLvYJ65ExUDOfQR9A=
+			G1Ctf+8nZoXydyDPpT4KTNKY1bolrPCb420PWkmr7pM=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TZXrtjD2l2XLJBJqdg/5EZkzqaLDcLVqfiJExvY/9cw=
+			u6igG5a9k4mJTfoSJey/vxU84hHU+L8elMExgv4iJxE=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I/pPAkGjzhV8uieo7ppeyaMkjZz2BbQUkxl8KCE46+U=
+			uK2WVREdYzNfWiHv/sXb/kGYxhlHJiaPoNcgOP/5BKM=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IzOIFuVt2hwLMZB7kggK6eY7Xy4EYlzp4NGeqc+RWuY=
+			l0tKrDyTmwOHHX4xPlO7xZq+PJSfoKSNB253uovcnlQ=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TZXrtjD2l2XLJBJqdg/5EZkzqaLDcLVqfiJExvY/9cw=
+			u6igG5a9k4mJTfoSJey/vxU84hHU+L8elMExgv4iJxE=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I/pPAkGjzhV8uieo7ppeyaMkjZz2BbQUkxl8KCE46+U=
+			uK2WVREdYzNfWiHv/sXb/kGYxhlHJiaPoNcgOP/5BKM=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IzOIFuVt2hwLMZB7kggK6eY7Xy4EYlzp4NGeqc+RWuY=
+			l0tKrDyTmwOHHX4xPlO7xZq+PJSfoKSNB253uovcnlQ=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KUGEwyAt8M8iIBA9BH70wQm2nfGarG80ToNHD8XaEAM=
+			tWNZQmikBSzFMU8JwLMv+sF9kXf8Mug1XDDKTez7FbU=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7MDZejGp5CW6oilCBO7/KHZ3dFdUciLT+1bzHI9QOVU=
+			weW2nsnpyzc3FcAwYZqNsmi0luxVOP4r4+9nz+IKd4U=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GQ/Hsrkl8BoStVeigemMiVIaxyVuxPFqWBlp4g3ArvU=
+			ySG1tNLaqqt5RK2m891HuJSiKo+Ub+T6NFECZHpX6w0=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KUGEwyAt8M8iIBA9BH70wQm2nfGarG80ToNHD8XaEAM=
+			tWNZQmikBSzFMU8JwLMv+sF9kXf8Mug1XDDKTez7FbU=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7MDZejGp5CW6oilCBO7/KHZ3dFdUciLT+1bzHI9QOVU=
+			weW2nsnpyzc3FcAwYZqNsmi0luxVOP4r4+9nz+IKd4U=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GQ/Hsrkl8BoStVeigemMiVIaxyVuxPFqWBlp4g3ArvU=
+			ySG1tNLaqqt5RK2m891HuJSiKo+Ub+T6NFECZHpX6w0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -243,28 +235,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zsVVXo5Pyj1LIlDMRc1uMF0vBFIzSw0ONFEOoCtt6y8=
+			SbtsqrJihncTZDJYESgQrP8+BMqMWtd8x6FofEAUWGs=
 			</data>
 		</dict>
 		<key>Resources/CHANGELOG.md</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VBa8xqtgzQwF8cS3WC7xsQX/tI1/9H8QL1tQr5xOuwQ=
+			Rxm+5pDc858HrgkbSq2Sisad8i1ZKKFwssQh4Q0vHfI=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AXfIDf5BD9JI4G8G6kreQo+/09wPYSG38+qB4jHhCCQ=
+			y3zTHnF2AYgLR5T154xQZMPVIwlKiQijwkzbqysXtPU=
 			</data>
 		</dict>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/BZo-a2-3aS-view-s0d-Y5-PD6.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			159PNdhtCS/9TQdgwehJttIkM+WJw0++kRuSHll17Cc=
+			p+DgP4YHqfPtaDqu23nZwGbwt642fx9gV2P+LsWjoiI=
 			</data>
 		</dict>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/Info.plist</key>
@@ -278,7 +270,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7YlQjK3J9IMayfSFITzshHy2LU/Jy0Fgu9ZiCZVbR3M=
+			3KXWuiMML+xuxu1yRLSPYULhKkYu7fUDPXPbPh4EPw8=
 			</data>
 		</dict>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/Info.plist</key>
@@ -292,28 +284,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/lmThJXffxLuqovp52aM60NK6R0R7EMOdXHs2ZaaL+w=
+			4JJnWU1LNVTNvjkiuPVDafObHTlQ3d0IT+srxK4gp1A=
 			</data>
 		</dict>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/jn2-VF-tgt-view-hS4-YQ-8yz.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5SBiGkOmBvtwdsMKbiRx1w8E53OT12YGS2uHEqSSUTA=
-			</data>
-		</dict>
-		<key>Resources/RatingStackView.nib/objects-14.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			OemUmHnVclE7iWQFWhMIUJS2ja7ZxCmaTk2QkX7HcWo=
-			</data>
-		</dict>
-		<key>Resources/RatingStackView.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			FHCO75zwiZ8FU4GYPc1zoMzbDPrL2GjY1hXSEsu/3x4=
+			kkWx1dYWPXSaXjh24PZU8U6QApYaNzacnInj4jzmckc=
 			</data>
 		</dict>
 		<key>Resources/de.lproj/Localizable.strings</key>

@@ -7,7 +7,20 @@ import StoreKit
 import Swift
 import UIKit
 import _Concurrency
+extension CrossDK.CrossDKManager {
+  public func load(crossDKOverlay: CrossDK.CrossDKOverlay)
+}
 public enum Colors {
+}
+@objc @_inheritsConvenienceInitializers public class CrossDKManager : ObjectiveC.NSObject {
+  public func display(crossDKOverlay: CrossDK.CrossDKOverlay, window: UIKit.UIWindow, format: CrossDK.CrossDKOverlay.OverlayFormat, position: CrossDK.CrossDKOverlay.OverlayPosition, withCloseButton: Swift.Bool, isRewarded: Swift.Bool)
+  public func load(crossDKOverlay: CrossDK.CrossDKOverlay, window: UIKit.UIWindow, format: CrossDK.CrossDKOverlay.OverlayFormat, position: CrossDK.CrossDKOverlay.OverlayPosition, withCloseButton: Swift.Bool, isRewarded: Swift.Bool)
+  public func dismiss(window: UIKit.UIWindow)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension CrossDK.CrossDKManager : UIKit.UIViewControllerTransitioningDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func animationController(forDismissed dismissed: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
 }
 @objc public protocol CrossDKOverlayDelegate {
   @objc func overlayWillStartPresentation()
@@ -20,33 +33,17 @@ public enum Colors {
   @objc func overlayDidFinishPlayingVideo()
   @objc func overlayDidRewardUserWithReward()
   @objc func overlayDidFailToLoad(error: Swift.Error)
+  @objc func overlayDidPreload()
+  @objc func overlayPreloadFailure()
+  @objc func overlayPreloadExpired()
   @objc func overlayUnavailable(error: CrossDK.CrossDKOverlay.OverlayError)
-}
-@objc public protocol InterstitialAdDelegate {
-  @objc func didLoadInterstitialAd()
-  @objc func didFailToLoadInterstitialAd()
-  @objc func didDisplayInterstitialAd()
-  @objc func didFailToDisplayInterstitialAd()
-  @objc func didHideInterstitialAd()
-  @objc func didClickInterstitialAd()
-}
-@objc public protocol RewardedAdDelegate {
-  @objc func didLoadRewardedAd()
-  @objc func didFailToLoadRewardedAd()
-  @objc func didDisplayRewardedAd()
-  @objc func didFailToDisplayRewardedAd()
-  @objc func didHideRewardedAd()
-  @objc func didClickRewardedAd()
-  @objc func didStartRewardedAdVideo()
-  @objc func didCompleteRewardedAdVideo()
-  @objc func didRewardUserWithReward()
 }
 @objc @_inheritsConvenienceInitializers public class CrossDKOverlay : ObjectiveC.NSObject {
   @objc weak public var delegate: CrossDK.CrossDKOverlayDelegate?
   @objc weak public var interstitialAdDelegate: CrossDK.InterstitialAdDelegate?
   @objc weak public var rewardedAdDelegate: CrossDK.RewardedAdDelegate?
   @objc public var sdkVersion: Swift.String?
-  @objc public var apiStatus: Swift.String?
+  public var apiStatus: Swift.String?
   @objc public enum OverlayPosition : Swift.Int {
     case bottom
     case bottomRaised
@@ -66,6 +63,16 @@ public enum Colors {
       get
     }
   }
+  @objc public enum OverlayLoadingState : Swift.Int {
+    case never
+    case inProgress
+    case finished
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
   @objc public enum OverlayError : Swift.Int {
     case unsupportedOSVersion
     case unavailableWindowScene
@@ -78,9 +85,9 @@ public enum Colors {
     }
   }
   @objc override dynamic public init()
-  @objc public func load()
   @objc public func display(window: UIKit.UIWindow, format: CrossDK.CrossDKOverlay.OverlayFormat, position: CrossDK.CrossDKOverlay.OverlayPosition, withCloseButton: Swift.Bool, isRewarded: Swift.Bool)
-  @objc public func dismiss(window: UIKit.UIWindow)
+  @objc public func load(window: UIKit.UIWindow, format: CrossDK.CrossDKOverlay.OverlayFormat, position: CrossDK.CrossDKOverlay.OverlayPosition, withCloseButton: Swift.Bool, isRewarded: Swift.Bool)
+  @objc public func display()
   @objc deinit
 }
 @available(iOS 14.0, *)
@@ -103,6 +110,48 @@ extension CrossDK.CrossDKOverlay : CrossDK.CrossDKOverlayDelegate {
   @objc dynamic public func overlayDidRewardUserWithReward()
   @objc dynamic public func overlayDidFailToLoad(error: Swift.Error)
   @objc dynamic public func overlayUnavailable(error: CrossDK.CrossDKOverlay.OverlayError)
+  @objc dynamic public func overlayDidPreload()
+  @objc dynamic public func overlayPreloadFailure()
+  @objc dynamic public func overlayPreloadExpired()
+}
+public struct CrossDKRecommendationFilter {
+  public init(churnedRankRange: Swift.ClosedRange<Swift.Float>? = nil, reopenRankRange: Swift.ClosedRange<Swift.Float>? = nil, installConversionProbaMin: Swift.Float? = nil, appIdDenylist: [Swift.String]? = nil, appIdAllowlist: [Swift.String]? = nil)
+}
+public enum Style {
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CrossDKConfig : ObjectiveC.NSObject {
+  @objc public static let shared: CrossDK.CrossDKConfig
+  @objc public var apiStatus: Swift.String?
+  @objc public var isConfigured: Swift.Bool {
+    @objc get
+  }
+  @objc public var deviceId: Swift.String?
+  @objc public func setup(appId: Swift.String, apiKey: Swift.String, userId: Swift.String? = nil)
+  public func set(recommendationFilter: CrossDK.CrossDKRecommendationFilter)
+  @objc deinit
+}
+@objc public protocol InterstitialAdDelegate {
+  @objc func didLoadInterstitialAd()
+  @objc func didFailToLoadInterstitialAd()
+  @objc func didDisplayInterstitialAd()
+  @objc func didFailToDisplayInterstitialAd()
+  @objc func didHideInterstitialAd()
+  @objc func didClickInterstitialAd()
+}
+@objc public protocol RewardedAdDelegate {
+  @objc func didLoadRewardedAd()
+  @objc func didFailToLoadRewardedAd()
+  @objc func didDisplayRewardedAd()
+  @objc func didFailToDisplayRewardedAd()
+  @objc func didHideRewardedAd()
+  @objc func didClickRewardedAd()
+  @objc func didStartRewardedAdVideo()
+  @objc func didCompleteRewardedAdVideo()
+  @objc func didRewardUserWithReward()
+}
+extension CrossDK.CrossDKOverlay {
+  @objc dynamic public func load()
+  @objc dynamic public func dismiss(window: UIKit.UIWindow)
 }
 extension CrossDK.CrossDKOverlay : CrossDK.InterstitialAdDelegate {
   @objc dynamic public func didLoadInterstitialAd()
@@ -123,43 +172,15 @@ extension CrossDK.CrossDKOverlay : CrossDK.RewardedAdDelegate {
   @objc dynamic public func didCompleteRewardedAdVideo()
   @objc dynamic public func didRewardUserWithReward()
 }
-extension CrossDK.CrossDKOverlay : UIKit.UIViewControllerTransitioningDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func animationController(forDismissed dismissed: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
-}
-public struct CrossDKRecommendationFilter {
-  public init(churnedRankRange: Swift.ClosedRange<Swift.Float>? = nil, reopenRankRange: Swift.ClosedRange<Swift.Float>? = nil, installConversionProbaMin: Swift.Float? = nil, appIdDenylist: [Swift.String]? = nil, appIdAllowlist: [Swift.String]? = nil)
-}
-public enum Style {
-}
-public enum StarRounding : Swift.Int {
-  case roundToHalfStar
-  case roundToStar
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CrossDKConfig : ObjectiveC.NSObject {
-  @objc public static let shared: CrossDK.CrossDKConfig
-  @objc public var apiStatus: Swift.String?
-  @objc public var isConfigured: Swift.Bool {
-    @objc get
-  }
-  @objc public var deviceId: Swift.String?
-  @objc public func setup(appId: Swift.String, apiKey: Swift.String, userId: Swift.String? = nil)
-  public func set(recommendationFilter: CrossDK.CrossDKRecommendationFilter)
-  @objc deinit
-}
 extension CrossDK.CrossDKOverlay.OverlayPosition : Swift.Equatable {}
 extension CrossDK.CrossDKOverlay.OverlayPosition : Swift.Hashable {}
 extension CrossDK.CrossDKOverlay.OverlayPosition : Swift.RawRepresentable {}
 extension CrossDK.CrossDKOverlay.OverlayFormat : Swift.Equatable {}
 extension CrossDK.CrossDKOverlay.OverlayFormat : Swift.Hashable {}
 extension CrossDK.CrossDKOverlay.OverlayFormat : Swift.RawRepresentable {}
+extension CrossDK.CrossDKOverlay.OverlayLoadingState : Swift.Equatable {}
+extension CrossDK.CrossDKOverlay.OverlayLoadingState : Swift.Hashable {}
+extension CrossDK.CrossDKOverlay.OverlayLoadingState : Swift.RawRepresentable {}
 extension CrossDK.CrossDKOverlay.OverlayError : Swift.Equatable {}
 extension CrossDK.CrossDKOverlay.OverlayError : Swift.Hashable {}
 extension CrossDK.CrossDKOverlay.OverlayError : Swift.RawRepresentable {}
-extension CrossDK.StarRounding : Swift.Equatable {}
-extension CrossDK.StarRounding : Swift.Hashable {}
-extension CrossDK.StarRounding : Swift.RawRepresentable {}

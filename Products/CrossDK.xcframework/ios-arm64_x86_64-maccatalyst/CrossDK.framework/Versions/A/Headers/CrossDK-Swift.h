@@ -210,7 +210,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-
 @class NSString;
 @class NSNumber;
 
@@ -239,6 +238,23 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 @end
 
 
+
+SWIFT_CLASS("_TtC7CrossDK14CrossDKManager")
+@interface CrossDKManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+@class UIViewController;
+@protocol UIViewControllerAnimatedTransitioning;
+
+@interface CrossDKManager (SWIFT_EXTENSION(CrossDK)) <UIViewControllerTransitioningDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
 @protocol CrossDKOverlayDelegate;
 @protocol InterstitialAdDelegate;
 @protocol RewardedAdDelegate;
@@ -257,11 +273,7 @@ SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 @property (nonatomic, weak) id <RewardedAdDelegate> _Nullable rewardedAdDelegate;
 /// Returns the <code>CrossDK</code> version.
 @property (nonatomic, copy) NSString * _Nullable sdkVersion;
-/// Current status state of the api.
-@property (nonatomic, copy) NSString * _Nullable apiStatus;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// For ALAdikteevMediationAdapter : Loads an Overlay view.
-- (void)load;
 /// Displays an Overlay view.
 /// \param window current window
 ///
@@ -274,10 +286,20 @@ SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 /// \param isRewarded provides some kind of value for the user (interstitial format only)
 ///
 - (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton isRewarded:(BOOL)isRewarded;
-/// Dismisses an Overlay view.
+/// Load an Overlay view.
 /// \param window current window
 ///
-- (void)dismissWithWindow:(UIWindow * _Nonnull)window;
+/// \param format banner, mid_size, interstitial overlay
+///
+/// \param position banner and mid_size overlay position
+///
+/// \param withCloseButton mid_size and interstitial overlay close button
+///
+/// \param isRewarded provides some kind of value for the user (interstitial format only)
+///
+- (void)loadWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton isRewarded:(BOOL)isRewarded;
+/// Display Loaded  Overlay view.
+- (void)display;
 @end
 
 /// Identifies the position of an overlay on the screen.
@@ -298,6 +320,16 @@ typedef SWIFT_ENUM(NSInteger, OverlayFormat, open) {
   OverlayFormatInterstitial = 2,
 };
 
+/// Identifies the loading state
+typedef SWIFT_ENUM(NSInteger, OverlayLoadingState, open) {
+/// not yet preloaded
+  OverlayLoadingStateNever = 0,
+/// preload in progress
+  OverlayLoadingStateInProgress = 1,
+/// finished Loading
+  OverlayLoadingStateFinished = 2,
+};
+
 /// Describes a specific error from <code>CrossDKOverlay</code>.
 typedef SWIFT_ENUM(NSInteger, OverlayError, open) {
 /// Indicates that current OS version is not supported.
@@ -310,13 +342,15 @@ typedef SWIFT_ENUM(NSInteger, OverlayError, open) {
   OverlayErrorNoConfiguration = 3,
 };
 
-@class UIViewController;
-@protocol UIViewControllerAnimatedTransitioning;
 
-@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <UIViewControllerTransitioningDelegate>
-- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK))
+/// For ALAdikteevMediationAdapter : Loads an Overlay view.
+- (void)load;
+/// Dismisses an Overlay view.
+/// \param window current window
+///
+- (void)dismissWithWindow:(UIWindow * _Nonnull)window;
 @end
-
 
 @class SKOverlay;
 @class SKOverlayTransitionContext;
@@ -416,7 +450,6 @@ SWIFT_PROTOCOL("_TtP7CrossDK18RewardedAdDelegate_")
 @end
 
 
-
 /// Delegate that gets notified on overlay state changes.
 SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 @protocol CrossDKOverlayDelegate
@@ -440,7 +473,12 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 - (void)overlayDidRewardUserWithReward;
 /// Indicates that the platform failed to load an overlay.
 - (void)overlayDidFailToLoadWithError:(NSError * _Nonnull)error;
-/// Indicates that the overlay is not available.
+/// Indicates that the overlay is preload
+- (void)overlayDidPreload;
+/// Indicates that the platform failed to preload an overlay.
+- (void)overlayPreloadFailure;
+/// /// Indicates that the overlay preload expired
+- (void)overlayPreloadExpired;
 /// \param error an error describing encountered issue
 ///
 - (void)overlayUnavailableWithError:(enum OverlayError)error;
@@ -470,7 +508,13 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 - (void)overlayDidFailToLoadWithError:(NSError * _Nonnull)error;
 /// Indicates that an overlay is unavailable.
 - (void)overlayUnavailableWithError:(enum OverlayError)error;
+- (void)overlayDidPreload;
+/// Indicates that the platform failed to preload an overlay.
+- (void)overlayPreloadFailure;
+/// Indicates that the overlay is preloaded
+- (void)overlayPreloadExpired;
 @end
+
 
 
 
@@ -694,7 +738,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-
 @class NSString;
 @class NSNumber;
 
@@ -723,6 +766,23 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 @end
 
 
+
+SWIFT_CLASS("_TtC7CrossDK14CrossDKManager")
+@interface CrossDKManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+@class UIViewController;
+@protocol UIViewControllerAnimatedTransitioning;
+
+@interface CrossDKManager (SWIFT_EXTENSION(CrossDK)) <UIViewControllerTransitioningDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
 @protocol CrossDKOverlayDelegate;
 @protocol InterstitialAdDelegate;
 @protocol RewardedAdDelegate;
@@ -741,11 +801,7 @@ SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 @property (nonatomic, weak) id <RewardedAdDelegate> _Nullable rewardedAdDelegate;
 /// Returns the <code>CrossDK</code> version.
 @property (nonatomic, copy) NSString * _Nullable sdkVersion;
-/// Current status state of the api.
-@property (nonatomic, copy) NSString * _Nullable apiStatus;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// For ALAdikteevMediationAdapter : Loads an Overlay view.
-- (void)load;
 /// Displays an Overlay view.
 /// \param window current window
 ///
@@ -758,10 +814,20 @@ SWIFT_CLASS("_TtC7CrossDK14CrossDKOverlay")
 /// \param isRewarded provides some kind of value for the user (interstitial format only)
 ///
 - (void)displayWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton isRewarded:(BOOL)isRewarded;
-/// Dismisses an Overlay view.
+/// Load an Overlay view.
 /// \param window current window
 ///
-- (void)dismissWithWindow:(UIWindow * _Nonnull)window;
+/// \param format banner, mid_size, interstitial overlay
+///
+/// \param position banner and mid_size overlay position
+///
+/// \param withCloseButton mid_size and interstitial overlay close button
+///
+/// \param isRewarded provides some kind of value for the user (interstitial format only)
+///
+- (void)loadWithWindow:(UIWindow * _Nonnull)window format:(enum OverlayFormat)format position:(enum OverlayPosition)position withCloseButton:(BOOL)withCloseButton isRewarded:(BOOL)isRewarded;
+/// Display Loaded  Overlay view.
+- (void)display;
 @end
 
 /// Identifies the position of an overlay on the screen.
@@ -782,6 +848,16 @@ typedef SWIFT_ENUM(NSInteger, OverlayFormat, open) {
   OverlayFormatInterstitial = 2,
 };
 
+/// Identifies the loading state
+typedef SWIFT_ENUM(NSInteger, OverlayLoadingState, open) {
+/// not yet preloaded
+  OverlayLoadingStateNever = 0,
+/// preload in progress
+  OverlayLoadingStateInProgress = 1,
+/// finished Loading
+  OverlayLoadingStateFinished = 2,
+};
+
 /// Describes a specific error from <code>CrossDKOverlay</code>.
 typedef SWIFT_ENUM(NSInteger, OverlayError, open) {
 /// Indicates that current OS version is not supported.
@@ -794,13 +870,15 @@ typedef SWIFT_ENUM(NSInteger, OverlayError, open) {
   OverlayErrorNoConfiguration = 3,
 };
 
-@class UIViewController;
-@protocol UIViewControllerAnimatedTransitioning;
 
-@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <UIViewControllerTransitioningDelegate>
-- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+@interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK))
+/// For ALAdikteevMediationAdapter : Loads an Overlay view.
+- (void)load;
+/// Dismisses an Overlay view.
+/// \param window current window
+///
+- (void)dismissWithWindow:(UIWindow * _Nonnull)window;
 @end
-
 
 @class SKOverlay;
 @class SKOverlayTransitionContext;
@@ -900,7 +978,6 @@ SWIFT_PROTOCOL("_TtP7CrossDK18RewardedAdDelegate_")
 @end
 
 
-
 /// Delegate that gets notified on overlay state changes.
 SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 @protocol CrossDKOverlayDelegate
@@ -924,7 +1001,12 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 - (void)overlayDidRewardUserWithReward;
 /// Indicates that the platform failed to load an overlay.
 - (void)overlayDidFailToLoadWithError:(NSError * _Nonnull)error;
-/// Indicates that the overlay is not available.
+/// Indicates that the overlay is preload
+- (void)overlayDidPreload;
+/// Indicates that the platform failed to preload an overlay.
+- (void)overlayPreloadFailure;
+/// /// Indicates that the overlay preload expired
+- (void)overlayPreloadExpired;
 /// \param error an error describing encountered issue
 ///
 - (void)overlayUnavailableWithError:(enum OverlayError)error;
@@ -954,7 +1036,13 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 - (void)overlayDidFailToLoadWithError:(NSError * _Nonnull)error;
 /// Indicates that an overlay is unavailable.
 - (void)overlayUnavailableWithError:(enum OverlayError)error;
+- (void)overlayDidPreload;
+/// Indicates that the platform failed to preload an overlay.
+- (void)overlayPreloadFailure;
+/// Indicates that the overlay is preloaded
+- (void)overlayPreloadExpired;
 @end
+
 
 
 

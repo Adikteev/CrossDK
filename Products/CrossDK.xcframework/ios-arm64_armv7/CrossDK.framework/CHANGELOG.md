@@ -1,5 +1,32 @@
 # CrossDK - CHANGELOG
 
+
+# Q123
+
+
+## Sprint 3
+
+### Features
+
+* ARP-3640 : Add Preload feature on sdk
+* ARP-3638 : Improve IBOutlets management
+* ARP-3637 : Improve previewImageView load
+
+## Sprint 2
+
+### Features
+
+* ARP-3565 : Isolate player video
+* ARP-3563 : Make a singleton for the CrossDKOverlay
+
+## Sprint 1
+
+### Features
+
+* ARP-3105 : Build SDK app IOS with staging url
+* ARP-3566 : Factorize MidSize and Interstitial classes
+
+
 # Q4
 
 * ARP-3535 : Freeze of the app when click and reclick before the end of the display
