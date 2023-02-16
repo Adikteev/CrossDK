@@ -28,7 +28,7 @@ _Note: Instructions below are for using **SPM** without the Xcode UI. It's easie
 To integrate using Apple's Swift Package Manager, without Xcode integration, add the following as a dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.3.2"))
+.package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "4.0.0"))
 ```
 
 and then specify `"CrossDK"` as a dependency of the Target in which you wish to use CrossDK.
@@ -46,7 +46,7 @@ let package = Package(
             targets: ["MyPackage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "3.3.2"))
+        .package(url: "https://github.com/Adikteev/crossdk-ios", .upToNextMajor(from: "4.0.0"))
     ],
     targets: [
         .target(
