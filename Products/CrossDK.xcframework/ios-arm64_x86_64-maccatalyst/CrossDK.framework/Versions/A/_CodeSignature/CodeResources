@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		ieQy3DFK7DxJ+tgSJ5pkunO0R28=
+		aJ3qydltNVQIeKLt0XUEN6UNBCg=
 		</data>
 		<key>Resources/CHANGELOG.md</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/BZo-a2-3aS-view-s0d-Y5-PD6.nib</key>
 		<data>
-		LfTS4ZtKPiAcf+zCUtMVnYahKUE=
+		kPuAQZZu6V1C8Dtj+6Hut/U9d20=
 		</data>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/Info.plist</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/InterstitialOverlayViewController.nib</key>
 		<data>
-		jZDkxycZmln2yDldBLkkkETvuGU=
+		BXvmfd0XedNGyTltDqTZjZWDYqw=
 		</data>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/Info.plist</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/MidSizeOverlay.nib</key>
 		<data>
-		zB7PxPkBkyp9V015wIA7Fbe2yqM=
+		2EkB7jQpFrEZeBr1IXrz+QNo0xU=
 		</data>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/jn2-VF-tgt-view-hS4-YQ-8yz.nib</key>
 		<data>
-		PH9Lrj7lc79WUiW3zGyM2R3ubdI=
+		jcO20P0lSba70bJkrw2HQVZJ28M=
 		</data>
 		<key>Resources/de.lproj/Localizable.strings</key>
 		<dict>
@@ -235,7 +235,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SbtsqrJihncTZDJYESgQrP8+BMqMWtd8x6FofEAUWGs=
+			Z+Y/ZV+90aBYYPqobK8h5CE8vPpIuzXuzVyVV8gjOs8=
 			</data>
 		</dict>
 		<key>Resources/CHANGELOG.md</key>
@@ -256,7 +256,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e5T1WBam7P4tO0DKEd+yN2N9465e9O+ofyd/3FnUR6E=
+			FGDSyiinC3Ioz9OX4NXfRIUWd1detUX8ptNuXX8ok7o=
 			</data>
 		</dict>
 		<key>Resources/InterstitialOverlayViewController.storyboardc/Info.plist</key>
@@ -270,7 +270,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dXIyQkc7dxaD6+z5NZi0gOylLvaxeE/yD8i5CgEuasA=
+			+cJSKJ/gwZpsyDMqBc0nBk5oBnbUQhxFIniyv28baaY=
 			</data>
 		</dict>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/Info.plist</key>
@@ -284,14 +284,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			p7OI0Ml5WodyIJqEqu6R4ZMdIZBhUkn3TYasH/ZqaeE=
+			DrGou0/UUyE6j1X60VYndLN3VR7Znvt9+taH16kRSxQ=
 			</data>
 		</dict>
 		<key>Resources/MidSizeOverlayViewController.storyboardc/jn2-VF-tgt-view-hS4-YQ-8yz.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jGIRxh/s/pyNVW4BPHQk7Z4rjEbVFCC2PiXt8kVyu5Q=
+			FtMevFWPqnuAat470IlFraVGOsr974cna4ONVkkTaAw=
 			</data>
 		</dict>
 		<key>Resources/de.lproj/Localizable.strings</key>
