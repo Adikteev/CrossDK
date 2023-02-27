@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CrossDK
+import AVFoundation
 import AVKit
 import Foundation
 import StoreKit
@@ -21,6 +22,14 @@ public enum Colors {
 }
 extension CrossDK.CrossDKManager : UIKit.UIViewControllerTransitioningDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func animationController(forDismissed dismissed: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+}
+@available(iOS 14.0, *)
+extension CrossDK.CrossDKManager : StoreKit.SKOverlayDelegate {
+  @objc dynamic public func storeOverlayWillStartPresentation(_: StoreKit.SKOverlay, transitionContext _: StoreKit.SKOverlay.TransitionContext)
+  @objc dynamic public func storeOverlayDidFinishPresentation(_: StoreKit.SKOverlay, transitionContext _: StoreKit.SKOverlay.TransitionContext)
+  @objc dynamic public func storeOverlayWillStartDismissal(_: StoreKit.SKOverlay, transitionContext _: StoreKit.SKOverlay.TransitionContext)
+  @objc dynamic public func storeOverlayDidFinishDismissal(_: StoreKit.SKOverlay, transitionContext _: StoreKit.SKOverlay.TransitionContext)
+  @objc dynamic public func storeOverlayDidFailToLoad(_: StoreKit.SKOverlay, error: Swift.Error)
 }
 @objc public protocol CrossDKOverlayDelegate {
   @objc func overlayWillStartPresentation()
@@ -67,6 +76,8 @@ extension CrossDK.CrossDKManager : UIKit.UIViewControllerTransitioningDelegate {
     case never
     case inProgress
     case finished
+    case failed
+    case expired
     public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
@@ -113,6 +124,11 @@ extension CrossDK.CrossDKOverlay : CrossDK.CrossDKOverlayDelegate {
   @objc dynamic public func overlayDidPreload()
   @objc dynamic public func overlayPreloadFailure()
   @objc dynamic public func overlayPreloadExpired()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class CachingPlayerItem : AVFoundation.AVPlayerItem {
+  open func download()
+  @objc override dynamic open func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  @objc deinit
 }
 public struct CrossDKRecommendationFilter {
   public init(churnedRankRange: Swift.ClosedRange<Swift.Float>? = nil, reopenRankRange: Swift.ClosedRange<Swift.Float>? = nil, installConversionProbaMin: Swift.Float? = nil, appIdDenylist: [Swift.String]? = nil, appIdAllowlist: [Swift.String]? = nil)

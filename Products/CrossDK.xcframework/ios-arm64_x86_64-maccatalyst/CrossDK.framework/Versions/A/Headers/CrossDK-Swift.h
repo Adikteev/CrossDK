@@ -190,6 +190,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AVFoundation;
+@import Foundation;
 @import ObjectiveC;
 @import StoreKit;
 @import UIKit;
@@ -210,7 +212,18 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSURL;
 @class NSString;
+@class AVAsset;
+
+SWIFT_CLASS("_TtC7CrossDK17CachingPlayerItem")
+@interface CachingPlayerItem : AVPlayerItem
+/// Is used for playing remote files.
+- (nonnull instancetype)initWithURL:(NSURL * _Nonnull)url SWIFT_UNAVAILABLE;
+- (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
+- (nonnull instancetype)initWithAsset:(AVAsset * _Nonnull)asset automaticallyLoadedAssetKeys:(NSArray<NSString *> * _Nullable)automaticallyLoadedAssetKeys SWIFT_UNAVAILABLE;
+@end
+
 @class NSNumber;
 
 /// Configuration class for <code>CrossDK</code>.
@@ -253,6 +266,23 @@ SWIFT_CLASS("_TtC7CrossDK14CrossDKManager")
 - (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+@class SKOverlay;
+@class SKOverlayTransitionContext;
+
+SWIFT_AVAILABILITY(ios,introduced=14.0)
+@interface CrossDKManager (SWIFT_EXTENSION(CrossDK)) <SKOverlayDelegate>
+/// Indicates that the platform presents an overlay.
+- (void)storeOverlay:(SKOverlay * _Nonnull)_ willStartPresentation:(SKOverlayTransitionContext * _Nonnull)_;
+/// Indicates that the platform is finished presenting an overlay.
+- (void)storeOverlay:(SKOverlay * _Nonnull)_ didFinishPresentation:(SKOverlayTransitionContext * _Nonnull)_;
+/// Indicates that the platform dismisses an overlay.
+- (void)storeOverlay:(SKOverlay * _Nonnull)_ willStartDismissal:(SKOverlayTransitionContext * _Nonnull)_;
+/// Indicates that the platform finished dismissing an overlay.
+- (void)storeOverlay:(SKOverlay * _Nonnull)_ didFinishDismissal:(SKOverlayTransitionContext * _Nonnull)_;
+/// Indicates that the platform failed to load an overlay.
+- (void)storeOverlay:(SKOverlay * _Nonnull)_ didFailToLoadWithError:(NSError * _Nonnull)error;
+@end
 
 
 @protocol CrossDKOverlayDelegate;
@@ -328,6 +358,10 @@ typedef SWIFT_ENUM(NSInteger, OverlayLoadingState, open) {
   OverlayLoadingStateInProgress = 1,
 /// finished Loading
   OverlayLoadingStateFinished = 2,
+/// failed Loading
+  OverlayLoadingStateFailed = 3,
+/// expired
+  OverlayLoadingStateExpired = 4,
 };
 
 /// Describes a specific error from <code>CrossDKOverlay</code>.
@@ -352,8 +386,6 @@ typedef SWIFT_ENUM(NSInteger, OverlayError, open) {
 - (void)dismissWithWindow:(UIWindow * _Nonnull)window;
 @end
 
-@class SKOverlay;
-@class SKOverlayTransitionContext;
 
 SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <SKOverlayDelegate>
@@ -718,6 +750,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AVFoundation;
+@import Foundation;
 @import ObjectiveC;
 @import StoreKit;
 @import UIKit;
@@ -738,7 +772,18 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSURL;
 @class NSString;
+@class AVAsset;
+
+SWIFT_CLASS("_TtC7CrossDK17CachingPlayerItem")
+@interface CachingPlayerItem : AVPlayerItem
+/// Is used for playing remote files.
+- (nonnull instancetype)initWithURL:(NSURL * _Nonnull)url SWIFT_UNAVAILABLE;
+- (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
+- (nonnull instancetype)initWithAsset:(AVAsset * _Nonnull)asset automaticallyLoadedAssetKeys:(NSArray<NSString *> * _Nullable)automaticallyLoadedAssetKeys SWIFT_UNAVAILABLE;
+@end
+
 @class NSNumber;
 
 /// Configuration class for <code>CrossDK</code>.
@@ -781,6 +826,23 @@ SWIFT_CLASS("_TtC7CrossDK14CrossDKManager")
 - (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+@class SKOverlay;
+@class SKOverlayTransitionContext;
+
+SWIFT_AVAILABILITY(ios,introduced=14.0)
+@interface CrossDKManager (SWIFT_EXTENSION(CrossDK)) <SKOverlayDelegate>
+/// Indicates that the platform presents an overlay.
+- (void)storeOverlay:(SKOverlay * _Nonnull)_ willStartPresentation:(SKOverlayTransitionContext * _Nonnull)_;
+/// Indicates that the platform is finished presenting an overlay.
+- (void)storeOverlay:(SKOverlay * _Nonnull)_ didFinishPresentation:(SKOverlayTransitionContext * _Nonnull)_;
+/// Indicates that the platform dismisses an overlay.
+- (void)storeOverlay:(SKOverlay * _Nonnull)_ willStartDismissal:(SKOverlayTransitionContext * _Nonnull)_;
+/// Indicates that the platform finished dismissing an overlay.
+- (void)storeOverlay:(SKOverlay * _Nonnull)_ didFinishDismissal:(SKOverlayTransitionContext * _Nonnull)_;
+/// Indicates that the platform failed to load an overlay.
+- (void)storeOverlay:(SKOverlay * _Nonnull)_ didFailToLoadWithError:(NSError * _Nonnull)error;
+@end
 
 
 @protocol CrossDKOverlayDelegate;
@@ -856,6 +918,10 @@ typedef SWIFT_ENUM(NSInteger, OverlayLoadingState, open) {
   OverlayLoadingStateInProgress = 1,
 /// finished Loading
   OverlayLoadingStateFinished = 2,
+/// failed Loading
+  OverlayLoadingStateFailed = 3,
+/// expired
+  OverlayLoadingStateExpired = 4,
 };
 
 /// Describes a specific error from <code>CrossDKOverlay</code>.
@@ -880,8 +946,6 @@ typedef SWIFT_ENUM(NSInteger, OverlayError, open) {
 - (void)dismissWithWindow:(UIWindow * _Nonnull)window;
 @end
 
-@class SKOverlay;
-@class SKOverlayTransitionContext;
 
 SWIFT_AVAILABILITY(ios,introduced=14.0)
 @interface CrossDKOverlay (SWIFT_EXTENSION(CrossDK)) <SKOverlayDelegate>
