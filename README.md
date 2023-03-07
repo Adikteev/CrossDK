@@ -145,6 +145,38 @@ final class SomeViewController: UIViewController {
     }
 }
 ```
+You can also preload recommendation before displaying it on screen, this is particularly useful when having large assets(video) which takes time to display. Preload should be launched before showing ads on screen in order to leave enough time to video to be prepared. Use the interface CrossDKOverlayDelegate to get notified when load finishes.
+
+A recommendation is available '30min' after its preload, when this delay passed the view becomes expired and can no longer be showed on screen.
+
+```swift
+import CrossDK
+
+final class SomeViewController: UIViewController {
+    private let crossDKOverlay = CrossDKOverlay()
+    
+    private func loadOverlay() {
+        guard let window = view.window else { return }
+
+        crossDKOverlay.load(window: window, format: .mid_size, position: .bottom, withCloseButton: true, isRewarded: false)
+    }
+}
+extension SomeViewController: CrossDKOverlayDelegate {
+    [...]
+    
+     func overlayDidPreload() {
+        crossDKOverlay.display()
+    }
+    
+    func overlayPreloadFailure() {
+        // In preloading failure
+    }
+    
+    func overlayPreloadExpired() {
+        // The preload has expired
+    }
+}
+```
 
 A public variable is available in `CrossDKConfig` : `deviceId`, to use custom device to try your recommendations using another device id than yours.
 Set it before crossDKOverlay.display function call.
@@ -270,6 +302,40 @@ final class SomeViewController: UIViewController {
     }
 }
 ```
+
+You can also preload recommendation before displaying it on screen, this is particularly useful when having large assets(video) which takes time to display. Preload should be launched before showing ads on screen in order to leave enough time to video to be prepared. Use the interface CrossDKOverlayDelegate to get notified when load finishes.
+
+A recommendation is available '30min' after its preload, when this delay passed the view becomes expired and can no longer be showed on screen.
+
+```swift
+import CrossDK
+
+final class SomeViewController: UIViewController {
+    private let crossDKOverlay = CrossDKOverlay()
+    
+    private func loadOverlay() {
+        guard let window = view.window else { return }
+
+        crossDKOverlay.load(window: window, format: .mid_size, position: .bottom, withCloseButton: true, isRewarded: false)
+    }
+}
+extension SomeViewController: CrossDKOverlayDelegate {
+    [...]
+    
+     func overlayDidPreload() {
+        crossDKOverlay.display()
+    }
+    
+    func overlayPreloadFailure() {
+        // In preloading failure
+    }
+    
+    func overlayPreloadExpired() {
+        // The preload has expired
+    }
+}
+```
+
 ### Overlay Delegate
 
 Additionally, a delegate is available if you want to monitor what is happening with the `CrossDKOverlay`. 
@@ -385,7 +451,7 @@ In order to display an overlay properly, CrossDK requires a few informations. Si
 
 ```swift
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	[CrossDKConfig.shared setupWithAppId:<#(NSString * _Nonnull)#> apiKey:<#(NSString * _Nonnull)#> userId:<#(NSString * _Nullable)#>];
+    [CrossDKConfig.shared setupWithAppId:<#(NSString * _Nonnull)#> apiKey:<#(NSString * _Nonnull)#> userId:<#(NSString * _Nullable)#>];
     return YES;
 }
 
@@ -468,5 +534,33 @@ And now, you can access to the `CrossDKOverlayDelegate`.
 }
 ```
 
+You can also preload recommendation before displaying it on screen, this is particularly useful when having large assets(video) which takes time to display. Preload should be launched before showing ads on screen in order to leave enough time to video to be prepared. Use the interface CrossDKOverlayDelegate to get notified when load finishes.
+
+A recommendation is available '30min' after its preload, when this delay passed the view becomes expired and can no longer be showed on screen.
+
+```swift
+- (void)loadOverlay {
+    UIWindow* window = self.view.window;
+    if (window != nil) {
+        [_crossDKOverlay loadWithWindow:window format:OverlayFormatMid_size position:OverlayPositionBottom withCloseButton:true isRewarded:false];
+    }
+    
+[...]
+
+- (void)overlayDidPreload() {
+     [_crossDKOverlay display];
+    }
+    
+- (void)overlayPreloadFailure() {
+     // In preloading failure
+    }
+    
+- (void)overlayPreloadExpired() {
+      // The preload has expired
+    }
+}
+```
+
 That’s all you need to know !
+
 
