@@ -1,5 +1,13 @@
 # CrossDK - CHANGELOG
 
+# Q223
+
+
+## Sprint 1
+
+### Features
+* ARP-4001 : Fix clicks when ads Applovin are displayed
+
 
 # Q123
 
