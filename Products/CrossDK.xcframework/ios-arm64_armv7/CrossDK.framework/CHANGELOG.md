@@ -7,10 +7,17 @@
 
 ### Features
 * ARP-4001 : Fix clicks when ads Applovin are displayed
+* ARP-3680 : Manage when keyboard is active when SDK displays an ad
+* ARP-3854 : Count 1 click by impression tracking
+* ARP-4017 : Issue with the "Close" button disappearing after multiple transitions between ad and App Store page
 
 
 # Q123
 
+
+## Sprint 5
+* ARP-3680 : Manage when keyboard is active when SDK displays
+* ARP-2084 : Count 1 click by impression
 
 ## Sprint 3
 

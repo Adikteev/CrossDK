@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ADIKTEEV_SDK_VERSION</key>
-	<string>4.0.2</string>
+	<string>4.1.0</string>
 	<key>BuildMachineOSBuild</key>
 	<string>20G1231</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.0.2</string>
+	<string>4.1.0</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
