@@ -10,7 +10,7 @@
 * ARP-3680 : Manage when keyboard is active when SDK displays an ad
 * ARP-3854 : Count 1 click by impression tracking
 * ARP-4017 : Issue with the "Close" button disappearing after multiple transitions between ad and App Store page
-
+* ARP-4050 : Fix app freeze when swiping from banner
 
 # Q123
 

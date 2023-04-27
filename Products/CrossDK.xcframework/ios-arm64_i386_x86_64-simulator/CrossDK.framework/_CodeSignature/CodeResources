@@ -10,7 +10,7 @@
 		</data>
 		<key>CHANGELOG.md</key>
 		<data>
-		4PWLGJNc7aiDzwU5vtOr6nvyrqY=
+		UOS4aqABXmO/tLGTQiiqs8hTZ0g=
 		</data>
 		<key>Headers/CrossDK-Swift.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JjihFJIyGjIIyZ6I9f2L8Zk6VSA=
+		X+dHDbdVxYUUmzpmQsK629RRHZs=
 		</data>
 		<key>InterstitialOverlayViewController.storyboardc/BZo-a2-3aS-view-s0d-Y5-PD6.nib</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ARKOMB+9NXzAORJRkfCZyx3TF9c=
+		jHQEw9LLNj2yrXHdXCP/2TFhSMQ=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		ARKOMB+9NXzAORJRkfCZyx3TF9c=
+		jHQEw9LLNj2yrXHdXCP/2TFhSMQ=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		5/4uOZ2hJpOXgyfLBl4Mv/FJUgU=
+		HXgMUhduqaHmSp7Rza54clVBqqw=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/i386.swiftmodule</key>
 		<data>
-		5/4uOZ2hJpOXgyfLBl4Mv/FJUgU=
+		HXgMUhduqaHmSp7Rza54clVBqqw=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		F9Z7C7mh/fYAwKtnvYU0PSnoCY0=
+		P7lSCsUBRFnEl/WIOPuumZhQu6g=
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		F9Z7C7mh/fYAwKtnvYU0PSnoCY0=
+		P7lSCsUBRFnEl/WIOPuumZhQu6g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -236,11 +236,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4PWLGJNc7aiDzwU5vtOr6nvyrqY=
+			UOS4aqABXmO/tLGTQiiqs8hTZ0g=
 			</data>
 			<key>hash2</key>
 			<data>
-			dRjeR5MPo/mLX4GByM6MiPto+f/bs49vIBsJ5Srnq94=
+			Mu0w+NI4bnfXU1hwyataSFNp/O7o4skoCzIZ7YkT6p8=
 			</data>
 		</dict>
 		<key>Headers/CrossDK-Swift.h</key>
@@ -368,11 +368,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ARKOMB+9NXzAORJRkfCZyx3TF9c=
+			jHQEw9LLNj2yrXHdXCP/2TFhSMQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			EUI6S88pOB7JH0fm6qvjR8vG1dV/TQHUOOtgMTgsuqY=
+			jtjsHvV/plcw6BrFXxXLP/uk/vD+Cq3TZP0JzuDFfvI=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/arm64.swiftdoc</key>
@@ -401,11 +401,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ARKOMB+9NXzAORJRkfCZyx3TF9c=
+			jHQEw9LLNj2yrXHdXCP/2TFhSMQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			EUI6S88pOB7JH0fm6qvjR8vG1dV/TQHUOOtgMTgsuqY=
+			jtjsHvV/plcw6BrFXxXLP/uk/vD+Cq3TZP0JzuDFfvI=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -434,11 +434,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5/4uOZ2hJpOXgyfLBl4Mv/FJUgU=
+			HXgMUhduqaHmSp7Rza54clVBqqw=
 			</data>
 			<key>hash2</key>
 			<data>
-			CthqAxmctaHeB1oMfNTNvdsBmEQj6psw1w/5OtoWK/I=
+			bmxTGUcA6bViJ733XkN/agGtd8RO762NTz4CyHDmsPA=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/i386.swiftdoc</key>
@@ -467,11 +467,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5/4uOZ2hJpOXgyfLBl4Mv/FJUgU=
+			HXgMUhduqaHmSp7Rza54clVBqqw=
 			</data>
 			<key>hash2</key>
 			<data>
-			CthqAxmctaHeB1oMfNTNvdsBmEQj6psw1w/5OtoWK/I=
+			bmxTGUcA6bViJ733XkN/agGtd8RO762NTz4CyHDmsPA=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -500,11 +500,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			F9Z7C7mh/fYAwKtnvYU0PSnoCY0=
+			P7lSCsUBRFnEl/WIOPuumZhQu6g=
 			</data>
 			<key>hash2</key>
 			<data>
-			ASWRRiP1iwnED6PDeykesEKwI629cntdiT1w1YPkm+0=
+			QQwCqYzcsvZRbD2H43RZeDo+fiOjwwsEI5UrWOD66wo=
 			</data>
 		</dict>
 		<key>Modules/CrossDK.swiftmodule/x86_64.swiftdoc</key>
@@ -533,11 +533,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			F9Z7C7mh/fYAwKtnvYU0PSnoCY0=
+			P7lSCsUBRFnEl/WIOPuumZhQu6g=
 			</data>
 			<key>hash2</key>
 			<data>
-			ASWRRiP1iwnED6PDeykesEKwI629cntdiT1w1YPkm+0=
+			QQwCqYzcsvZRbD2H43RZeDo+fiOjwwsEI5UrWOD66wo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
