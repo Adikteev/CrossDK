@@ -225,6 +225,7 @@ SWIFT_CLASS("_TtC7CrossDK17CachingPlayerItem")
 @end
 
 @class NSNumber;
+enum LogLevel : NSInteger;
 
 /// Configuration class for <code>CrossDK</code>.
 SWIFT_CLASS("_TtC7CrossDK13CrossDKConfig")
@@ -248,6 +249,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 /// \param userId user’s ID
 ///
 - (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nullable)userId;
+/// Sets the log level for the logger.
+/// \param level The log level to be set.
+///
+- (void)setLogWithLevel:(enum LogLevel)level;
 @end
 
 
@@ -543,11 +548,17 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 - (void)overlayDidPreload;
 /// Indicates that the platform failed to preload an overlay.
 - (void)overlayPreloadFailure;
-/// Indicates that the overlay is preloaded
+/// Indicates that the overlay is Expired
 - (void)overlayPreloadExpired;
 @end
 
 
+
+typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
+  LogLevelNone = 0,
+  LogLevelError = 1,
+  LogLevelVerbose = 2,
+};
 
 
 
@@ -785,6 +796,7 @@ SWIFT_CLASS("_TtC7CrossDK17CachingPlayerItem")
 @end
 
 @class NSNumber;
+enum LogLevel : NSInteger;
 
 /// Configuration class for <code>CrossDK</code>.
 SWIFT_CLASS("_TtC7CrossDK13CrossDKConfig")
@@ -808,6 +820,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 /// \param userId user’s ID
 ///
 - (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nullable)userId;
+/// Sets the log level for the logger.
+/// \param level The log level to be set.
+///
+- (void)setLogWithLevel:(enum LogLevel)level;
 @end
 
 
@@ -1103,11 +1119,17 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 - (void)overlayDidPreload;
 /// Indicates that the platform failed to preload an overlay.
 - (void)overlayPreloadFailure;
-/// Indicates that the overlay is preloaded
+/// Indicates that the overlay is Expired
 - (void)overlayPreloadExpired;
 @end
 
 
+
+typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
+  LogLevelNone = 0,
+  LogLevelError = 1,
+  LogLevelVerbose = 2,
+};
 
 
 
@@ -1345,6 +1367,7 @@ SWIFT_CLASS("_TtC7CrossDK17CachingPlayerItem")
 @end
 
 @class NSNumber;
+enum LogLevel : NSInteger;
 
 /// Configuration class for <code>CrossDK</code>.
 SWIFT_CLASS("_TtC7CrossDK13CrossDKConfig")
@@ -1368,6 +1391,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CrossDKConfi
 /// \param userId user’s ID
 ///
 - (void)setupWithAppId:(NSString * _Nonnull)appId apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nullable)userId;
+/// Sets the log level for the logger.
+/// \param level The log level to be set.
+///
+- (void)setLogWithLevel:(enum LogLevel)level;
 @end
 
 
@@ -1663,11 +1690,17 @@ SWIFT_PROTOCOL("_TtP7CrossDK22CrossDKOverlayDelegate_")
 - (void)overlayDidPreload;
 /// Indicates that the platform failed to preload an overlay.
 - (void)overlayPreloadFailure;
-/// Indicates that the overlay is preloaded
+/// Indicates that the overlay is Expired
 - (void)overlayPreloadExpired;
 @end
 
 
+
+typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
+  LogLevelNone = 0,
+  LogLevelError = 1,
+  LogLevelVerbose = 2,
+};
 
 
 

@@ -31,6 +31,16 @@ extension CrossDK.CrossDKManager : StoreKit.SKOverlayDelegate {
   @objc dynamic public func storeOverlayDidFinishDismissal(_: StoreKit.SKOverlay, transitionContext _: StoreKit.SKOverlay.TransitionContext)
   @objc dynamic public func storeOverlayDidFailToLoad(_: StoreKit.SKOverlay, error: Swift.Error)
 }
+@objc public enum LogLevel : Swift.Int {
+  case none = 0
+  case error = 1
+  case verbose = 2
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public protocol CrossDKOverlayDelegate {
   @objc func overlayWillStartPresentation()
   @objc func overlayDidFinishPresentation()
@@ -144,6 +154,7 @@ public enum Style {
   @objc public var deviceId: Swift.String?
   @objc public func setup(appId: Swift.String, apiKey: Swift.String, userId: Swift.String? = nil)
   public func set(recommendationFilter: CrossDK.CrossDKRecommendationFilter)
+  @objc public func setLog(level: CrossDK.LogLevel)
   @objc deinit
 }
 @objc public protocol InterstitialAdDelegate {
@@ -188,6 +199,9 @@ extension CrossDK.CrossDKOverlay : CrossDK.RewardedAdDelegate {
   @objc dynamic public func didCompleteRewardedAdVideo()
   @objc dynamic public func didRewardUserWithReward()
 }
+extension CrossDK.LogLevel : Swift.Equatable {}
+extension CrossDK.LogLevel : Swift.Hashable {}
+extension CrossDK.LogLevel : Swift.RawRepresentable {}
 extension CrossDK.CrossDKOverlay.OverlayPosition : Swift.Equatable {}
 extension CrossDK.CrossDKOverlay.OverlayPosition : Swift.Hashable {}
 extension CrossDK.CrossDKOverlay.OverlayPosition : Swift.RawRepresentable {}

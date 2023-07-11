@@ -1,5 +1,27 @@
 # CrossDK - CHANGELOG
 
+# Q323
+
+
+## Sprint 4
+
+### Features
+* ARP-3817 : Add debug mode logs on SDK
+
+## Sprint 5
+
+
+### Features
+* ARP-4098 : Remove Interstitial and Mid-Siz Display Warnings in Logs
+* ARP-4184 : Integrate show() for mobile tracking
+
+## Sprint 6
+
+### Features
+* ARP-4114 : Multiple preload causing memory leak
+
+
+
 # Q223
 
 

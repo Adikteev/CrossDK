@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "CrossDK"
   spec.platform     = :ios, '10.0'
-  spec.version      = "4.1.2"
+  spec.version      = "4.2.0"
   spec.summary      = "Cross-promote an application catalog"
 
   spec.description  = <<-DESC
