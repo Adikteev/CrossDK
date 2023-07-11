@@ -224,6 +224,22 @@ extension SomeViewController: CrossDKOverlayDelegate {
     }
 }
 ```
+### CrossDK Debug mode:
+
+You can enable the debug mode on the SDK to generate logs in the console.
+This can be done by setting the logLevel in `CrossDKConfig` class:
+
+```swift
+import CrossDK
+
+CrossDKConfig.shared.setLog(level: LogLevel.verbose)
+```
+
+- `LogLevel.verbose`: for verbose logging
+- `LogLevel.error`: for error logging
+- `LogLevel.none`: for disabling logger
+
+> We recommend setting up this config before initializing the SDK.
 
 ## SwiftUI support
 
