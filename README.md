@@ -1,3 +1,5 @@
+> :warning: Due to the end of the Cross Promotion Platform, this repository is now deprecated.
+
 # CrossDK 4.1.2
 
 ![IOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white)
